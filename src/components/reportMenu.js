@@ -14,10 +14,14 @@ const ReportMenu = ({isActive, setActive}) => {
     {link: "literature-review", title: "Literature Review"}
   ]
   
-  const menuLinks = menuData.map((element, i) => {return <div key={i}><a href={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "active" : ""}>{element.title}</a><br/></div>})
+  const menuLinks = menuData.map((element, i) => {
+    return <a key={i} href={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
+        {element.title}
+      </a>
+  })
   
   return (
-    <div className="report-content__menu">
+    <div className="report-menu">
       {menuLinks}
     </div>
   )

@@ -4,7 +4,7 @@ const Appendix = () => {
 
   return (
     <div className="section">
-      Appendix
+      <h2>Appendix</h2>
     </div>
   )
 }

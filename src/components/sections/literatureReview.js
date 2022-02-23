@@ -4,7 +4,7 @@ const LiteratureReview = () => {
 
   return (
     <div className="section">
-      Literature Review
+      <h2>Literature Review</h2>
     </div>
   )
 }

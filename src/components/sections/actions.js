@@ -4,7 +4,7 @@ const Actions = () => {
 
   return (
     <div className="section">
-      Actions To Take
+      <h2>Actions To Take</h2>
     </div>
   )
 }

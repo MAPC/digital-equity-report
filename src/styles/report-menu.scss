@@ -1,3 +1,19 @@
+.report-menu{
+  color: navy;
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: sticky;
+  top: 2rem;
+  &__link {
+    font-size: $font_size-xsmall;
+    font-weight: bold;
+    height: auto;
+    margin: 0 0 1rem;
+  }
+}
+
 .active {
-  color: red;
+  color: lavender;
 }

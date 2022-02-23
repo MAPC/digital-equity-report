@@ -4,7 +4,7 @@ const Assessment = () => {
 
   return (
     <div className="section">
-      Community Needs Assessment
+      <h2>Community Needs Assessment</h2>
     </div>
   )
 }

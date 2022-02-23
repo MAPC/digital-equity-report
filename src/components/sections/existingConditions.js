@@ -4,7 +4,7 @@ const ExistingConditions = () => {
 
   return (
     <div className="section">
-      Existing Conditions
+      <h2>Existing Conditions</h2>
     </div>
   )
 }

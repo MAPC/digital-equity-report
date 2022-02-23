@@ -5,7 +5,7 @@ const Process = () => {
 
   return (
     <div className="section">
-      Planning Process
+      <h2>Planning Process</h2>
     </div>
   )
 }

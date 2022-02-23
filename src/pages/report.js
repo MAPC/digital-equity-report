@@ -56,7 +56,7 @@ const Report = () => {
   return (
     <div className="report-container" onScroll={handleScroll}>
       <div className="report-header padding">
-        Report Page Header  
+        <h1>Digital Equity Report</h1> 
       </div>
       <div className="report-content padding">
         <div className="report-content__col-1">

@@ -4,7 +4,7 @@ const History = () => {
 
   return (
     <div className="section">
-      History & Background
+      <h2>History & Background</h2>
     </div>
   )
 }
