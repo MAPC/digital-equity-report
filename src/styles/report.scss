@@ -1,0 +1,33 @@
+.report {
+  &-container {
+    height: 100vh;
+    // overflow: scroll;
+  }
+  &-header {
+    background-color: lavender;
+    height: 5rem;
+  }
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__col-1 {
+      margin-right: 2rem;
+      width: 12rem;
+    }
+    &__col-2 {
+      width: 100%;
+    }
+    &__menu {
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: sticky;
+      top: 2rem;
+    }
+  }
+}
+
+.section {
+  // color: red;
+  padding-bottom: 10rem;
+}
