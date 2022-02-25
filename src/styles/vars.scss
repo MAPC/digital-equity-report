@@ -6,6 +6,19 @@ $font_size-small: 1.5rem; // 24px
 $font_size-xsmall: 1rem; // 16px
 $font_size-xxsmall: 0.75rem; // 12px
 
+// Colors
+$color-dark-teal: #155756;
+$color-deep-gold: #D1B02A;
+$color-pale-butter: #FFE6AF;
+$color-blush: #F2EDF2;
+$color-smoke: #BEB6B6;
+$color-cornflower: #6495ED;
+$color-ash-purple: #7774AA;
+$color-midnight: #07215B;
+$color-white: #ffffff;
+
+
+
 // Media Query
 @mixin media($size) {
   @if $size == 'x-small' {
@@ -45,7 +58,6 @@ a:hover {
 
 h1 {
   font-size: $font_size-xlarge;
-  // margin-bottom: 2.5rem;
 }
 
 h2 {
@@ -56,11 +68,9 @@ h2 {
 
 h3 {
   font-size: $font_size-medium;
-  // margin-bottom: 1rem;
 }
 
 h4 {
-  // margin-bottom: 1rem;
   font-size: $font_size-small;
 }
 

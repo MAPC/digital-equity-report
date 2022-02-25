@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import Menu from "../components/modules/mainMenu";
+import Header from "../components/modules/header"; 
 import ReportMenu from "../components/reportMenu";
 import Summary from "../components/sections/summary";
 import Process from "../components/sections/process";
@@ -52,13 +52,12 @@ const Report = () => {
     }
   } 
 
-
-
   return (
     <div className="report-container" onScroll={handleScroll}>
-      <Menu />
+      <Header />
       <div className="report-header padding">
-        <h1>Digital Equity Report</h1> 
+        <h4>Digital Equity Report:</h4>
+        <h2>Everett, Chelsea, & Revere</h2> 
       </div>
       <div className="report-content padding">
         <div className="report-content__col-1">
