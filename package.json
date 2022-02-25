@@ -1,0 +1,31 @@
+{
+  "name": "digital-equity-report",
+  "version": "1.0.0",
+  "private": true,
+  "description": "digital-equity-report",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.8.0",
+    "gatsby-plugin-sass": "^5.8.0",
+    "import": "^0.0.6",
+    "marked": "^4.0.12",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-markdown": "^8.0.0",
+    "react-router-dom": "^6.2.1",
+    "react-tabs": "^3.2.3",
+    "rehype-raw": "^6.1.1",
+    "rehype-sanitize": "^5.0.1",
+    "remark-gfm": "^3.0.1",
+    "sass": "^1.49.8"
+  }
+}

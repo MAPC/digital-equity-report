@@ -1,0 +1,22 @@
+const markdown = `
+  #### An overview of digital access 
+
+  It’s important to define “Digital Access” and provide a framework for interventions and actions aimed at achieving community outcomes. In this report we use the framework of the “three-legged stool” to represent the many facets that make up this complicated, interconnected topic. It’s not a comprehensive analogy but does provide a reminder that solutions or interventions must not only work for resolving isolated challenges, but be part of a larger web actions, rooted in systemic and social justice.  
+
+  #### Defining "Digital Access"
+
+  #### Who owns the internet? 
+
+  To understand what actions and responsibilities could be taken, it’s important to look at the ownership model that exists today. As the slides above highlight, the internet is comprised of many technologies, each leveraged to transfer information as bits across the globe and to your screen. Who owns, manages or regulates those technologies and infrastructure is even more varied. 
+
+  In our three communities, as is true across the United States today, the internet and the infrastructure that underpins it, is not treated as a public utility. Public utilities like water, electricity or public infrastructure like highways have a different ownership and regulation model from internet infrastructure. While water, electricity, or our highways may each have a varied different model of ownership and regulations; they all have some level of public management. The infrastructure that makes up our highway, sewer, or electric system are all publicly owned infrastructure and assets.  
+  
+  While our three municipalities do manage fiber, conduit and connection center equipment they do so for an internal public network that connects police, fire, and city staff to the internet and each other. Several municipalities across the commonwealth have extended or built publicly owned networks, under different models, that have extended beyond municipal needs or activities. A small-scale example of this is the extending of “public” networks at town halls or libraries through open public access points. This extension of the network draws on the capacity of the IT for the municipality either internal or contracted.  
+  
+  Larger scale expansion of internet service, reliant on publicly owned infrastructure, has a number of examples in western MA often where no private company was willing to make the investment in wired connection of households. Municipalities have taken on the role of establishing or leveraging power and light plants (LINK TO LIST OF MUNI ACTIVITIES OR ILSR MAP) to become an ISP. Serving households or businesses with the potential to connect to other municipalities, or research institutions. In many cases the municipality have chosen to become the owner of infrastructure technology (tech referenced in slides above) as well as the provider of service ISP. This requires substantial planning (Link to and check out Cambridge and Boston, Quincy planning) as well as capacity and staffing either at a municipality, power and light utility, or private public partnership. Some government entities have also taken on the role of just owning the infrastructure and not becoming an ISP, but rather creating an open market for ISP to lease from the government their technology/infrastructure/fiber. This model is referred to as Open Access Networks and is common in other parts of the world. More example about this model can be found here: 
+
+  The majority of pipes/conduit, fiber and copper cables, poles and connection center equipment that run through Everett, Chelsea, and Revere are owned by private companies. For example, while the city of Chelsea may own some light poles on Broadway the majority of telephone poles across the cities are owned by the telecom company Verizon. Additionally, Comcast asserts that they only leverage infrastructure owned and managed by them in their hybrid coaxial / fiber network. (link to slides from Everett town council meeting Jan 21). Other providers we will see later in this report like Crown Castle, First Light serve as owners of infrastructure/fiber who may lease to other companies like RCN or Starry to provide residential service. In the Existing Condition: Infrastructure section we will look further into the touch points municipalities have with private companies that provide internet as a services Internet Service Providers (ISPs). 
+
+`
+
+export default markdown
