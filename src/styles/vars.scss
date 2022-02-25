@@ -3,7 +3,7 @@ $font_size-xlarge: 5.625rem; // 90px
 $font_size-large: 3.75rem; // 60px 
 $font_size-medium: 2.25rem; // 36px 
 $font_size-small: 1.5rem; // 24px 
-$font_size-xsmall: 1.125rem; // 18px
+$font_size-xsmall: 1rem; // 16px
 $font_size-xxsmall: 0.75rem; // 12px
 
 // Media Query
@@ -25,41 +25,62 @@ $font_size-xxsmall: 0.75rem; // 12px
 
 * {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
 }
 
-a, a:hover, a:focus, a:active {
-  color: inherit;
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+// default for all links not specifically styled
+a, a:focus, a:active {
+  color: cornflowerblue;
   text-decoration: none !important;
+}
+
+a:hover {
+  border-bottom: 2px dotted cornflowerblue;
 }
 
 h1 {
   font-size: $font_size-xlarge;
-  margin-bottom: 1rem;
+  // margin-bottom: 2.5rem;
 }
 
 h2 {
   font-size: $font_size-large;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  width: 50%;
 }
 
 h3 {
   font-size: $font_size-medium;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 }
 
 h4 {
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
   font-size: $font_size-small;
 }
 
+// h5 {
+//   font-size: $font_size-small;
+// }
+
 p {
-  margin-bottom: 1rem;
+  font-size: $font_size-xsmall;
+}
+
+p.bold {
+  font-weight: 900;
 }
 
 .padding {
   padding: 4rem;
 }
 
+ul, li {
+  list-style: none;
+  padding: 0;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Menu from "../components/modules/mainMenu";
 import ReportMenu from "../components/reportMenu";
 import Summary from "../components/sections/summary";
 import Process from "../components/sections/process";
@@ -55,6 +56,7 @@ const Report = () => {
 
   return (
     <div className="report-container" onScroll={handleScroll}>
+      <Menu />
       <div className="report-header padding">
         <h1>Digital Equity Report</h1> 
       </div>

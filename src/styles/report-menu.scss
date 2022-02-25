@@ -1,19 +1,29 @@
-.report-menu{
-  color: navy;
+.report-menu {
   display: flex;
   flex-direction: column;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: sticky;
   top: 2rem;
-  &__link {
-    font-size: $font_size-xsmall;
-    font-weight: bold;
-    height: auto;
-    margin: 0 0 1rem;
+}
+
+a.report-menu__link {
+  color: navy;
+  font-size: $font_size-xsmall;
+  font-weight: bold;
+  height: auto;
+  margin: 0 0 1rem;
+  padding-left: 0.25rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border-bottom: none;
+    border-left: solid 5px cornflowerblue;
+    color: cornflowerblue;
   }
 }
 
-.active {
+a.active {
+  border-left: solid 5px lavender;
   color: lavender;
 }

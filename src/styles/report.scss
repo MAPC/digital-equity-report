@@ -5,7 +5,9 @@
   }
   &-header {
     background-color: lavender;
-    height: 5rem;
+    display: flex;
+    justify-content: center;
+    min-height: 5rem;
   }
   &-content {
     display: flex;
@@ -13,7 +15,7 @@
     justify-content: center;
     &__col-1 {
       margin-right: 2rem;
-      width: 12rem;
+      width: 10rem;
     }
     &__col-2 {
       width: 100%;
@@ -22,12 +24,16 @@
 }
 
 .section {
-  min-height: 100vh;
   padding-bottom: 2rem;
   &-full {
     width: 100%;
   }
   &-half {
-    width: 50%;
+    width: 45%;
+  }
+  &-two-col-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
