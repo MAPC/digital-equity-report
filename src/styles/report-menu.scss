@@ -8,22 +8,23 @@
 }
 
 a.report-menu__link {
-  color: navy;
+  color: $color-smoke;
   font-size: $font_size-xsmall;
   font-weight: bold;
   height: auto;
   margin: 0 0 1rem;
   padding-left: 0.25rem;
+  padding-right: 5px; //offsets left border
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
     border-bottom: none;
-    border-left: solid 5px cornflowerblue;
-    color: cornflowerblue;
+    border-left: solid 5px  $color-midnight;
+    color: $color-midnight;
   }
 }
 
 a.active {
-  border-left: solid 5px lavender;
-  color: lavender;
+  border-left: solid 5px $color-midnight;
+  color: $color-midnight;
 }

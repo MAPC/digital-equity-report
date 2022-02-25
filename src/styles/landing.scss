@@ -1,4 +1,13 @@
 .landing {
-  background-color: azure;
-  max-height: 100vh;
+  background-color: $color-dark-teal;
+  color: $color-white;
+  span {
+    color: $color-pale-butter;
+  }
+}
+
+.border-left {
+  border-left: 5px solid $color-smoke;
+  margin-left: 2rem;
+  padding-left: 2rem;
 }
