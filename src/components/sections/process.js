@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+// import 'react-tabs/style/react-tabs.css';
 
 
 const Process = () => {
@@ -109,9 +109,9 @@ const Process = () => {
       <div className="section">
         <Tabs>
           <TabList>
-            <Tab><p className="bold">Advise Capital Investment</p></Tab>
-            <Tab><p className="bold">Inform Policy Decisions</p></Tab>
-            <Tab><p className="bold">Identify Program Needs</p></Tab>
+            <Tab><h4>Advise Capital Investment</h4></Tab>
+            <Tab><h4>Inform Policy Decisions</h4></Tab>
+            <Tab><h4>Identify Program Needs</h4></Tab>
           </TabList>
 
           <TabPanel>
