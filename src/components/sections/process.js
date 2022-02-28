@@ -5,6 +5,10 @@ import 'react-tabs/style/react-tabs.css';
 
 const Process = () => {
 
+  function parseList(list) {
+    list.map((li, i) =>  <li key={i}>{li}</li>);
+  }
+
   const mapc = [
     "Josh Eichen", 
     "Ryan Kelly", 
@@ -64,7 +68,7 @@ const Process = () => {
         <p>This work connected us to connect with communities hit hard by the pandemic and with populations most in need of recovery assistance and future resiliency. MAPC partnered with leaders in Everett, Chelsea, & Revere who were working to address digital access issues, residents had raised in their communities. Residents in these communities were experiencing average internet speeds much lower than the available, advertised interest speeds along with device and literacy challenges related to the internet. The MAPC visualization of speed data depicted these communities with some of the lowest average download speeds of any municipality in the region. To explore the challenges and opportunities further, MAPC and the Cities partnered to develop this plan that is scaled to fit the capacity of municipal staff while leveraging a strong resource network of local, state, and federal resources that cross the public, private, educational, and nonprofit sectors. </p>
       </div>
       <div className="section-two-col-flex">
-        <div className="section-half">
+        <div className="section-half border-right">
           <h3>Community Advisory Team</h3>
           <p>To achieve outcomes that enhance the wellbeing of the community, it’s essential that community perspective guides the work. A community advisory team served as a core working group which meet throughout the process to provide feedback, responses to proposed strategies and data analysis. This group was essential in assisting with the distribution and completion of the community needs assessment. The perspective provided by the community advisory helped inform the development of this plans vision and goals, and shaped the focus and framing of this report. Ultimately, it will be this set of stakeholders will be able to take actionable measures towards the goals this report intends to achieve.</p>
         </div>

@@ -31,16 +31,24 @@
 }
 
 .section {
-  padding-bottom: 2rem;
-  &-full {
+  margin-bottom: 2rem;
+  &-full {  
+    margin-bottom: 2rem;
     width: 100%;
   }
   &-half {
+    margin-bottom: 2rem;
     width: 45%;
   }
   &-two-col-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 2rem;
   }
+}
+
+.border-right {
+  border-right: 5px solid $color-deep-gold;
+  padding-right: 5%;
 }

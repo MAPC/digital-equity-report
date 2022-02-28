@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import CalloutQuote from "../modules/calloutQuote";
 
 const History = () => {
 
@@ -8,12 +9,18 @@ const History = () => {
     <div>
       <div className="section">
         <h2>History & Background</h2>
-        <h3>An overview of digital access</h3>
+        <h4>An overview of digital access</h4>
         <p>Digital access is more than getting a wifi password so you can read some email or stream a show. It’s a complicated, interconnected [topic] that includes three main elements: a good connection to the internet, an adequate device, and knowledge of how to use it. It’s important to define “Digital Access” and provide a framework for interventions and actions aimed at achieving community outcomes. In this report we use the framework of the “three-legged stool” to represent the many facets that make up this complicated, interconnected topic. It’s not a comprehensive analogy but does provide a reminder that solutions or interventions must not only work for resolving isolated challenges, but be part of a larger web actions, rooted in systemic and social justice.  </p>
       </div>
-      <div className="section">
-        <h4>Defining "Digital Access"</h4>
-        Quote Call Out: Digital Divide -- the gap between those with access to the reliable internet essential to navigating everyday tasks like job searches, homework, and digital communications; and those who don’t. 
+      <div className="section-two-col-flex">
+        <div className="section-half border-right">
+          <h3>Defining "Digital Access"</h3>
+        </div>
+        <div className="section-half">
+          <CalloutQuote 
+            quote="Digital Divide — the gap between those with access to the reliable internet essential to navigating everyday tasks like job searches, homework, and digital communications; and those who don’t." 
+          />
+        </div>
       </div>
       <div className="section">
         <Tabs>
@@ -35,12 +42,22 @@ const History = () => {
         </Tabs>
       </div>
       <div className="section">
-        <h4>How Does the Internet Function?</h4>
+        <h3>How Does the Internet Function?</h3>
         <p>Let’s look at the technology that is relied upon to provide the internet to us.</p>
-        <iframe src="https://slides.com/mapc/internet-slides/embed" width="576" height="420" title="Internet Slides" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://slides.com/mapc/internet-slides/embed" width="100%" height="580" title="Internet Slides" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+      <div className="section-two-col-flex">
+        <div className="section-half border-right">
+          <h3>Who owns the internet? </h3>
+        </div>
+        <div className="section-half">
+          <CalloutQuote 
+            quote="[Broadband] isn’t a luxury; it’s now a necessity, like water and electricity."
+            byline="- President Biden" 
+          />
+        </div>
       </div>
       <div className="section">
-        <h4>Who owns the internet? </h4>
         <p>To understand what actions and responsibilities could be taken, it’s important to look at the ownership model that exists today. As the slides above highlight, the internet is comprised of many technologies, each leveraged to transfer information as bits across the globe and to your screen. Who owns, manages or regulates those technologies and infrastructure is even more varied. </p>
         <p>In our three communities, as is true Aacross the United States today,  the internet and the infrastructure that underpins it, is not treated as a public utility. Public utilities like such as water, electricity or public infrastructure like highways have a different ownership and regulation model from internet infrastructure. While water, electricity, or our highways may each have a varied different model of ownership and regulations; they all have some level of public management. The infrastructure that makes up our highway, sewer, or electric system are all publicly owned infrastructure and assets.  </p>
         <p>While our three municipalities do manage fiber, conduit and connection center equipment, they do so for an internal public network that connects police, fire, and city staff to the internet and each other. Several municipalities across the commonwealth have extended or built publicly owned networks, under different models, that have extended beyond municipal needs or activities. A small-scale example of this is the extending of “public” networks at town halls or libraries through open public access points. This extension of the network draws on the capacity of the IT for the municipality either internal or contracted.  </p>

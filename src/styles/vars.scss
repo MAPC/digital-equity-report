@@ -17,8 +17,6 @@ $color-ash-purple: #7774AA;
 $color-midnight: #07215B;
 $color-white: #ffffff;
 
-
-
 // Media Query
 @mixin media($size) {
   @if $size == 'x-small' {
@@ -57,26 +55,30 @@ a:hover {
 }
 
 h1 {
+  color: $color-midnight;
   font-size: $font_size-xlarge;
 }
 
 h2 {
+  color: $color-midnight;
   font-size: $font_size-large;
   margin-top: 0;
   width: 50%;
 }
 
 h3 {
+  color: $color-midnight;
   font-size: $font_size-medium;
 }
 
 h4 {
+  color: $color-midnight;
   font-size: $font_size-small;
 }
 
-// h5 {
-//   font-size: $font_size-small;
-// }
+h5 {
+  font-size: $font_size-xsmall;
+}
 
 p {
   font-size: $font_size-xsmall;
