@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+// import 'react-tabs/style/react-tabs.css';
 import CalloutQuote from "../modules/calloutQuote";
 
 const History = () => {
@@ -25,9 +25,9 @@ const History = () => {
       <div className="section">
         <Tabs>
           <TabList>
-            <Tab>Device</Tab>
-            <Tab>Access to Affordable, High Speed, and Reliable Internet</Tab>
-            <Tab>Digital Literacy</Tab>
+            <Tab><h4>Device</h4></Tab>
+            <Tab><h4>Access</h4></Tab>
+            <Tab><h4>Digital Literacy</h4></Tab>
           </TabList>
 
           <TabPanel>

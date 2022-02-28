@@ -8,6 +8,7 @@ $font_size-xxsmall: 0.75rem; // 12px
 
 // Colors
 $color-dark-teal: #155756;
+$color-light-teal: cadetblue;
 $color-deep-gold: #D1B02A;
 $color-pale-butter: #FFE6AF;
 $color-blush: #F2EDF2;
@@ -78,6 +79,11 @@ h4 {
 
 h5 {
   font-size: $font_size-xsmall;
+}
+
+img {
+  box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+  width: 100%;
 }
 
 p {
