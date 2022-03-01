@@ -1,0 +1,22 @@
+.header {
+  &__link {
+    align-items: center;
+    color: $color-white;
+    display: flex;
+    text-decoration: none;
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+      color: $color-pale-butter;
+    }
+  }
+
+  &__logo {
+    border-right: solid 2px white;
+    box-shadow: none;
+    height: 45px;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    width: auto;
+  }
+}
