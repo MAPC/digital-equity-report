@@ -9,6 +9,8 @@ import Assessment from "../components/sections/assessment";
 import Actions from "../components/sections/actions";
 import Appendix from "../components/sections/appendix";
 import LiteratureReview from "../components/sections/literatureReview";
+// import { Footer } from "mapc-design-system";
+import Footer2 from "../components/modules/footer"
 
 const Report = () => {
 
@@ -54,10 +56,12 @@ const Report = () => {
 
   return (
     <div className="report-container" onScroll={handleScroll}>
-      <Header />
       <div className="report-header padding">
-        <h4>Digital Equity Report:</h4>
-        <h2>Everett, Chelsea, & Revere</h2> 
+        <Header />
+        <div className="report-header-copy">
+          <h4>Digital Equity Report:</h4>
+          <h2>Everett, Chelsea, & Revere</h2> 
+        </div>
       </div>
       <div className="report-content padding">
         <div className="report-content__col-1">
@@ -102,6 +106,8 @@ const Report = () => {
         
         </div>
       </div>
+      {/* <Footer backgroundColor="#155756" /> */}
+      <Footer2 />
     </div>
   )
 }

@@ -5,15 +5,18 @@
   }
   &-header {
     background-color: $color-dark-teal;
-    color: $color-white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 14rem;
-    min-height: 5rem;
-    h2 {
-      color: $color-pale-butter;
-      width: 100%;
+    &-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 6rem;
+      h2 {
+        color: $color-pale-butter;
+        width: 100%;
+      }
+      h4 {
+        color: $color-white;
+      }
     }
   }
   &-content {
