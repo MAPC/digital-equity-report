@@ -5,7 +5,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import logo from "../../images/mapc-logo.svg";
 
-const Footer2 = () => {
+const Footer = () => {
   return (
     <footer className="footer padding">
       <section className="footer__column footer__column--about">
@@ -81,4 +81,4 @@ const Footer2 = () => {
   );
 };
 
-export default Footer2;
+export default Footer;

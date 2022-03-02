@@ -14,7 +14,11 @@ const Header = () => {
           </Link>
         </div>
         <div className="section-half-right">
-          <Menu />
+          <Link to="/report" className="header__link">
+            {/* <img src={logo} alt="MAPC Logo" className="header__logo" /> */}
+            <h5>Read the Report</h5>
+          </Link>
+          {/* <Menu /> */}
         </div>
       </div>
     </div>

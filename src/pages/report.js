@@ -9,8 +9,7 @@ import Assessment from "../components/sections/assessment";
 import Actions from "../components/sections/actions";
 import Appendix from "../components/sections/appendix";
 import LiteratureReview from "../components/sections/literatureReview";
-// import { Footer } from "mapc-design-system";
-import Footer2 from "../components/modules/footer"
+import Footer from "../components/modules/footer"
 
 const Report = () => {
 
@@ -112,8 +111,7 @@ const Report = () => {
         
         </div>
       </div>
-      {/* <Footer backgroundColor="#155756" /> */}
-      <Footer2 />
+      <Footer />
     </div>
   )
 }
