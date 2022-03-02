@@ -8,7 +8,6 @@ const Service = () => {
   return (
     <div>
       <div className="section">
-        <h3>Service & Affordability</h3>
         <h4>Why are households offline?</h4>
         <p>Looking nationally at this question, the national nonprofit Education Superhighway has <a href="https://www.educationsuperhighway.org/no-home-left-offline/">released a report</a> that categorizes the reasons why US households are offline. They identified 28.2 million unconnected households across the US. While a portion 11% of the population is choosing not to connect and another 25% do not have the available infrastructure to connect, the majority of the unconnected households cite affordability as the reason why they are not connected 64%.</p>
         <img src={chart1} />

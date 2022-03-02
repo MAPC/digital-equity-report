@@ -6,9 +6,6 @@ const Literacy = () => {
 
   return (
     <div>
-      <div className="section">
-        <h3>Digital Literacy</h3>
-      </div>
       <div className="section-two-col-flex">
         <div className="section-half">
           <p>As essential as it is to have the device or connection to the internet, it’s as essential to have the skills and ability to be successful in navigating that digital landscape.  The NDIA defines digital literacy as “the ability to use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills”. The “digital” in digital literacy skills casts a wide net and encompasses many skills a person or user may need to leverage devices and connection. Translated to daily life, dDigital skills are required to operate a device, obtain, and email address, apply for a job, communicate with a doctor, and connect with family members. Assessments such as the NorthStar Digital Literacy assessment, purchased (by City of Revere?) can provide a way of assessing levels of digital literacy.</p>
