@@ -41,7 +41,7 @@ const Assessment = () => {
         42% of those respondents have two children <br/>
         22% have three or more children </p>
       </div>
-      <div className="section">
+      <div className="section section-bottom">
         <h3>Key Findings</h3>
         <h4>Connectivity</h4>
         <p>Ensuring that residents are able to acquire internet services at an affordable price that meets their needs is a major component of digital access. The following key findings summarize respondents experience and perspective on internet subscriptions, internet affordability, and internet reliability.  </p>

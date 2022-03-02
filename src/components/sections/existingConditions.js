@@ -7,39 +7,48 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "gatsby";
 
-const ExistingConditions = () => {
+const ExistingConditions = ({tabIndex, setTabIndex}) => {
+
+  const handleTabsChange = (index) => {
+    setTabIndex(index);
+  };
 
   return (
     <div>
-      <div className="section" id="tabs">
+      <div className="section section-bottom" id="tabs">
         <h2>Existing Conditions</h2>
-        <Tabs>
+        <Tabs 
+          selectedIndex={tabIndex} 
+          onSelect={(index) => setTabIndex(index)}
+        >
           <TabList>
             <Tab><h4>Connection & Access</h4></Tab>
-            <Tab><h4>Digital Literacy</h4></Tab>
             <Tab><h4>Service & Affordability</h4></Tab>
             <Tab><h4>Infrastructure</h4></Tab>
           </TabList>
 
           <TabPanel>
             <Connection />
-            <AnchorLink to={`#tabs`} className="anchor__wrapper">
+            <AnchorLink to={`#tabs`} className="anchor">
               <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
               <span className="anchor__helper-text">Return to Selection</span>
             </AnchorLink>
           </TabPanel>
           <TabPanel>
-            <Literacy />
-            <a href="#tabs"><h4>Return to Selection</h4></a>
-          </TabPanel>
-          <TabPanel>
             <Service />
-            <a href="#tabs"><h4>Return to Selection</h4></a>
+            <AnchorLink to={`#tabs`} className="anchor">
+              <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
+              <span className="anchor__helper-text">Return to Selection</span>
+            </AnchorLink>
           </TabPanel>
           <TabPanel>
             <Infrastructure />
-            <a href="#tabs"><h4>Return to Selection</h4></a>
+            <AnchorLink to={`#tabs`} className="anchor">
+              <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
+              <span className="anchor__helper-text">Return to Selection</span>
+            </AnchorLink>
           </TabPanel>
         </Tabs> 
       </div>

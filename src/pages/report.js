@@ -14,6 +14,7 @@ import Footer2 from "../components/modules/footer"
 
 const Report = () => {
 
+  const [tabIndex, setTabIndex] = useState(0);
   const [isActive, setActive] = useState("summary");
 
   const summaryRef = useRef();
@@ -67,7 +68,9 @@ const Report = () => {
         <div className="report-content__col-1">
           <ReportMenu 
             isActive={isActive} 
-            setActive={setActive} 
+            setActive={setActive}
+            tabIndex={tabIndex}
+            setTabIndex={setTabIndex}
           />
         </div>
         <div className="report-content__col-2">
@@ -85,7 +88,10 @@ const Report = () => {
           </div>
           
           <div ref={existingRef} id="existing-conditions">
-            <ExistingConditions />
+            <ExistingConditions 
+              tabIndex={tabIndex}
+              setTabIndex={setTabIndex}
+            />
           </div>
           
           <div ref={assessRef} id="assessment">

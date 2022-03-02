@@ -124,14 +124,14 @@ const Process = () => {
           </TabPanel>
         </Tabs> 
       </div>
-      {/* <div className="section"> */}
+      <div className="section">
         <h3>Project Vision</h3>
         <p>Remove barriers to adoption that prevent universal access to reliable and high speed (100/100) internet.</p> 
         <p>Augment the capacity of key stakeholders such as IT Departments, School Districts, Libraries, Community based organizations, and municipal staff to address the digital divide</p>
         <p>Ensure all residents who desire to improve their digital / technology literacy have a pathway to educational opportunities at a range of skill levels, offered in community appropriate languages and settings.</p>
         <p>Promote competition among internet service providers offering broadband service.</p>
-      {/* </div> */}
-      <div className="section">
+      </div>
+      <div className="section section-bottom">
         <h3>Timeline</h3>
       </div>
     </div>
