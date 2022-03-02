@@ -1,0 +1,14 @@
+a.anchor {
+  &:hover {
+      border-bottom: none;
+      * {color: $color-pale-butter;}
+  }
+}
+
+.anchor {
+  &__icon, &__helper-text {
+    color: $color-deep-gold;
+    font-size: $font_size-small;
+    padding-right: 2rem;
+  }
+}

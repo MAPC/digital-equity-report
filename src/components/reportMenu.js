@@ -1,25 +1,38 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const ReportMenu = ({isActive, setActive}) => {
+const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
 
 
   const menuData = [
-    {link: "summary", title: "Executive Summary"},
-    {link: "process", title: "Planning Process"},
-    {link: "history", title: "History & Background"},
-    {link: "existing-conditions", title: "Existing Conditions"},
-    {link: "assessment", title: "Community Needs Assessment"},
-    {link: "actions", title: "Actions To Take"},
-    {link: "appendix", title: "Appendix"},
-    {link: "literature-review", title: "Literature Review"}
+    {type: "main", link: "summary", title: "Executive Summary"},
+    {type: "main", link: "process", title: "Planning Process"},
+    {type: "main", link: "history", title: "History & Background"},
+    {type: "main", link: "existing-conditions", title: "Existing Conditions"},
+    {type: "sub", title: "Connection & Access", tab: 0, parent: "existing-conditions"},
+    {type: "sub", title: "Service & Affordability", tab: 1, parent: "existing-conditions"},
+    {type: "sub", title: "Infrastructure", tab: 2, parent: "existing-conditions"},
+    {type: "main", link: "assessment", title: "Community Needs Assessment"},
+    {type: "main", link: "actions", title: "Actions To Take"},
+    {type: "main", link: "appendix", title: "Appendix"},
   ]
-  
+
   const menuLinks = menuData.map((element, i) => {
-    return <a key={i} href={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
+    if (element.type === "main") {
+      return <a key={i} href={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
         {element.title}
       </a>
+    } else if (element.type === "sub") {
+      return <a key={i} href={"#" + element.parent} onClick={() => handleClick(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</a>
+    } else {
+      return undefined;
+    }
   })
   
+  function handleClick (index) {
+    setTabIndex(index);
+    console.log("tabIndex", tabIndex);
+  }
+
   return (
     <div className="report-menu">
       {menuLinks}

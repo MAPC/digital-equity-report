@@ -4,7 +4,7 @@ const Summary = () => {
 
   return (
     <div>
-      <div className="section">
+      <div className="section section-bottom">
         <h2>Executive Summary</h2>
         <h4>Now is time to close Digital Divide</h4>
         <p className="section-full">Equity is the condition of fair and just inclusion into a society. Equity will exist when those who have been most marginalized have equal access to opportunities, power, participation and resources and all have avenues to safe, healthy, productive, and fulfilling lives. It requires restructuring deeply entrenched systems of privilege and oppression that have led to the uneven distribution of benefits and burdens over multiple generations. Society will be stronger when the promise in all of us is actualized. With inspiration from: Policy Link, King County Office of Equity and Social Justice</p>
