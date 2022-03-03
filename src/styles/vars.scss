@@ -56,11 +56,17 @@ a:hover {
 }
 
 h1 {
+  @include media(small) {
+    font-size: 60px;
+  }
   color: $color-midnight;
   font-size: $font_size-xlarge;
 }
 
 h2 {
+  @include media(small) {
+    font-size: 40px;
+  }
   color: $color-midnight;
   font-size: $font_size-large;
   margin-top: 0;

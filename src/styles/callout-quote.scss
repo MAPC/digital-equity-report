@@ -8,6 +8,9 @@
     z-index: -1;
   }
   &__copy {
+    @include media(small) {
+      margin-left: 0;
+    }
     color: $color-deep-gold;
     margin-left: 2rem;
     &-byline {
@@ -26,6 +29,9 @@
 }
 
 .right {
+  @include media(small) {
+    right: 0;
+  }
   margin-top: -5rem;
   margin-left: 16.5rem;
 }
