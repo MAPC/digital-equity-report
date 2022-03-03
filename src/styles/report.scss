@@ -1,7 +1,6 @@
 .report {
   &-container {
     height: 100vh;
-    // overflow: scroll;
   }
   &-header {
     background-color: $color-dark-teal;
@@ -24,9 +23,30 @@
     flex-direction: row;
     justify-content: center;
     &__col-1 {
+      @include media(large) {
+        width: 10rem;
+      }
+      @include media(medium) {
+        width: 10rem;
+      }
+      @include media(small) {
+        width: 10rem;
+      }
       width: 10rem;
     }
     &__col-2 {
+      @include media(large) {
+        margin: auto;
+        max-width: 45rem;
+      }
+      @include media(medium) {
+        margin: auto;
+        max-width: 45rem;
+      }
+      @include media(small) {
+        margin: auto;
+        max-width: 100%;
+      }
       margin: auto;
       max-width: 45rem;
     }
@@ -39,10 +59,16 @@
     margin-bottom: 2rem;
   }
   &-half {
+    @include media(small) {
+      width: 100%;
+    }
     margin-bottom: 2rem;
     width: 45%;
   }
   &-two-col-flex {
+    @include media(small) {
+      display: block;
+    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,6 +80,9 @@
 }
 
 .border-right {
+  @include media(small) {
+    border-right: none;
+  }
   border-right: 5px solid $color-deep-gold;
   padding-right: 5%;
 }
