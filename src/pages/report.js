@@ -78,7 +78,7 @@ const Report = () => {
             <Summary />
           </div>
           
-          <div ref={processRef} id="process">
+          <div ref={processRef} id="background">
             <Process />
           </div>
           

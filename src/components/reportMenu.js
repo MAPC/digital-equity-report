@@ -5,7 +5,7 @@ const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
 
   const menuData = [
     {type: "main", link: "summary", title: "Executive Summary"},
-    {type: "main", link: "process", title: "Planning Process"},
+    {type: "main", link: "background", title: "Background"},
     {type: "main", link: "history", title: "History & Background"},
     {type: "main", link: "existing-conditions", title: "Existing Conditions"},
     {type: "sub", title: "Connection & Access", tab: 0, parent: "existing-conditions"},

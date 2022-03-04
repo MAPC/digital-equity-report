@@ -1,15 +1,102 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
 import CalloutQuote from "../modules/calloutQuote";
 import chart1 from "../../images/choppy.png";
 import chart2 from "../../images/laptop.png";
-import chart3 from "../../images/internet-connectivity.png"
-import chart4 from "../../images/learn-more.png"
-import chart5 from "../../images/it.png"
+import chart3 from "../../images/internet-connectivity.png";
+import chart4 from "../../images/learn-more.png";
+import chart5 from "../../images/it.png";
+import PercentBar from "../modules/percentBar";
 
 const Assessment = () => {
 
+  const floatsData = [
+    {
+      number: "1,068",
+      stat: "responses were recorded in English"
+    },
+    {
+      number: "1,045",
+      stat: "responses were recorded in Spanish"
+    },
+    {
+      number: "36",
+      stat: "responses were recorded in Arabic"
+    },
+    {
+      number: "15",
+      stat: "responses were recorded in Brazilian Portuguese"
+    },
+    {
+      number: "1",
+      stat: "response was recorded in Haitian Creole"
+    },
+    {
+      number: "0",
+      stat: "responses were recorded in Khmer"
+    },
+    {
+      number: "1,404",
+      stat: "respondents identified their race or ethnicity within the survey"
+    }
+  ]
+  const floats =  floatsData.map((elem, index) => {
+    return <div key={index} style={{display: "flex", alignItems: "center"}}>
+      <h4 style={{margin: "0.5rem"}}>{elem.number}</h4>
+      <p>{elem.stat}.</p>
+    </div>
+  })
+
+  const percentsData = [
+    {
+      number: 23,
+      stat: "of respondents who responded identified as White"
+    },
+    {
+      number: 3,
+      stat: "as Black"
+    },
+    {
+      number: 1,
+      stat: "as AAPI"
+    },
+    {
+      number: 69,
+      stat: "as Hispanic/Latinx"
+    },
+    {
+      number: 5,
+      stat: "as Arab"
+    },
+    {
+      number: 40,
+      stat: "of respondents live in a household with 5 or more people"
+    },
+    {
+      number: 45,
+      stat: "of respondents live in a household with 3 or more adults"
+    },
+    {
+      number: 54,
+      stat: "of respondents live in a household with at least one child"
+    },
+    {
+      number: 42,
+      stat: "of those respondents have two children"
+    },
+    {
+      number: 22,
+      stat: "have three or more children"
+    },
+  ]
+
+  const percents = percentsData.map((elem, index) => {
+    return <div key={index}>
+      <PercentBar percent={elem.number} />
+      <p style={{display: "inline"}}><span style={{fontWeight: "200"}}>{elem.stat}.</span></p>
+    </div>
+  })
+  
   return (
     <div>
       <div className="section">
@@ -23,23 +110,8 @@ const Assessment = () => {
       <div className="section">
         <h4>Demographics</h4>
         <p>In addition to being available in English the digital access survey was translated into 5 languages spoken widely in the three cities; Spanish, Haitian Creole, Brazilian Portuguese, Arabic, and Khmer.</p>
-        <p>1,068 responses were recorded in English <br/>
-        1,045 responses were recorded in Spanish <br/>
-        36 responses were recorded in Arabic <br/>
-        15 responses were recorded in Brazilian Portuguese <br/>
-        1 response was recorded in Haitian Creole  <br/>
-        0 responses were recorded in Khmer <br/>
-        1,404 respondents identified their race or ethnicity within the survey. <br/>
-        23% of respondents who responded identified as White <br/>
-        3% as black <br/>
-        1% as AAPI <br/>
-        69% as Hispanic/Latinx <br/>
-        5% as Arab <br/>
-        40% of respondents live in a household with 5 or more people <br/>
-        45% of respondents live in a household with 3 or more adults <br/>
-        54% of respondents live in a household with at least one child <br/>
-        42% of those respondents have two children <br/>
-        22% have three or more children </p>
+        {floats}
+        {percents}
       </div>
       <div className="section section-bottom">
         <h3>Key Findings</h3>

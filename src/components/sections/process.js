@@ -55,10 +55,71 @@ const Process = () => {
 
   const revereList = revere.map((li) =>  <li>{li}</li>);
 
+  const timelineData = [
+    {
+      title: "Existing Conditions",
+      time: "February - April",
+      description: [
+        "Assessment of the current internet service providers available in Everett and their associated service offerings. Identify and analyze existing data sources to better understand community device and internet access."
+      ],
+      deliverables: [
+        "Spatially map publicly owned digital infrastructure including broadband fiber, telephone poles, cell towers, public Wi-Fi, data centers, etc.",
+        "Slide deck outlining Everett’s existing level of service and public infrastructure and provide data files and code in standard formats used in the analysis."
+      ]
+    },
+    {
+      title: "Community Needs Assessment",
+      time: "April - June",
+      description: [
+        "To understand the specific internet access needs of the Everett community, MAPC worked with community partners to identify the key functional needs of the internet in daily life, current ability to use the internet for those key functions, and barriers or challenges impacting that ability to use the internet. This assessment was structured within the framework of internet availability, device access, and digital literacy and designed to reflect certain specific population needs within the community. "
+      ],
+      deliverables: [
+        "Data and analysis from the digital community needs assessment and implications for potential recommendations."
+      ]
+    },
+    {
+      title: "Infrastructure and Technology Evaluation ",
+      time: "June - August",
+      description: [
+        "Reviewed available data sources to catalog the state of digital infrastructure in the City of Everett. Undertook analysis to understand the extent that private ISP’s have invested in the community and if there are gaps in private service infrastructure. In addition evaluated relevant infrastructure elements as recommended by the City and partners."
+      ],
+      deliverables: [
+        "Data and analysis related to the inventory of digital infrastructure in Everett. This inventory will also outline the implications for future investment based on current infrastructure.",
+        "Technical memorandum outlining the relevant regulations and permitting for digital infrastructure.",
+        "Technical memorandum outlining major findings regarding strategic investment opportunities and policies that would yield the advancement of improved digital infrastructure in the City."
+      ]
+    },
+    {
+      title: "Plan Development",
+      time: "August - November",
+      description: [
+        "Synthesis of earlier phases of work to inform policy, program, and capital investments to address specific barriers and needs in Everett."
+      ],
+      deliverables: [
+        "Public document of key digital needs and issues within the City of Everett, the collective vision for digital access, and specific strategies that will need to be implemented to achieve success.",
+        "Presentation of findings, strategies and an evaluation framework to working group."
+      ]
+    }
+  ]
+
+  const timeline = timelineData.map((elem, index) => {
+    return <div key={index} className="section-two-col-flex">
+          <div className="section-half border-right">
+            <h4>{elem.title}</h4>
+            <h5>{elem.time}</h5>
+          </div>
+          <div className="section-half">
+            {elem.description.map(p => <p>{p}</p>)}
+            <h5>Deliverables</h5>
+            {elem.deliverables.map(p => <p>{p}</p>)}
+          </div>
+        </div>
+  })
+
   return (
     <div>
       <div className="section">
-        <h2>Planning Process</h2>
+        <h2>Background</h2>
         <p>The COVID-19 pandemic has upended daily life in Greater Boston and around the world. Thousands of people can’t report to work, and millions are being told to cease nonessential travel. Never before has the internet been so essential for working remotely and staying connected. MAPC’s urban communities have identified access to fast, reliable, and affordable internet was a challenge to residents and businesses.</p>
         <p>Through economic recovery and resilience efforts there is an opportunity to make significant investments to address systemic issues that underpin the “Digital Divide”. Leveraging funds made available through the Economic Development Administration’s Disaster Mitigation and Planning Grant, made available through the Coronavirus Aid, Relief, and Economic Security (CARES) Act, MAPC partnered with municipalities who were facing COVID recovery challenges and both acute and systemic Digital Divide issues.</p>
         <p>Through economic recovery and resilience efforts there is an opportunity to make significant investments to address systemic issues that underpin the “Digital Divide”. Leveraging funds made available through the Economic Development Administration’s Disaster Mitigation and Planning Grant, made available through the Coronavirus Aid, Relief, and Economic Security (CARES) Act, MAPC partnered with municipalities who were facing COVID recovery challenges and both acute and systemic Digital Divide issues.</p>
@@ -90,21 +151,6 @@ const Process = () => {
         <h3>Project Goals</h3>
         <p>Few Massachusetts municipalities of Chelsea, Everett, or Revere’s size have adopted a clear strategy for providing fast, reliable, and affordable internet to residents and businesses.  Most cities and towns within the state do not have a clear understanding of the role of local government in the area of digital access., Few Massachusetts municipalities of Chelsea, Everett, or Revere’s sizecities have adopted a clear strategy for providing fast, reliable, and affordable internet to residents and businesses.  and as sucThere is no clear template for doing so. Revere, Chelsea, and Everett h, these communities are set to become leaders within the Commonwealth by developing a plan that is scaled to fit the capacity of municipal staff while leveraging a strong resource network of local, state, and federal resources that cross the public, private, educational, and nonprofit sectors.</p>
         <p>MAPC has structured this plan to be used by municipalities and their partner stakeholders in accomplishing the following goals:</p>
-
-          <h4>Advise Capital Investment</h4>
-          <p>Recent federal actions through the American Rescue Plan Act and the Infrastructure Investment and Jobs Act have created an unprecedented amount of potential resources available for capital investment in broadband infrastructure. Municipalities will have discretionary resources, as well as the opportunity to apply for state and federal grants to invest in infrastructure, and this plan aims to provide a framework within which to municipalities can make sound decisions for that future investment.  </p> 
-
-          <h4>Inform Policy Decisions​​</h4>
-          <div>
-            <p>While not involved in the direct provision of internet services, municipalities have a significant amount of regulatory power in the permitting and licensing of internet service providers and other technologies that will enable broader internet access. This includes the administration of cable franchise agreements, permitting of 5g infrastructure, and licensing right of way use for cable and fiber infrastructure. This plan aims to give municipal actors a fuller picture of how that regulatory power can improve digital access within their communities. </p>
-            <p>Further, municipalities have the ability to enact policies that will address the social and systemic barriers that inhibit the adoption or use of broadband internet. Establishing discretionary funding sources, convening critical stakeholders, and collecting community data are all within the purview of municipal activity. </p>
-          </div>
-
-          <h4>Identify Program Needs</h4>
-          <p>Historically, the landscape of digital access programs has been sparse, and mostly focused on building basic digital literacy skills. There is a major opportunity to build a robust ecosystem of programs available to support basic to advanced digital skills in multilingual curriculums, expanded workforce development initiatives, and community scale programs that will build capacity and expertise in this critical area.</p> 
-        <p>Building on these broad goals, MAPC worked with the community advisory committees in the three communities to establish a vision that ultimately was used to establish a suite of short, medium, and long term recommendations. The vision as follows: </p>
-      </div>
-      <div className="section">
         <Tabs>
           <TabList>
             <Tab><h4>Advise Capital Investment</h4></Tab>
@@ -125,14 +171,19 @@ const Process = () => {
         </Tabs> 
       </div>
       <div className="section">
+        <p>Building on these broad goals, MAPC worked with the community advisory committees in the three communities to establish a vision that ultimately was used to establish a suite of short, medium, and long term recommendations. The vision as follows: </p>
+      </div>
+      <div className="section">
         <h3>Project Vision</h3>
-        <p>Remove barriers to adoption that prevent universal access to reliable and high speed (100/100) internet.</p> 
-        <p>Augment the capacity of key stakeholders such as IT Departments, School Districts, Libraries, Community based organizations, and municipal staff to address the digital divide</p>
-        <p>Ensure all residents who desire to improve their digital / technology literacy have a pathway to educational opportunities at a range of skill levels, offered in community appropriate languages and settings.</p>
-        <p>Promote competition among internet service providers offering broadband service.</p>
+        <h4>Remove barriers <span style={{fontWeight: "200"}}>to adoption that prevent universal access to reliable and high speed (100/100) internet.</span></h4> 
+        <h4>Augment the capacity <span style={{fontWeight: "200"}}>of key stakeholders such as IT Departments, School Districts, Libraries, Community based organizations, and municipal staff to address the digital divide</span></h4>
+        <h4><span style={{fontWeight: "200"}}>Ensure all residents who desire to improve their digital / technology literacy have a</span> pathway to educational opportunities <span style={{fontWeight: "200"}}>at a range of skill levels, offered in community appropriate languages and settings.</span></h4>
+        <h4>Promote competition <span style={{fontWeight: "200"}}>among internet service providers offering broadband service.</span></h4>
       </div>
       <div className="section section-bottom">
         <h3>Timeline</h3>
+        {timeline}
+
       </div>
     </div>
   )

@@ -20,7 +20,8 @@ const Connection = () => {
       <div className="section">
         <h4>Connected to the Internet</h4>
         <p>The American Community Survey also captures data on internet connection. The current survey asks… [if you have internet, what kind of plan—summarize how the question is asked.] As shown in the data viz below, almost 16% of Everett households, and more than 18% of Revere and Chelsea households, have no internet connection at home.</p>
-        <img src={chart2} />
+        {/* <img src={chart2} /> */}
+        <iframe src="https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/U_S_CensusQuestions?:showVizHome=no&:embed=true" width="100%" height="828"></iframe>
         <p>The connection to the internet is not distributed equally. While the number of households with a fiber / broadband level speed lags behinds the state and region, the lack of connection is even more pronounced to for those households living below 200% of below the poverty threshold.</p>
         <p>Access to the internet is also a racial equity issue. Analysis of the digital divide shows that Black and Latinx residents are also disproportionately represented in “Unconnected Communities,” defined as….   We know nationally disconnect households are disproportionately impacting communities of color.</p>
         <img src={chart3} />
