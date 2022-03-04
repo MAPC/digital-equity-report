@@ -30,24 +30,26 @@
         width: 10rem;
       }
       @include media(small) {
+        margin-right: 0;
         width: 10rem;
       }
+      margin-right: 4rem;
       width: 10rem;
     }
     &__col-2 {
       @include media(large) {
-        margin: auto;
+        // margin: auto;
         max-width: 45rem;
       }
       @include media(medium) {
-        margin: auto;
+        // margin: auto;
         max-width: 45rem;
       }
       @include media(small) {
-        margin: auto;
+        // margin: auto;
         max-width: 100%;
       }
-      margin: auto;
+      // margin: auto;
       max-width: 45rem;
     }
   }

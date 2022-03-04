@@ -5,7 +5,7 @@ import logo from "../../images/mapc-logo.svg";
 
 const Header = () => {
   return (
-    <div className="">
+    <div>
       <div className="section-two-col-flex">
         <div className="section-half"> 
           <Link to="/" className="header__link">
