@@ -106,7 +106,7 @@ const Process = () => {
     return <div key={index} className="section-two-col-flex">
           <div className="section-half border-right">
             <h4>{elem.title}</h4>
-            <h5>{elem.time}</h5>
+            <h4 style={{color: "#BEB6B6"}}>{elem.time}</h4>
           </div>
           <div className="section-half">
             {elem.description.map(p => <p>{p}</p>)}
@@ -119,7 +119,7 @@ const Process = () => {
   return (
     <div>
       <div className="section">
-        <h2>Background</h2>
+        <h2>Process</h2>
         <p>The COVID-19 pandemic has upended daily life in Greater Boston and around the world. Thousands of people can’t report to work, and millions are being told to cease nonessential travel. Never before has the internet been so essential for working remotely and staying connected. MAPC’s urban communities have identified access to fast, reliable, and affordable internet was a challenge to residents and businesses.</p>
         <p>Through economic recovery and resilience efforts there is an opportunity to make significant investments to address systemic issues that underpin the “Digital Divide”. Leveraging funds made available through the Economic Development Administration’s Disaster Mitigation and Planning Grant, made available through the Coronavirus Aid, Relief, and Economic Security (CARES) Act, MAPC partnered with municipalities who were facing COVID recovery challenges and both acute and systemic Digital Divide issues.</p>
         <p>Through economic recovery and resilience efforts there is an opportunity to make significant investments to address systemic issues that underpin the “Digital Divide”. Leveraging funds made available through the Economic Development Administration’s Disaster Mitigation and Planning Grant, made available through the Coronavirus Aid, Relief, and Economic Security (CARES) Act, MAPC partnered with municipalities who were facing COVID recovery challenges and both acute and systemic Digital Divide issues.</p>
@@ -175,7 +175,7 @@ const Process = () => {
       </div>
       <div className="section">
         <h3>Project Vision</h3>
-        <h4>Remove barriers <span style={{fontWeight: "200"}}>to adoption that prevent universal access to reliable and high speed (100/100) internet.</span></h4> 
+        <h4>Remove barriers <span style={{fontFamily: 'AvenirNextLTPro-Regular'}}>to adoption that prevent universal access to reliable and high speed (100/100) internet.</span></h4> 
         <h4>Augment the capacity <span style={{fontWeight: "200"}}>of key stakeholders such as IT Departments, School Districts, Libraries, Community based organizations, and municipal staff to address the digital divide</span></h4>
         <h4><span style={{fontWeight: "200"}}>Ensure all residents who desire to improve their digital / technology literacy have a</span> pathway to educational opportunities <span style={{fontWeight: "200"}}>at a range of skill levels, offered in community appropriate languages and settings.</span></h4>
         <h4>Promote competition <span style={{fontWeight: "200"}}>among internet service providers offering broadband service.</span></h4>

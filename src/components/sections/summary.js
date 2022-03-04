@@ -6,7 +6,7 @@ const Summary = () => {
     <div>
       <div className="section section-bottom">
         <h2>Executive Summary</h2>
-        <h4>Now is time to close Digital Divide</h4>
+        <h4>Now is time to close the Digital Divide</h4>
         <p>Equity is the condition of fair and just inclusion into a society. Equity will exist when those who have been most marginalized have equal access to opportunities, power, participation and resources and all have avenues to safe, healthy, productive, and fulfilling lives. It requires restructuring deeply entrenched systems of privilege and oppression that have led to the uneven distribution of benefits and burdens over multiple generations. Society will be stronger when the promise in all of us is actualized. With inspiration from: Policy Link, King County Office of Equity and Social Justice</p>
         <h4>Everett, Chelsea, & Revere</h4>
         <p>Ben Forman, a Research Director at the Massachusetts Institute for a New Commonwealth (MassINC), published “Gateway Cities at the Center of the digital divide in Massachusetts” in May of 2020. MassINC is a nonprofit think tank and news source in the state. Forman’s article provides an overview and visualization of the Census Bureau data on internet and device access for Gateway Cities in the state. The articles provides maps and key findings from this data that are filtered so that the reader can best understand the digital divide as it pertains to education for students in these cities.</p>

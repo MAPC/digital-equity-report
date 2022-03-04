@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@700&display=swap');
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+  font-family: AvenirNextLTPro-Regular;
+  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: AvenirNextLTPro;
+  font-weight: bold;
+  src: url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+// Stylesheets
+
 @import "vars";
 @import "header";
 @import "landing";
