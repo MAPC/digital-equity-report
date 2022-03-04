@@ -15,7 +15,7 @@
   color: $color-white;
   display: grid;
   flex-direction: row;
-  font-family: 'Tw Cen MT';
+  font-family: AvenirNextLTPro;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   padding: 3rem 5rem;
@@ -74,7 +74,9 @@
   }
 
   &__link {
+    border-bottom: none;
     color: $color-white;
+    font-family: "Noto Serif", serif;
     text-decoration: none;
   }
 

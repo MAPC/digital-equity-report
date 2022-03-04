@@ -9,6 +9,7 @@
 
 a.report-menu{
     &__link {
+    border-bottom: none;
     color: $color-smoke;
     font-size: $font_size-xsmall;
     font-weight: bold;
@@ -25,6 +26,7 @@ a.report-menu{
     }
   }
   &__sublink {
+    border-bottom: none;
     color: $color-midnight;
     font-size: $font_size-xxsmall;
     font-weight: bold;

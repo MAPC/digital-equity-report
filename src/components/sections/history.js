@@ -44,7 +44,7 @@ const History = () => {
       <div className="section">
         <h3>How Does the Internet Function?</h3>
         <p>Let’s look at the technology that is relied upon to provide the internet to us.</p>
-        <iframe src="https://slides.com/mapc/internet-slides/embed" width="100%" height="580" title="Internet Slides" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://slides.com/mapc/internet-slides/embed" width="100%" height="480" title="Internet Slides" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <div className="section-two-col-flex">
         <div className="section-half border-right">

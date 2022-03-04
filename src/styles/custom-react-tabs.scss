@@ -2,7 +2,7 @@
   -webkit-tap-highlight-color: transparent;
 
   &__tab-list {
-    border-bottom: 2px solid $color-dark-teal;
+    border-bottom: 2px solid $color-midnight;
     box-shadow: rgba(0, 0, 0, .10) 0 6px 2px -2px;
     display: flex;
     justify-content: space-between;
@@ -26,14 +26,15 @@
     text-align: center;
 
     h4 {
+      color: $color-smoke;
       margin-bottom: 0.5rem;
     }
 
     &--selected {
       background: #fff;
-      border-bottom: 6px solid $color-dark-teal;
+      border-bottom: 6px solid $color-midnight;
       h4 {
-        color: $color-light-teal;
+        color: $color-midnight;
       }
     }
 
