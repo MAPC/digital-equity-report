@@ -57,6 +57,7 @@ const Process = () => {
 
   const timelineData = [
     {
+      phase: "1A",
       title: "Existing Conditions",
       time: "February - April",
       description: [
@@ -68,6 +69,7 @@ const Process = () => {
       ]
     },
     {
+      phase: "1B",
       title: "Community Needs Assessment",
       time: "April - June",
       description: [
@@ -78,6 +80,7 @@ const Process = () => {
       ]
     },
     {
+      phase: "2",
       title: "Infrastructure and Technology Evaluation ",
       time: "June - August",
       description: [
@@ -90,6 +93,7 @@ const Process = () => {
       ]
     },
     {
+      phase: "3",
       title: "Plan Development",
       time: "August - November",
       description: [
@@ -105,13 +109,16 @@ const Process = () => {
   const timeline = timelineData.map((elem, index) => {
     return <div key={index} className="section-two-col-flex">
           <div className="section-half border-right">
-            <h4>{elem.title}</h4>
+            <h4>Phase {elem.phase}</h4>
             <h4 style={{color: "#BEB6B6"}}>{elem.time}</h4>
           </div>
           <div className="section-half">
+            <h4>{elem.title}</h4>
             {elem.description.map(p => <p>{p}</p>)}
             <h5>Deliverables</h5>
-            {elem.deliverables.map(p => <p>{p}</p>)}
+            <ul>
+              {elem.deliverables.map((li, index) => <li key={index}>{li}</li>)}
+            </ul>
           </div>
         </div>
   })

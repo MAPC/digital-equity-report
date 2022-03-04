@@ -8,7 +8,8 @@ $font_size-xsmall: 1rem; // 16px
 $font_size-xxsmall: 0.75rem; // 12px
 
 // Colors
-$color-dark-teal: #155756;
+// $color-dark-teal: #155756;
+$color-dark-teal: #123e4b;
 $color-light-teal: cadetblue;
 $color-deep-gold: #D1B02A;
 $color-pale-butter: #FFE6AF;
@@ -16,7 +17,8 @@ $color-blush: #F2EDF2;
 $color-smoke: #BEB6B6;
 $color-cornflower: #6495ED;
 $color-ash-purple: #7774AA;
-$color-midnight: #07215B;
+// $color-midnight: #07215B;
+$color-midnight: navy;
 $color-white: #ffffff;
 
 // Media Query
@@ -116,6 +118,8 @@ p.bold {
 }
 
 ul, li {
-  list-style: none;
-  padding: 0;
+  font-family: 'Noto Serif', serif;
+  line-height: 1.65;
+  list-style: circle;
+  padding-left: 1rem;
 }

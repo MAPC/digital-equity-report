@@ -38,18 +38,14 @@
     }
     &__col-2 {
       @include media(large) {
-        // margin: auto;
         max-width: 45rem;
       }
       @include media(medium) {
-        // margin: auto;
         max-width: 45rem;
       }
       @include media(small) {
-        // margin: auto;
         max-width: 100%;
       }
-      // margin: auto;
       max-width: 45rem;
     }
   }
@@ -77,7 +73,7 @@
     margin-bottom: 2rem;
   }
   &-bottom {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 }
 
