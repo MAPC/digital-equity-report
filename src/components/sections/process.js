@@ -141,7 +141,7 @@ const Process = () => {
         <div className="section-half">
           <h3>Community Advisory Members</h3>
           <h4>MAPC Staff</h4>
-          <ul>
+          <ul className="">
             {mapcList}
           </ul>
           <h4>City of Everett</h4>
