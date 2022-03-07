@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-
+import TimelineAccordion from "../accordions/timelineAccordion";
 const Process = () => {
 
   function parseList(list) {
@@ -189,8 +189,8 @@ const Process = () => {
       </div>
       <div className="section section-bottom">
         <h3>Timeline</h3>
-        {timeline}
-
+        {/* {timeline} */}
+        <TimelineAccordion />
       </div>
     </div>
   )

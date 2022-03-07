@@ -2,6 +2,17 @@
   &-container {
     height: 100vh;
   }
+  &-image {
+    align-items: center;
+    background-color: rgba(237, 237, 237, 0.8);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    overflow: scroll;
+    width: 100vw;
+    z-index: 5;
+  }
   &-header {
     background-color: $color-dark-teal;
     &-copy {

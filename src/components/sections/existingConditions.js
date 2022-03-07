@@ -31,9 +31,13 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
 
           <TabPanel>
             <Connection />
-            <AnchorLink to={`#tabs`} className="anchor">
+            <AnchorLink 
+              to={`#tabs`} 
+              className="anchor"
+              onSelect={() => setTabIndex(tabIndex + 1)}
+            >
               <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
-              <span className="anchor__helper-text">Return to Selection</span>
+              <span className="anchor__helper-text">Next Section</span>
             </AnchorLink>
           </TabPanel>
           <TabPanel>
