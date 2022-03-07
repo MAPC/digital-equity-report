@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
+  // border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
     borderBottom: 0,
   },
@@ -26,8 +26,10 @@ const AccordionSummary = styled((props) => (
 ))(({ theme }) => ({
   backgroundColor:
     theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+      ? 'rgba(0, 0, 0, .03)'
+      // : 'rgba(255, 230, 175, 0.5)',
+      : 'rgba(100, 149, 237, 0.15)',
+  border: '2px solid white',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -39,7 +41,7 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
+  // borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
 export default function TimelineAccordion() {
@@ -104,7 +106,7 @@ export default function TimelineAccordion() {
     return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
       <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
         <Typography>            
-          <h4>Phase {elem.phase}</h4>
+          <h4 style={{color: "black"}}>Phase {elem.phase}</h4>
         </Typography>
       </AccordionSummary>
       <AccordionDetails>

@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
     borderBottom: 0,
   },
@@ -26,8 +25,10 @@ const AccordionSummary = styled((props) => (
 ))(({ theme }) => ({
   backgroundColor:
     theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+      ? 'rgba(0, 0, 0, .03)'
+      // : 'rgba(255, 230, 175, 0.5)',
+      : 'rgba(100, 149, 237, 0.15)',
+  border: '2px solid white',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -39,7 +40,6 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
 export default function ActionsAccordion() {
@@ -155,17 +155,21 @@ export default function ActionsAccordion() {
   const createAccordions = actions.map((action, index) => {
       return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
         <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
-          <Typography>{action.title}</Typography>
+          <Typography><h5>{action.title}</h5></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <p>Timeframe: {action.timeframe}</p>
-            <p>Status: {action.status}</p>
-            <p>Type: {action.type}</p>
-            <p>Primary Actor: {action.actor}</p>
-            <p>Description:</p> 
-            {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
-            <p>Next Steps:</p>
+            <h5 style={{marginBottom: 0}}>Timeframe:</h5>
+            <p style={{marginTop: 0}}>{action.timeframe}</p>
+            <h5 style={{marginBottom: 0}}>Status: </h5>
+            <p style={{marginTop: 0}}>{action.status}</p>
+            <h5 style={{marginBottom: 0}}>Type: </h5>
+            <p style={{marginTop: 0}}>{action.type}</p>
+            <h5 style={{marginBottom: 0}}>Primary Actor: </h5>
+            <p style={{marginTop: 0}}>{action.actor}</p>
+            <h5>Description</h5>
+            {action.description.map((elem, i) => <p key={i} style={{marginTop: 0}}>{elem}</p>)}
+            <h5 style={{marginBottom: 0}}>Next Steps</h5>
             <ul>
               {action.steps.map((elem, i) => <li key={i}>{elem}</li>)}
             </ul>
