@@ -13,8 +13,7 @@ const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
     {type: "sub", title: "Infrastructure", tab: 2, parent: "existing-conditions"},
     {type: "main", link: "assessment", title: "Community Needs Assessment"},
     {type: "main", link: "actions", title: "Actions To Take"},
-    {type: "main", link: "appendix", title: "Appendix"},
-    {type: "main", link: "literature-review", title: "Literature"}
+    {type: "main", link: "appendix", title: "Appendix"}
   ]
 
   const menuLinks = menuData.map((element, i) => {

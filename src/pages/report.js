@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import Header from "../components/modules/header"; 
 import ReportMenu from "../components/reportMenu";
 import Summary from "../components/sections/summary";
@@ -9,12 +9,16 @@ import Assessment from "../components/sections/assessment";
 import Actions from "../components/sections/actions";
 import Appendix from "../components/sections/appendix";
 import LiteratureReview from "../components/sections/literatureReview";
-import Footer from "../components/modules/footer"
+import Footer from "../components/modules/footer";
+import chart1 from "../images/bar-chart-placeholder.png";
+import { PopupContext } from "../components/contexts/popupContext";
 
 const Report = () => {
 
   const [tabIndex, setTabIndex] = useState(0);
   const [isActive, setActive] = useState("summary");
+  // const [popup, togglePopup] = useContext(PopupContext);
+  // const [popupSource, setPopupSource] = useContext(PopupContext);
 
   const summaryRef = useRef();
   const processRef = useRef();
@@ -23,8 +27,7 @@ const Report = () => {
   const assessRef = useRef();
   const actionsRef = useRef();
   const appendixRef = useRef();
-  const litRef = useRef();
-  let refs = [summaryRef, processRef, historyRef, existingRef, assessRef, actionsRef, appendixRef, litRef];
+  let refs = [summaryRef, processRef, historyRef, existingRef, assessRef, actionsRef, appendixRef];
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -33,9 +36,7 @@ const Report = () => {
 
   const handleScroll = () => {
     let viewport = window.pageYOffset + window.innerHeight;
-    if (viewport >= refs[7].current.offsetTop) {
-      setActive(refs[7].current.id);
-    } else if (viewport >= refs[6].current.offsetTop) {
+    if (viewport >= refs[6].current.offsetTop) {
       setActive(refs[6].current.id);
     } else if (viewport >= refs[5].current.offsetTop) {
       setActive(refs[5].current.id);
@@ -55,7 +56,15 @@ const Report = () => {
   } 
 
   return (
+    // <PopupProvider>
     <div className="report-container" onScroll={handleScroll}>
+      {/* <div className={popup ? "report-image" : "hidden"}>
+        <img 
+          className={popup ? "popup" : "hidden"} 
+          src={popupSource} 
+          onClick={() => togglePopup(!popup)}
+        />
+      </div> */}
       <div className="report-header padding">
         <Header />
         <div className="report-header-copy">
@@ -104,15 +113,12 @@ const Report = () => {
           <div ref={appendixRef} id="appendix">
             <Appendix />
           </div>
-          
-          <div ref={litRef} id="literature-review">
-            <LiteratureReview />
-          </div>
         
         </div>
       </div>
       <Footer />
     </div>
+    // </PopupProvider>
   )
 }
 

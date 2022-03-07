@@ -96,11 +96,6 @@ h5 {
   font-size: $font_size-xsmall;
 }
 
-img {
-  box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-  width: 100%;
-}
-
 p {
   font-family: 'Noto Serif', serif;
   font-size: $font_size-xsmall;
@@ -121,5 +116,5 @@ ul, li {
   font-family: 'Noto Serif', serif;
   line-height: 1.65;
   list-style: none;
-  // padding-left: 1rem;
+  padding: 0;
 }

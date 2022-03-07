@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import Menu from "./mainMenu";
 import logo from "../../images/mapc-logo.svg";
 

@@ -4,11 +4,14 @@ import Landing from "../components/landing";
 import Report from "./report";
 import ReactMarkdown from 'react-markdown';
 import "../styles/index.scss";
+import { PopupProvider } from "../components/contexts/popupContext";
 
 const IndexPage = () => {
   return (
     <div>
-      <Landing />
+      <PopupProvider>
+        <Landing />
+      </PopupProvider>
     </div>
   )
 }
