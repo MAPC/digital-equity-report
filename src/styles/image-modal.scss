@@ -12,12 +12,17 @@ img {
   cursor: pointer;
   height: auto;
   max-height: 90vh;
-  width: 80vw;
+  width: auto;
 }
 
-.expand-overlay {
-  cursor: pointer;
-  margin-left: 1rem;
-  margin-top: -4rem;
-  position: absolute;
+.modal {
+  &-container {
+    margin-bottom: 1.995rem; 
+  }
+  &-expand-overlay {
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: -3rem;
+    position: absolute;
+  }
 }

@@ -10,7 +10,7 @@ const ImageModal = ({source}) => {
   const [expand, toggleExpand] = useState(false);
 
     return (
-      <div>
+      <div className="modal-container">
         <div>
           <img 
             src={source}
@@ -26,9 +26,9 @@ const ImageModal = ({source}) => {
             }}
           />
         </div>
-        <div className="expand-overlay">
+        <div className="modal-expand-overlay">
           <FaExpand 
-            size={"3em"} 
+            size={"2em"} 
             style={expand ? {color: "#FFE6AF"} : {color: "navy"}}             
             onClick={() => {
               setPopupSource(source);
