@@ -135,8 +135,6 @@ const Assessment = () => {
         <Tabs>
           <TabList>
             <Tab><h4>Internet Subscriptions</h4></Tab>
-            <Tab><h4>Affordability</h4></Tab>
-            <Tab><h4>Reliability</h4></Tab>
             <Tab><h4>Literacy</h4></Tab>
             <Tab><h4>Device Access</h4></Tab>
           </TabList>
@@ -163,10 +161,10 @@ const Assessment = () => {
             Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service. 
 
             In Revere and Everett where RCN is an available competitor to Comcast, those communities had about 20% of users subscribing to an alternative to Comcast. Indicating that where there is more choice in service providers, individuals will adopt.</p>
-          </TabPanel>
-          <TabPanel>
+
             <div className="section-two-col-flex">
               <div className="section-half border-right">
+                <h4>Affordability</h4>
                 <p>70% of survey respondents have had to change or cancel their internet subscription because it was too expensive 
 
                 Overall, only 50% of respondents agreed with the statement “My internet is affordable” 
@@ -181,10 +179,10 @@ const Assessment = () => {
                 <CalloutQuote quote="Necesitamos que el costo del internet sea mas justo." byline="We need the cost of the internet to be fairer." />
               </div>
             </div>
-          </TabPanel>
-          <TabPanel>
+
             <div className="section-two-col-flex">
               <div className="section-half">
+                <h4>Reliability</h4>
                 <p>37% of survey respondents have had to leave their home to use internet at another location because internet at their home is unreliable 
 
                 32% of survey respondents indicate that they always or frequently have issues with dropped or choppy video calls. 
@@ -199,6 +197,7 @@ const Assessment = () => {
                 <img src={chart1} />
               </div>
             </div>
+
           </TabPanel>
           <TabPanel>
             <p>Digital Access can be defined as the ability to use a device and internet effectively and in a way that enables an individual to easily use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills.  These skills are a foundational element of digital access and are frequently observed as the most difficult of the three legs of the stool to address due to different levels of experience with technology, language barriers, and other issues. </p>
