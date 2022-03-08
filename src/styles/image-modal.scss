@@ -1,6 +1,5 @@
 img {
   box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-  cursor: pointer;
   position: relative;
   width: 100%;
 }
@@ -10,7 +9,15 @@ img {
 }
 
 .popup {
+  cursor: pointer;
   height: auto;
   max-height: 90vh;
   width: 80vw;
+}
+
+.expand-overlay {
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-top: -4rem;
+  position: absolute;
 }
