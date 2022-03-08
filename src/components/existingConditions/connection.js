@@ -54,7 +54,9 @@ const Connection = () => {
           <p>A recent 2021 Pew study found that 30% of adults are not “tech ready,” meaning they need support to set up or navigate a new computer, smartphone or other electronic device or have little to no confidence to use those devices to do the things they need to do online. The digital literacy issue is even greater with older adults.</p>
         </div>
         <div className="section-half">
-          <img src={chart1} />
+          <ImageModal
+            source={chart1}
+          />
         </div>
       </div>
       <div className="section-two-col-flex">
@@ -63,7 +65,9 @@ const Connection = () => {
           <p>There are many ways for a person to develop or gain skills that can help them to be more productive and secure while accessing services and information across the web. <a href="https://www.digitalinclusion.org/digital-navigator-model/">The National Digital Inclusion Alliance (NDIA)</a> has pioneered many efforts to bridge the digital divide, most recently through the Digital Navigator program, a train the trainer model that enables staff at community organizations to support computer users using common applications such as email, Google search, and other productivity tools; sign up for discounted Internet service; and provide light IT support. Digital Navigators have been placed in libraries, schools, and community-based organizations. The MetroNorth Work Force Board, through their YouthWorks programming and with support from Comcast, is currently organizing Digital Navigator programs in Everett, Revere, and Malden municipal offices.</p>
         </div>
         <div className="section-half">
-          <img src={chart2} />
+          <ImageModal
+            source={chart2} 
+          />
         </div>
       </div>
     </div>
