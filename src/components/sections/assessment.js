@@ -109,9 +109,24 @@ const Assessment = () => {
       </div>  
       <div className="section">
         <h4>Demographics</h4>
-        <p>In addition to being available in English the digital access survey was translated into 5 languages spoken widely in the three cities; Spanish, Haitian Creole, Brazilian Portuguese, Arabic, and Khmer.</p>
-        {floats}
-        {percents}
+        <Tabs>
+          <TabList>
+            <Tab><h4>Language</h4></Tab>
+            <Tab><h4>Race and Ethnicity</h4></Tab>
+            <Tab><h4>Household Size</h4></Tab>
+          </TabList>
+
+          <TabPanel>
+            <p>In addition to being available in English the digital access survey was translated into 5 languages spoken widely in the three cities; Spanish, Haitian Creole, Brazilian Portuguese, Arabic, and Khmer.</p>
+            {floats}
+          </TabPanel>
+          <TabPanel>
+            {percents}
+          </TabPanel>
+          <TabPanel>
+            {percents}
+          </TabPanel>
+        </Tabs> 
       </div>
       <div className="section section-bottom">
         <h3>Key Findings</h3>

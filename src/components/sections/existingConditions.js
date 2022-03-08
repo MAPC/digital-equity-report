@@ -34,17 +34,21 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
             <AnchorLink 
               to={`#tabs`} 
               className="anchor"
-              onSelect={() => setTabIndex(tabIndex + 1)}
+              onAnchorLinkClick={() => setTabIndex(tabIndex + 1)}
             >
               <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
-              <span className="anchor__helper-text">Next Section</span>
+              <span className="anchor__helper-text">Next Section: Service & Affordability</span>
             </AnchorLink>
           </TabPanel>
           <TabPanel>
             <Service />
-            <AnchorLink to={`#tabs`} className="anchor">
+            <AnchorLink 
+              to={`#tabs`} 
+              className="anchor"
+              onAnchorLinkClick={() => setTabIndex(tabIndex + 1)}
+            >
               <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
-              <span className="anchor__helper-text">Return to Selection</span>
+              <span className="anchor__helper-text">Next Section: Infrastructure</span>
             </AnchorLink>
           </TabPanel>
           <TabPanel>

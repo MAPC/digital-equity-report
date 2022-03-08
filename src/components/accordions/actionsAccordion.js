@@ -137,7 +137,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      title: "Adopt a standard small cell permitting policy and practice. ",
+      title: "Adopt a standard small cell permitting policy and practice",
       timeframe: "Intermediate / Long term ", 
       status: "Potential",
       type: "Connection",
@@ -150,12 +150,120 @@ export default function ActionsAccordion() {
         "Draft and establish guidelines drawing on successful practices and community input"
       ]
     },
+    {
+      title: "Leverage Cable Franchise to Map Connection",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        "MAPC will establish a process to expand on the analysis that comes from fiber and 	cable mapping data provided by ISPs."
+      ],
+      steps: [
+        "MACP to establish program and funds (DLTA?)"
+      ]
+    },
+    {
+      title: "Hire a Regional Digital Access and Equity Officer ",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        "Municipalities hire a shared digital equity officer model after similar positions 	across the country. "
+      ],
+      steps: [
+        "Connect with MAPC Regional Cyber officer work",
+        "Pull list of positions and job descriptions "
+      ]
+    },
+    {
+      title: "Participate in Youth Works Digital Navigators Program",
+      timeframe: "Intermediate", 
+      status: "Underway",
+      type: "Digital Literacy",
+      actor: "Municipal Staff, Community Organizations",
+      description: [
+        "Through the Chelsea, Everett, Revere planning process, it was revealed that there were significant gaps in local capacity to help residents navigate the various public benefit resources related to digital access. To address this issue, MAPC worked with the MetroNorth Workforce Investment Board to seek funding through the State’s Commonwealth Corporation YouthWorks program, and additional corporate support from Comcast. By combining these funds, the MetroNorth Workforce Board was able to hire the National Digital Inclusion Alliance to train and support 15 young people, aged 17 – 21, in Everett, Revere, and Malden to provide digital resource navigation support.",
+        "MAPC is further supporting the workforce board by connecting the young people with entities who are working directly with the target population the navigators seek to serve. These include healthcare institutions like the Cambridge Health Alliance, school districts, housing authorities, and the Mass Healthy Aging Council.",
+        "This is the first youth-focused digital navigators program in the country. Municipalities responded to RFI, Spend residents to support and help make connections between new capacity and those that need support. Digital Navigators can be embedded in municipal offices, healthcare facilities, schools, or other CBO's to provide direct technology and resource support to the community."
+      ],
+      steps: [
+        "Connect residents to new service ",
+        "Add to training and City communications "
+      ]
+    },
+    {
+      title: "Brand Cities as \"Tech Goes Home\" Communities ",
+      timeframe: "Immediate", 
+      status: "Potential",
+      type: "Digital Literacy",
+      actor: "Municipal Staff",
+      description: [
+        "Embed at least one Tech Goes Home instructor in every school and library in the City.  Ensure courses are offered in Spanish, Haitian Creole, Portuguese, and other community languages."
+      ],
+      steps: [
+        "Adopt brand as policy and assess funding requirements "
+      ]
+    },
+    {
+      title: "Reposition Community TV as a Digital Resource Hub",
+      timeframe: "Long term", 
+      status: "Potential",
+      type: "Digital Literacy, Device",
+      actor: "Community TV Staff, Municipal Staff",
+      description: [
+        "Local cable stations could leverage existing equipment, knowledge, and space for digital content production and skill development."
+      ],
+      steps: [
+        "Establish an advisory board to develop a strategic plan for local access stations "
+      ]
+    },
+    {
+      title: "Apply for and Distribute Emergency Connectivity Fund Resources",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Digital Literacy, Device",
+      actor: "Municipal Staff",
+      description: [
+        "The Emergency Connectivity Fund assists schools and libraries purchase technology equipment and internet service.  Funds should be leveraged to supporting wired connections whenever possible."
+      ],
+      steps: [
+        "Submit ECF applications from School District and Library "
+      ]
+    },
+    {
+      title: "Establish a Digital Equity Trust Fund",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Digital Literacy, Device, Connection",
+      actor: "Municipal Staff",
+      description: [
+        "A Digital Equity Trust would be a sustained funding source to assist residents purchase devices such as PC's or routers, as well as internet subscriptions when subsidies are unavailable."
+      ],
+      steps: [
+        "Establish a trust through legislative action."
+      ]
+    },
+    {
+      title: "Support the Creation of a Tech Refurbishment Center (Long)",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Device",
+      actor: "Municipal Staff",
+      description: [
+        "A Tech Refurbishment program would divert e-waste, enable skill-building, and provide low-cost options for devices in the community."
+      ],
+      steps: [
+        "Coordinate with private sector partners, School District, and Workforce Board"
+      ]
+    }
   ]
 
   const createAccordions = actions.map((action, index) => {
       return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
         <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
-          <Typography><h5>{action.title}</h5></Typography>
+          <Typography><h5 style={{margin: "0.5rem"}}>{action.title}</h5></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
