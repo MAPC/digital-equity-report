@@ -197,8 +197,7 @@ const Assessment = () => {
               </div>
             </div>
 
-            <div className="section-two-col-flex">
-              <div className="section-half">
+            <div className="section">
                 <h4>Reliability</h4>
                 <p>37% of survey respondents have had to leave their home to use internet at another location because internet at their home is unreliable 
 
@@ -209,10 +208,6 @@ const Assessment = () => {
                 Those respondents who disagreed with the statement my internet is affordable (45% of all respondents), that number jumps to 45% indicating they always or frequently have issues with dropped video calls, potentially indicating that they are unable to pay for the speed package needed to serve their household. 
 
                 Respondents who indicated that thre or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls </p>                
-              </div>
-              <div className="section-half">
-                <img src={chart1} />
-              </div>
             </div>
 
           </TabPanel>

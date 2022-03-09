@@ -286,7 +286,7 @@ export default function ActionsAccordion() {
     return actions.map((action, index) => {
       return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
         <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
-          <Typography><h5 style={{margin: "0.5rem"}}>{action.title}</h5></Typography>
+          <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.title}</h4></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
