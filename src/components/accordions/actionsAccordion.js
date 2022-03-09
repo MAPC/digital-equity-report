@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -43,7 +43,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function ActionsAccordion() {
-  const [expanded, setExpanded] = React.useState('panel0');
+  const [expanded, setExpanded] = useState();
 
   const handleChange = (panel) => (event, newExpanded) => {
     
@@ -65,7 +65,7 @@ export default function ActionsAccordion() {
 
   };
 
-  const actions = [
+  const immediate = [
     {
       title: "Participate in Education Superhighway Bridge to Broadband Program Pilot",
       timeframe: "Immediate (Fall 2021 – Winter 2022)",
@@ -81,6 +81,36 @@ export default function ActionsAccordion() {
         "Advocate for ways to expand data exchanges that respect data rights and privacy beyond schools to support broader community connection efforts."
       ]
     },
+    {
+      title: "Explore and Align Municipal Infrastructure Investments",
+      timeframe: "Immediate (March 2022) / Long term ", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        "Building on the infrastructure investments that have already been made by Everett, Chelsea, and Revere, to connect municipal buildings and assets. There is an opportunity to align in future investments and maintenance. The Division of Local Services has established a Municipal Fiber Grant Program that opens for the first time in March of 2020. Structured like other competitive Community Compact grants, this program allows more funds to go towards multi-jurisdictional projects up to a maximum of $500,000 may be awarded to a project.  This is an opportunity to address deficiencies in municipal networks identified in reports (like Chelsea’s Dewsbury report) while establishing robust fiber option networking to support network monitoring, cyber security, records management, and backup and recovery. Cohesive and collaborative inter-municipal network connection also creates opportunities to gain economies of scale by aggregating internet bandwidth purchases and the associated security infrastructure."
+      ],
+      steps: [
+        "Identify priority municipal infrastructure needs",
+        "Draft application(s) for Municipal Fiber Grant program "
+      ]
+    },
+    {
+      title: "Brand Cities as \"Tech Goes Home\" Communities ",
+      timeframe: "Immediate", 
+      status: "Potential",
+      type: "Digital Literacy",
+      actor: "Municipal Staff",
+      description: [
+        "Embed at least one Tech Goes Home instructor in every school and library in the City.  Ensure courses are offered in Spanish, Haitian Creole, Portuguese, and other community languages."
+      ],
+      steps: [
+        "Adopt brand as policy and assess funding requirements "
+      ]
+    },
+  ]
+
+  const intermediate = [
     {
       title: "Establish Wi-Fi deployments as part of Mass Broadband Institute Gateway City WiFi Grant",
       timeframe: "Intermediate (Summer 2021 – 2024)", 
@@ -123,20 +153,6 @@ export default function ActionsAccordion() {
       ],
       steps: [
         "Review fiber maps and ID priority areas for investment. "
-      ]
-    },
-    {
-      title: "Explore and Align Municipal Infrastructure Investments",
-      timeframe: "Immediate (March 2022) / Long term ", 
-      status: "Potential",
-      type: "Connection",
-      actor: "Municipal Staff",
-      description: [
-        "Building on the infrastructure investments that have already been made by Everett, Chelsea, and Revere, to connect municipal buildings and assets. There is an opportunity to align in future investments and maintenance. The Division of Local Services has established a Municipal Fiber Grant Program that opens for the first time in March of 2020. Structured like other competitive Community Compact grants, this program allows more funds to go towards multi-jurisdictional projects up to a maximum of $500,000 may be awarded to a project.  This is an opportunity to address deficiencies in municipal networks identified in reports (like Chelsea’s Dewsbury report) while establishing robust fiber option networking to support network monitoring, cyber security, records management, and backup and recovery. Cohesive and collaborative inter-municipal network connection also creates opportunities to gain economies of scale by aggregating internet bandwidth purchases and the associated security infrastructure."
-      ],
-      steps: [
-        "Identify priority municipal infrastructure needs",
-        "Draft application(s) for Municipal Fiber Grant program "
       ]
     },
     {
@@ -210,32 +226,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      title: "Brand Cities as \"Tech Goes Home\" Communities ",
-      timeframe: "Immediate", 
-      status: "Potential",
-      type: "Digital Literacy",
-      actor: "Municipal Staff",
-      description: [
-        "Embed at least one Tech Goes Home instructor in every school and library in the City.  Ensure courses are offered in Spanish, Haitian Creole, Portuguese, and other community languages."
-      ],
-      steps: [
-        "Adopt brand as policy and assess funding requirements "
-      ]
-    },
-    {
-      title: "Reposition Community TV as a Digital Resource Hub",
-      timeframe: "Long term", 
-      status: "Potential",
-      type: "Digital Literacy, Device",
-      actor: "Community TV Staff, Municipal Staff",
-      description: [
-        "Local cable stations could leverage existing equipment, knowledge, and space for digital content production and skill development."
-      ],
-      steps: [
-        "Establish an advisory board to develop a strategic plan for local access stations "
-      ]
-    },
-    {
       title: "Apply for and Distribute Emergency Connectivity Fund Resources",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -276,7 +266,24 @@ export default function ActionsAccordion() {
     }
   ]
 
-  const createAccordions = actions.map((action, index) => {
+  const longterm = [
+    {
+      title: "Reposition Community TV as a Digital Resource Hub",
+      timeframe: "Long term", 
+      status: "Potential",
+      type: "Digital Literacy, Device",
+      actor: "Community TV Staff, Municipal Staff",
+      description: [
+        "Local cable stations could leverage existing equipment, knowledge, and space for digital content production and skill development."
+      ],
+      steps: [
+        "Establish an advisory board to develop a strategic plan for local access stations "
+      ]
+    },
+  ]
+
+  function createAccordions(actions) {
+    return actions.map((action, index) => {
       return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
         <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
           <Typography><h5 style={{margin: "0.5rem"}}>{action.title}</h5></Typography>
@@ -300,11 +307,17 @@ export default function ActionsAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-  })
+    })
+  };
 
   return (
     <div>
-      {createAccordions}
+      <h3>Immediate</h3>
+      {createAccordions(immediate)}
+      <h3>Intermediate</h3>
+      {createAccordions(intermediate)}
+      <h3>Long-term</h3>
+      {createAccordions(longterm)}
     </div>
   );
 }
