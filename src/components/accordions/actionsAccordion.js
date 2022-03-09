@@ -46,7 +46,23 @@ export default function ActionsAccordion() {
   const [expanded, setExpanded] = React.useState('panel0');
 
   const handleChange = (panel) => (event, newExpanded) => {
+    
     setExpanded(newExpanded ? panel : false);
+
+    const viewportOffset = event.target.getBoundingClientRect();
+    const top = viewportOffset.top;
+    const scrollHeight = window.pageYOffset + top;
+
+    console.log("window.pageYOffset", window.pageYOffset);
+    console.log("window.innerHeight", window.innerHeight);
+    console.log("top", top);
+    
+    window.scrollTo({
+      top: scrollHeight ,
+      left: 0,
+      behavior: "smooth",
+    });
+
   };
 
   const actions = [
