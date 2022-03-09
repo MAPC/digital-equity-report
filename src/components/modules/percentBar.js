@@ -9,11 +9,11 @@ const PercentBar = ({percent}) => {
     >
       <div style={{
         backgroundColor: "#D1B02A", 
-        height: "50px", 
+        height: "30px", 
         width: percent + "%", 
-        marginRight: "1rem"}}>
+        marginRight: "1.5rem"}}>
       </div>
-      <h4>{percent}%</h4>
+      <h4 style={{margin: 0}}>{percent}%</h4>
     </div>
   )
 }

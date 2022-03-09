@@ -7,10 +7,11 @@ import chart3 from "../../images/internet-connectivity.png";
 import chart4 from "../../images/learn-more.png";
 import chart5 from "../../images/it.png";
 import PercentBar from "../modules/percentBar";
+import ImageModal from "../modules/imageModal";
 
 const Assessment = () => {
 
-  const floatsData = [
+  const languageFloats = [
     {
       number: "1,068",
       stat: "responses were recorded in English"
@@ -35,19 +36,16 @@ const Assessment = () => {
       number: "0",
       stat: "responses were recorded in Khmer"
     },
+  ]
+
+  const raceFloats = [
     {
       number: "1,404",
       stat: "respondents identified their race or ethnicity within the survey"
     }
   ]
-  const floats =  floatsData.map((elem, index) => {
-    return <div key={index} style={{display: "flex", alignItems: "center"}}>
-      <h4 style={{margin: "0.5rem"}}>{elem.number}</h4>
-      <p>{elem.stat}.</p>
-    </div>
-  })
 
-  const percentsData = [
+  const racePercents = [
     {
       number: 23,
       stat: "of respondents who responded identified as White"
@@ -68,6 +66,9 @@ const Assessment = () => {
       number: 5,
       stat: "as Arab"
     },
+  ]
+
+  const hhPercents = [
     {
       number: 40,
       stat: "of respondents live in a household with 5 or more people"
@@ -87,15 +88,26 @@ const Assessment = () => {
     {
       number: 22,
       stat: "have three or more children"
-    },
+    }
   ]
 
-  const percents = percentsData.map((elem, index) => {
-    return <div key={index}>
-      <PercentBar percent={elem.number} />
-      <p style={{display: "inline"}}><span style={{fontWeight: "200"}}>{elem.stat}.</span></p>
-    </div>
-  })
+  function createFloats(data) {
+    return data.map((elem, index) => {
+      return <div key={index} style={{display: "flex", alignItems: "center"}}>
+        <h4 style={{margin: "0.5rem 0.5rem 0.5rem 0"}}>{elem.number}</h4>
+        <p style={{margin: "0.5rem 0"}}>{elem.stat}.</p>
+      </div>
+    })
+  }
+
+  function createPercents(data) { 
+    return data.map((elem, index) => {
+      return <div key={index} style={{margin: "1.5rem 0"}}>
+        <PercentBar percent={elem.number} />
+        <p style={{display: "inline", margin: "1.5rem 0"}}><span style={{fontWeight: "200"}}>{elem.stat}.</span></p>
+      </div>
+    })
+  }
   
   return (
     <div>
@@ -108,7 +120,7 @@ const Assessment = () => {
         <p>MAPC collected 793 surveys from Chelsea residents, 388 from Everett residents, and 825 from Revere residents. The key findings in this report will summarize the total of the three communities, but specific community-level findings can be viewed using the tableau data tool to the XXXX. </p>
       </div>  
       <div className="section">
-        <h4>Demographics</h4>
+        <h3>Demographics</h3>
         <Tabs>
           <TabList>
             <Tab><h4>Language</h4></Tab>
@@ -118,13 +130,14 @@ const Assessment = () => {
 
           <TabPanel>
             <p>In addition to being available in English the digital access survey was translated into 5 languages spoken widely in the three cities; Spanish, Haitian Creole, Brazilian Portuguese, Arabic, and Khmer.</p>
-            {floats}
+            {createFloats(languageFloats)}
           </TabPanel>
           <TabPanel>
-            {percents}
+            {createFloats(raceFloats)}
+            {createPercents(racePercents)}
           </TabPanel>
           <TabPanel>
-            {percents}
+            {createPercents(hhPercents)}
           </TabPanel>
         </Tabs> 
       </div>
@@ -140,27 +153,31 @@ const Assessment = () => {
           </TabList>
 
           <TabPanel>
-            <p>12% of survey respondents do not have an internet subscription, slightly lower than what is represented in the Census 
+            <div className="section">
+              <iframe src="https://public.tableau.com/shared/P4HHTP4R3?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p>12% of survey respondents do not have an internet subscription, slightly lower than what is represented in the Census 
 
-            6% Do not have any internet at their home 
+              6% Do not have any internet at their home 
 
-            75% of those who do not have internet access cite affordability as the reason why they don’t have internet. 
+              75% of those who do not have internet access cite affordability as the reason why they don’t have internet. 
 
-            6% rely only on a WiFi hotspot 
+              6% rely only on a WiFi hotspot 
 
-            The majority of survey respondents in the three cities are Comcast subscribers. 
+              The majority of survey respondents in the three cities are Comcast subscribers. 
 
-            In Chelsea, where Comcast is the only cable ISP, 80% of respondents used Comcast. In Revere and Everett that number was between 63 and 67%, with an average of 20% of respondents using RCN as an available competitor. 
+              In Chelsea, where Comcast is the only cable ISP, 80% of respondents used Comcast. In Revere and Everett that number was between 63 and 67%, with an average of 20% of respondents using RCN as an available competitor. 
 
-            In all three communities, about 6% of respondents were still using Verizon DSL services. 
+              In all three communities, about 6% of respondents were still using Verizon DSL services. 
 
-            About 8% of respondents in all communities rely on T Mobile or MetroPCS Hotspot mobile subscriptions. 
+              About 8% of respondents in all communities rely on T Mobile or MetroPCS Hotspot mobile subscriptions. 
 
-            Chelsea had the highest number of T-Mobile or MetroPCS wireless service subscriptions as the primary form of internet service. 
+              Chelsea had the highest number of T-Mobile or MetroPCS wireless service subscriptions as the primary form of internet service. 
 
-            Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service. 
+              Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service. 
 
-            In Revere and Everett where RCN is an available competitor to Comcast, those communities had about 20% of users subscribing to an alternative to Comcast. Indicating that where there is more choice in service providers, individuals will adopt.</p>
+              In Revere and Everett where RCN is an available competitor to Comcast, those communities had about 20% of users subscribing to an alternative to Comcast. Indicating that where there is more choice in service providers, individuals will adopt.</p>
+            </div>
+
 
             <div className="section-two-col-flex">
               <div className="section-half border-right">
@@ -200,39 +217,27 @@ const Assessment = () => {
 
           </TabPanel>
           <TabPanel>
-            <p>Digital Access can be defined as the ability to use a device and internet effectively and in a way that enables an individual to easily use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills.  These skills are a foundational element of digital access and are frequently observed as the most difficult of the three legs of the stool to address due to different levels of experience with technology, language barriers, and other issues. </p>
-            <h4>Use of Technology</h4>
-            <div className="section-two-col-flex">
-              <div className="section-half">
-                <p>82% of survey respondents indicate that the feel confident in their ability to use a laptop/Chromebook. 
+            <div className="section">
+              <iframe src="https://public.tableau.com/shared/77TSJBM84?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p>Digital Access can be defined as the ability to use a device and internet effectively and in a way that enables an individual to easily use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills.  These skills are a foundational element of digital access and are frequently observed as the most difficult of the three legs of the stool to address due to different levels of experience with technology, language barriers, and other issues. </p>
+              <h4>Use of Technology</h4>
+              <p>82% of survey respondents indicate that the feel confident in their ability to use a laptop/Chromebook. 
 
-                For respondents who took the survey in a language other than English that number dropped as follows: 
+              For respondents who took the survey in a language other than English that number dropped as follows: 
 
-                70% Arabic 
+              70% Arabic 
 
-                72% Spanish 
+              72% Spanish 
 
-                37.5% Portuguese 
+              37.5% Portuguese 
 
-                Younger respondents also responded with higher levels of confidence than older respondents </p>
-              </div>
-              <div className="section-half">
-                <img src={chart2} />
-              </div>
+              Younger respondents also responded with higher levels of confidence than older respondents </p>
+        
+              <p>A smaller portion of respondents felt comfortable solving issues related directly to internet connectivity. Similarly, that number increased in higher age brackets. </p>
             </div>
-            <div className="section-two-col-flex">
-              <div className="section-half">
-                <p>A smaller portion of respondents felt comfortable solving issues related directly to internet connectivity. 
-                  Similarly, that number increased in higher age brackets. </p>
-              </div>
-              <div className="section-half">
-                <img src={chart3} />
-              </div>
-            </div>
-            <h4>Support Systems and Training</h4>
-            <p>Overall, 90% of respondents indicated that they would prefer to have a local resource that could support technology needs, rather than relying on internet service providers. 
-
-            When asked about which digital skills respondents would like to learn more about, about a third of all respondents indicated interest in all of the following topics: 
+            <div className="section">
+              <h4>Support Systems and Training</h4>
+              <p>Overall, 90% of respondents indicated that they would prefer to have a local resource that could support technology needs, rather than relying on internet service providers. When asked about which digital skills respondents would like to learn more about, about a third of all respondents indicated interest in all of the following topics: 
 
             Essential basic computer skills (identifying technology, using keyboard and mouse, using a web browser) 
 
@@ -241,34 +246,22 @@ const Assessment = () => {
             Using technology in daily life (use online resources to find trustworthy information, find a job, use social media) 
 
             Learning advanced technology skills </p>
-
-            <div className="section-two-col-flex">
-              <div className="section-half">
-                <p>However, twice as many respondents in Spanish indicated an interest in those same skill areas.  </p>
-              </div>
-              <div className="section-half">
-                <img src={chart4} />
-              </div>
-            </div>
-
-            <div className="section-two-col-flex">
-              <div className="section-half">
-                <p>Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available. </p>
-              </div>
-              <div className="section-half">
-                <img src={chart5} />
-              </div>
+              <p>However, twice as many respondents in Spanish indicated an interest in those same skill areas.  </p>
+              <p>Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available. </p>
             </div>
           </TabPanel>
           <TabPanel>
-            <p>In order to utilize the internet for critical personal services such as education, healthcare, and job search / online applications individuals need a computing device with  a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet, but is not a substitute for a personal computing devices function.</p>
-            <p>21.5% of respondents disagreed with the statement “People in my household always have access to a computer if they need one.” 
+            <div className="section">
+              <iframe src="https://public.tableau.com/shared/K3Z38NZS3?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p>In order to utilize the internet for critical personal services such as education, healthcare, and job search / online applications individuals need a computing device with  a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet, but is not a substitute for a personal computing devices function.</p>
+              <p>21.5% of respondents disagreed with the statement “People in my household always have access to a computer if they need one.” 
 
-            60% of respondents lease a WiFi router from an internet service provider. 
+              60% of respondents lease a WiFi router from an internet service provider. 
 
-            41% of respondents have had to buy a new computer in the last three years 
+              41% of respondents have had to buy a new computer in the last three years 
 
-            Many of those individuals had to buy a computer to either replace an older computer, or because their household did not have an existing computer. </p>
+              Many of those individuals had to buy a computer to either replace an older computer, or because their household did not have an existing computer. </p>
+            </div>
           </TabPanel>
         </Tabs>
       </div>

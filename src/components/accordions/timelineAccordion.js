@@ -43,9 +43,38 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function TimelineAccordion() {
   const [expanded, setExpanded] = React.useState('panel0');
+  
+  // const [prevYOffset, setPrevYOffset] = useState(window.pageYOffset);
+  // const prevYRef = useRef();
+
+  // useEffect(() => {
+  //   prevYRef.current = prevYOffset;
+  // }, [prevYOffset]);
+
 
   const handleChange = (panel) => (event, newExpanded) => {
+
     setExpanded(newExpanded ? panel : false);
+
+    // console.log("prevYOffset", prevYOffset);
+    // setPrevYOffset(window.pageYOffset);
+    // console.log("newYOffset", prevYOffset);
+
+    // const viewportOffset = event.target.getBoundingClientRect();
+    // const top = viewportOffset.top;
+    // const scrollHeight = window.pageYOffset + top; // will line to the top, if no other acc open
+
+    // console.log("window.pageYOffset", window.pageYOffset);
+    // console.log("window.innerHeight", window.innerHeight);
+    // console.log("top", top);
+    // console.log("prevYOffset", prevYOffset);
+    
+    // window.scrollTo({
+    //   top: scrollHeight ,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
+
   };
 
   const timelineData = [
