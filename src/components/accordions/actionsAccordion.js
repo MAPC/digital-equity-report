@@ -66,7 +66,8 @@ export default function ActionsAccordion() {
   };
 
   const immediate = [
-    {
+    { 
+      short: "Bridge to Broadband",
       title: "Participate in Education Superhighway Bridge to Broadband Program Pilot",
       timeframe: "Immediate (Fall 2021 – Winter 2022)",
       status: "Completed",
@@ -82,6 +83,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Align Capital Investments",
       title: "Explore and Align Municipal Infrastructure Investments",
       timeframe: "Immediate (March 2022) / Long term ", 
       status: "Potential",
@@ -96,6 +98,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Tech Goes Home Partnership",
       title: "Brand Cities as \"Tech Goes Home\" Communities ",
       timeframe: "Immediate", 
       status: "Potential",
@@ -112,6 +115,7 @@ export default function ActionsAccordion() {
 
   const intermediate = [
     {
+      short: "Housing Authority Wi-Fi",
       title: "Establish Wi-Fi deployments as part of Mass Broadband Institute Gateway City WiFi Grant",
       timeframe: "Intermediate (Summer 2021 – 2024)", 
       status: "Underway",
@@ -129,6 +133,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Rooftop RFP",
       title: "Inventory and release procurements for use of Municipal rooftop space",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -143,6 +148,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Last Mile RFI",
       title: "Release a request for information about \"Last Mile\" fiber connections ",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -156,6 +162,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Dig Once Policy",
       title: "Establish Dig Once Policy",
       timeframe: "Intermediate / Long term ", 
       status: "Potential",
@@ -169,6 +176,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Standardize Small Cell Permits",
       title: "Adopt a standard small cell permitting policy and practice",
       timeframe: "Intermediate / Long term ", 
       status: "Potential",
@@ -183,6 +191,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Analyze Provider Network Maps",
       title: "Leverage Cable Franchise to Map Connection",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -196,6 +205,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Hire Digital Equity Officer",
       title: "Hire a Regional Digital Access and Equity Officer ",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -210,6 +220,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Host Digital Navigator Program",
       title: "Participate in Youth Works Digital Navigators Program",
       timeframe: "Intermediate", 
       status: "Underway",
@@ -226,6 +237,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "ECF Funding Application",
       title: "Apply for and Distribute Emergency Connectivity Fund Resources",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -239,6 +251,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Digital Equity Fund",
       title: "Establish a Digital Equity Trust Fund",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -252,6 +265,7 @@ export default function ActionsAccordion() {
       ]
     },
     {
+      short: "Device Refurbishment Program",
       title: "Support the Creation of a Tech Refurbishment Center (Long)",
       timeframe: "Intermediate", 
       status: "Potential",
@@ -268,6 +282,7 @@ export default function ActionsAccordion() {
 
   const longterm = [
     {
+      short: "Expand on Community TV resource",
       title: "Reposition Community TV as a Digital Resource Hub",
       timeframe: "Long term", 
       status: "Potential",
@@ -286,24 +301,32 @@ export default function ActionsAccordion() {
     return actions.map((action, index) => {
       return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
         <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
-          <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.title}</h4></Typography>
+          <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.short}</h4></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <h5 style={{marginBottom: 0}}>Timeframe:</h5>
-            <p style={{marginTop: 0}}>{action.timeframe}</p>
-            <h5 style={{marginBottom: 0}}>Status: </h5>
-            <p style={{marginTop: 0}}>{action.status}</p>
-            <h5 style={{marginBottom: 0}}>Type: </h5>
-            <p style={{marginTop: 0}}>{action.type}</p>
-            <h5 style={{marginBottom: 0}}>Primary Actor: </h5>
-            <p style={{marginTop: 0}}>{action.actor}</p>
-            <h5>Description</h5>
-            {action.description.map((elem, i) => <p key={i} style={{marginTop: 0}}>{elem}</p>)}
-            <h5 style={{marginBottom: 0}}>Next Steps</h5>
-            <ul>
-              {action.steps.map((elem, i) => <li key={i}>{elem}</li>)}
-            </ul>
+          <h4>{action.title}</h4>
+
+          <div className="section-two-col-flex">
+            <div className="section-half border-right">
+            {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
+            </div>
+            <div className="section-half">
+              {/* <h5 style={{marginBottom: 0, marginTop: "1.6rem"}}>Timeframe:</h5> */}
+              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Timeframe:</span> <br/>{action.timeframe}</p>
+              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Status:</span> <br/>{action.status}</p>
+              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Type:</span> <br/>{action.type}</p>
+              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Primary Actor:</span> <br/>{action.actor}</p>
+              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Next Steps:</span> <br/>
+                <ul style={{marginTop: 0, listStyle: "circle"}}>
+                  {action.steps.map((elem, i) => <li key={i} style={{listStyle: "circle", marginLeft: "1.2rem"}}>{elem}</li>)}
+                </ul>
+              </p>
+            </div>
+          </div>
+
+
+
           </Typography>
         </AccordionDetails>
       </Accordion>

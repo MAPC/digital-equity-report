@@ -69,7 +69,6 @@ const Process = () => {
           <h4>MAPC Staff</h4>
           <ul className="">
             {createList(mapc)}
-            {/* {mapcList} */}
           </ul>
           <h4>City of Everett</h4>
           <ul>
