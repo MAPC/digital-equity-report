@@ -9,6 +9,13 @@
       border-bottom: none;
       color: $color-pale-butter;
     }
+    a {
+    color: $color-white;
+      &:hover {
+        border-bottom: none;
+        color: $color-pale-butter;
+      }
+    }
   }
 
   &__logo {
@@ -16,6 +23,7 @@
     box-shadow: none;
     height: 45px;
     margin-right: 1rem;
+    margin-top: 0;
     padding-right: 1rem;
     width: auto;
   }

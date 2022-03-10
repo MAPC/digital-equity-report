@@ -3,10 +3,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TimelineAccordion from "../accordions/timelineAccordion";
 const Process = () => {
 
-  function parseList(list) {
-    list.map((li, i) =>  <li key={i}>{li}</li>);
-  }
-
   const mapc = [
     "Josh Eichen", 
     "Ryan Kelly", 
@@ -20,8 +16,6 @@ const Process = () => {
     "Ellyn Morgan"
   ];
 
-  const mapcList = mapc.map((li) =>  <li>{li}</li>);
-
   const everett = [
     "Deanna Deveny, Director of Communications",
     "Erin Deveny, Chief of Staff",
@@ -31,8 +25,6 @@ const Process = () => {
     "Kevin Shaw, Assistant Superintendent",
     "Kevin Dorgan, Director of Information Technology"
   ];
-
-  const everettList = everett.map((li) =>  <li>{li}</li>);
 
   const chelsea = [
     "Ramon Garcia, Chief Information Officer",
@@ -53,75 +45,9 @@ const Process = () => {
     "Dianne Kelly, Superintendent, Revere Public Schools"
   ]
 
-  const revereList = revere.map((li) =>  <li>{li}</li>);
-
-  const timelineData = [
-    {
-      phase: "1A",
-      title: "Existing Conditions",
-      time: "February - April",
-      description: [
-        "Assessment of the current internet service providers available in Everett and their associated service offerings. Identify and analyze existing data sources to better understand community device and internet access."
-      ],
-      deliverables: [
-        "Spatially map publicly owned digital infrastructure including broadband fiber, telephone poles, cell towers, public Wi-Fi, data centers, etc.",
-        "Slide deck outlining Everett’s existing level of service and public infrastructure and provide data files and code in standard formats used in the analysis."
-      ]
-    },
-    {
-      phase: "1B",
-      title: "Community Needs Assessment",
-      time: "April - June",
-      description: [
-        "To understand the specific internet access needs of the Everett community, MAPC worked with community partners to identify the key functional needs of the internet in daily life, current ability to use the internet for those key functions, and barriers or challenges impacting that ability to use the internet. This assessment was structured within the framework of internet availability, device access, and digital literacy and designed to reflect certain specific population needs within the community. "
-      ],
-      deliverables: [
-        "Data and analysis from the digital community needs assessment and implications for potential recommendations."
-      ]
-    },
-    {
-      phase: "2",
-      title: "Infrastructure and Technology Evaluation ",
-      time: "June - August",
-      description: [
-        "Reviewed available data sources to catalog the state of digital infrastructure in the City of Everett. Undertook analysis to understand the extent that private ISP’s have invested in the community and if there are gaps in private service infrastructure. In addition evaluated relevant infrastructure elements as recommended by the City and partners."
-      ],
-      deliverables: [
-        "Data and analysis related to the inventory of digital infrastructure in Everett. This inventory will also outline the implications for future investment based on current infrastructure.",
-        "Technical memorandum outlining the relevant regulations and permitting for digital infrastructure.",
-        "Technical memorandum outlining major findings regarding strategic investment opportunities and policies that would yield the advancement of improved digital infrastructure in the City."
-      ]
-    },
-    {
-      phase: "3",
-      title: "Plan Development",
-      time: "August - November",
-      description: [
-        "Synthesis of earlier phases of work to inform policy, program, and capital investments to address specific barriers and needs in Everett."
-      ],
-      deliverables: [
-        "Public document of key digital needs and issues within the City of Everett, the collective vision for digital access, and specific strategies that will need to be implemented to achieve success.",
-        "Presentation of findings, strategies and an evaluation framework to working group."
-      ]
-    }
-  ]
-
-  const timeline = timelineData.map((elem, index) => {
-    return <div key={index} className="section-two-col-flex">
-          <div className="section-half border-right">
-            <h4>Phase {elem.phase}</h4>
-            <h4 style={{color: "#BEB6B6"}}>{elem.time}</h4>
-          </div>
-          <div className="section-half">
-            <h4>{elem.title}</h4>
-            {elem.description.map(p => <p>{p}</p>)}
-            <h5>Deliverables</h5>
-            <ul>
-              {elem.deliverables.map((li, index) => <li key={index}>{li}</li>)}
-            </ul>
-          </div>
-        </div>
-  })
+  function createList(data) {
+    return data.map((li) =>  <li>{li}</li>)
+  };
 
   return (
     <div>
@@ -142,15 +68,19 @@ const Process = () => {
           <h3>Community Advisory Members</h3>
           <h4>MAPC Staff</h4>
           <ul className="">
-            {mapcList}
+            {createList(mapc)}
           </ul>
           <h4>City of Everett</h4>
           <ul>
-            {everettList}
+            {createList(everett)}
+          </ul>
+          <h4>City of Chelsea</h4>
+          <ul>
+            {createList(chelsea)}
           </ul>
           <h4>City of Revere</h4>
           <ul>
-            {revereList}
+            {createList(revere)}
           </ul>
         </div>
       </div>
@@ -189,7 +119,6 @@ const Process = () => {
       </div>
       <div className="section section-bottom">
         <h3>Timeline</h3>
-        {/* {timeline} */}
         <TimelineAccordion />
       </div>
     </div>
