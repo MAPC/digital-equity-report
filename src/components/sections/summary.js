@@ -11,10 +11,16 @@ const Summary = () => {
         <h4>Introduction</h4>
         <p>In March of 2020, the COVID-19 pandemic upended daily life in Greater Boston and around the world. Unemployment rates spiked, schools were closed, and those fortunate enough to work or attend school from home were forced to reorient themselves to a completely digital environment. And while fluctuations in COVID transmission will continue to impact the degree that in-person interactions can take place –the significant shift our society and economy have made to online presence is unlikely to reverse. This shift has pushed the public sector, specifically municipal leaders and staff, to evaluate their role in ensuring that residents and businesses have access to reliable, high speed, and affordable internet – along with the skills and tools to make use of it.</p>
         <p>Nowhere was this push felt more than in the cities of Chelsea, Everett, and Revere – three communities of the most impacted communities by COVID in the MAPC region and three cities with high populations of low income, people of color, and immigrant residents – population groups that have been disproportionately impacted by the health and economic disruptions of COVID . Early in the pandemic, city staff quickly identified the critical need to understand the role of municipal government in ensuring internet connectivity for residents and engaged with the Metropolitan Area Planning Council to create the Commonwealths first coordinated regional digital access plan. </p>
-        <p>Through a comprehensive planning process MAPC evaluated available data, coordinated a digital access survey with over 2,000 responses, attended school district meetings, held focus groups in multiple languages, evaluated existing infrastructure, and worked closely with municipal staff and executive leadership to fully understand not only the symptoms, but root causes of digital inequities. This report outlines those findings and sets a path forward for these municipalities, and others, to improve not only digital connectivity and use, but the economic, health, and social well being of all community residents.</p>
-        <img
-          src={cities}
-        />
+        <div className="section-two-col-flex">
+          <div className="section-half">
+            <p>Through a comprehensive planning process MAPC evaluated available data, coordinated a digital access survey with over 2,000 responses, attended school district meetings, held focus groups in multiple languages, evaluated existing infrastructure, and worked closely with municipal staff and executive leadership to fully understand not only the symptoms, but root causes of digital inequities. This report outlines those findings and sets a path forward for these municipalities, and others, to improve not only digital connectivity and use, but the economic, health, and social well being of all community residents.</p>
+          </div>
+          <div className="section-half">
+            <ImageModal 
+              source={cities}
+            />
+          </div>
+        </div>
       </div>
       <div className="section section-bottom">
         <h4>Key Findings</h4>

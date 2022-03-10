@@ -132,24 +132,17 @@ export default function TimelineAccordion() {
     return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
       <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
         <Typography>            
-          <h4 style={{color: "black", margin: "0.5rem"}}>Phase {elem.phase}</h4>
+          <h4 style={{color: "black", margin: "0.5rem"}}>{elem.title}</h4>
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography>
-        <div className="section-two-col-flex">
-          <div className="section-half border-right">
-            <h4>{elem.title}</h4>
-            <h4 style={{color: "#BEB6B6"}}>{elem.time}</h4>
-          </div>
-          <div className="section-half">
-            {elem.description.map(p => <p>{p}</p>)}
-            <h5>Deliverables</h5>
-            <ul>
-              {elem.deliverables.map((li, index) => <li key={index}>{li}</li>)}
-            </ul>
-          </div>
-        </div>
+          <h5>{elem.time}</h5>
+          {elem.description.map(p => <p>{p}</p>)}
+          <h5>Deliverables</h5>
+          <ul style={{listStyle: "circle"}}>
+            {elem.deliverables.map((li, index) => <li key={index} style={{listStyle: "circle", marginLeft: "0.8rem"}}>{li}</li>)}
+          </ul>
         </Typography>
       </AccordionDetails>
     </Accordion>
