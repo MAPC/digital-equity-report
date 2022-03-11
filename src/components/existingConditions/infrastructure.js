@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import chart1 from "../../images/comcast_census_blocks_2022-02-18_3pm.png";
-import chart2 from "../../images/fcc_residential_fiber_providers.png";
+import chart2 from "../../images/residential_fiber_blocks.png";
 import ImageModal from "../modules/imageModal";
 
 const Infrastructure = () => {
