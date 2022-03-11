@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Link } from "gatsby"
 
 const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
 
@@ -18,11 +19,11 @@ const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
 
   const menuLinks = menuData.map((element, i) => {
     if (element.type === "main") {
-      return <a key={i} href={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
+      return <Link key={i} to={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
         {element.title}
-      </a>
+      </Link>
     } else if (element.type === "sub") {
-      return <a key={i} href={"#" + element.parent} onClick={() => handleClick(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</a>
+      return <Link key={i} to={"#" + element.parent} onClick={() => handleClick(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</Link>
     } else {
       return undefined;
     }
