@@ -13,6 +13,7 @@ import Footer from "../components/modules/footer";
 import chart1 from "../images/bar-chart-placeholder.png";
 import { PopupContext, PopupProvider } from "../components/contexts/popupContext";
 import ReportWrapper from "../components/reportWrapper";
+import "../styles/index.scss";
 
 const Report = () => {
 
