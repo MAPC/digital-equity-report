@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby"
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
 
@@ -19,16 +20,16 @@ const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
 
   const menuLinks = menuData.map((element, i) => {
     if (element.type === "main") {
-      return <Link key={i} to={"#" + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
+      return <AnchorLink key={i} to={`#` + element.link} onClick={() => setActive(element.link)} className={isActive === element.link ? "report-menu__link active" : "report-menu__link"}>
         {element.title}
-      </Link>
+      </AnchorLink>
     } else if (element.type === "sub") {
-      return <Link key={i} to={"#" + element.parent} onClick={() => handleClick(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</Link>
+      return <AnchorLink key={i} to={"#" + element.parent} onClick={() => handleClick(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</AnchorLink>
     } else {
       return undefined;
     }
   })
-  
+
   function handleClick (index) {
     setTabIndex(index);
     console.log("tabIndex", tabIndex);
