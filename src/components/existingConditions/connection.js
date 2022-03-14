@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import chart1 from "../../images/bar-chart-placeholder.png";
-import chart2 from "../../images/without-internet.png";
 import pew1 from "../../images/pew.png";
 import pew2 from "../../images/pew2.png";
-import literacy from "../../images/literacy-survey.png"
 import ImageModal from "../modules/imageModal";
 
 const Connection = () => {

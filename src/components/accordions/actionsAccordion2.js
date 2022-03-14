@@ -26,7 +26,6 @@ const AccordionSummary = styled((props) => (
   backgroundColor:
     theme.palette.mode === 'dark'
       ? 'rgba(0, 0, 0, .03)'
-      // : 'rgba(255, 230, 175, 0.5)',
       : 'rgba(100, 149, 237, 0.15)',
   border: '2px solid white',
   flexDirection: 'row-reverse',
@@ -42,7 +41,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-export default function ActionsAccordion() {
+export default function IntermediateActions() {
   const [expanded, setExpanded] = useState();
 
   // on direct access to an action, this hook will check the url for the selected panel and expand that panel on load
@@ -52,8 +51,7 @@ export default function ActionsAccordion() {
       const url = window.location.href;
       const panel = url.substring(url.indexOf('panel'));
       console.log("end of url", panel);
-      // setExpanded(panel)
-      // need to setExpanded action.timeframe + "/panel" + index
+      setExpanded(panel)
     }
   }, []);
 
@@ -71,69 +69,10 @@ export default function ActionsAccordion() {
 
     setExpanded(newExpanded ? panel : false);
 
-    const viewportOffset = event.target.getBoundingClientRect();
-    const top = viewportOffset.top;
-    const scrollHeight = window.pageYOffset + top;
-
-    window.scrollTo({
-      top: scrollHeight ,
-      left: 0,
-      behavior: "smooth",
-    });
-
   };
 
-  const actions = [
-    { 
-      category: "immediate",
-      short: "Bridge to Broadband",
-      title: "Participate in Education Superhighway Bridge to Broadband Program Pilot",
-      timeframe: "Immediate (Fall 2021 – Winter 2022)",
-      status: "Completed",
-      type: "Connection",
-      actor: "School District",
-      description: [
-        "This program is a facilitated data exchange between school districts and Internet Service Providers. Massachusetts Department of Elementary and Secondary Education in Partnership with Education Superhighway established a pilot in MA, where school districts could establish data exchanges through data-sharing agreements brokered by the Student Data Privacy Alliance. Everett, Chelsea, and Revere were added to the initial pilot program and are now able to identify which students are or are not currently able to be served with a wired internet connection for an ISP serving the community."
-      ],
-      steps: [
-        "Complete data exchanges.", 
-        "Leverage data to support schools-based efforts aimed at connecting unconnected students and households.",
-        "Advocate for ways to expand data exchanges that respect data rights and privacy beyond schools to support broader community connection efforts."
-      ]
-    },
+  const intermediate = [
     {
-      category: "immediate",
-      short: "Align Capital Investments",
-      title: "Explore and Align Municipal Infrastructure Investments",
-      timeframe: "Immediate (March 2022) / Long term ", 
-      status: "Potential",
-      type: "Connection",
-      actor: "Municipal Staff",
-      description: [
-        "Building on the infrastructure investments that have already been made by Everett, Chelsea, and Revere, to connect municipal buildings and assets. There is an opportunity to align in future investments and maintenance. The Division of Local Services has established a Municipal Fiber Grant Program that opens for the first time in March of 2020. Structured like other competitive Community Compact grants, this program allows more funds to go towards multi-jurisdictional projects up to a maximum of $500,000 may be awarded to a project.  This is an opportunity to address deficiencies in municipal networks identified in reports (like Chelsea’s Dewsbury report) while establishing robust fiber option networking to support network monitoring, cyber security, records management, and backup and recovery. Cohesive and collaborative inter-municipal network connection also creates opportunities to gain economies of scale by aggregating internet bandwidth purchases and the associated security infrastructure."
-      ],
-      steps: [
-        "Identify priority municipal infrastructure needs",
-        "Draft application(s) for Municipal Fiber Grant program "
-      ]
-    },
-    {
-      category: "immediate",
-      short: "Tech Goes Home Partnership",
-      title: "Brand Cities as \"Tech Goes Home\" Communities ",
-      timeframe: "Immediate", 
-      status: "Potential",
-      type: "Digital Literacy",
-      actor: "Municipal Staff",
-      description: [
-        "Embed at least one Tech Goes Home instructor in every school and library in the City.  Ensure courses are offered in Spanish, Haitian Creole, Portuguese, and other community languages."
-      ],
-      steps: [
-        "Adopt brand as policy and assess funding requirements "
-      ]
-    },
-    {
-      category: "intermediate",
       short: "Housing Authority Wi-Fi",
       title: "Establish Wi-Fi deployments as part of Mass Broadband Institute Gateway City WiFi Grant",
       timeframe: "Intermediate (Summer 2021 – 2024)", 
@@ -152,7 +91,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Rooftop RFP",
       title: "Inventory and release procurements for use of Municipal rooftop space",
       timeframe: "Intermediate", 
@@ -168,7 +106,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Last Mile RFI",
       title: "Release a request for information about \"Last Mile\" fiber connections ",
       timeframe: "Intermediate", 
@@ -183,7 +120,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Dig Once Policy",
       title: "Establish Dig Once Policy",
       timeframe: "Intermediate / Long term ", 
@@ -198,7 +134,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Standardize Small Cell Permits",
       title: "Adopt a standard small cell permitting policy and practice",
       timeframe: "Intermediate / Long term ", 
@@ -214,7 +149,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Analyze Provider Network Maps",
       title: "Leverage Cable Franchise to Map Connection",
       timeframe: "Intermediate", 
@@ -229,7 +163,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Hire Digital Equity Officer",
       title: "Hire a Regional Digital Access and Equity Officer ",
       timeframe: "Intermediate", 
@@ -245,7 +178,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Host Digital Navigator Program",
       title: "Participate in Youth Works Digital Navigators Program",
       timeframe: "Intermediate", 
@@ -263,7 +195,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "ECF Funding Application",
       title: "Apply for and Distribute Emergency Connectivity Fund Resources",
       timeframe: "Intermediate", 
@@ -278,7 +209,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Digital Equity Fund",
       title: "Establish a Digital Equity Trust Fund",
       timeframe: "Intermediate", 
@@ -293,7 +223,6 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      category: "intermediate",
       short: "Device Refurbishment Program",
       title: "Support the Creation of a Tech Refurbishment Center (Long)",
       timeframe: "Intermediate", 
@@ -306,72 +235,46 @@ export default function ActionsAccordion() {
       steps: [
         "Coordinate with private sector partners, School District, and Workforce Board"
       ]
-    },
-    {
-      category: "intermediate",
-      short: "Expand on Community TV resource",
-      title: "Reposition Community TV as a Digital Resource Hub",
-      timeframe: "Long term", 
-      status: "Potential",
-      type: "Digital Literacy, Device",
-      actor: "Community TV Staff, Municipal Staff",
-      description: [
-        "Local cable stations could leverage existing equipment, knowledge, and space for digital content production and skill development."
-      ],
-      steps: [
-        "Establish an advisory board to develop a strategic plan for local access stations "
-      ]
     }
   ]
 
   function createAccordions(actions) { 
     return actions.map((action, index) => {
-
-      const immediateList = [];
-      const intermediateList = [];
-      const longtermList = [];
-
-      return <div>
-        <a href={"#actions/" + action.timeframe + "/panel" + index}>
-          <Accordion expanded={expanded === action.timeframe + "/panel" + index} onChange={handleChange(action.timeframe + "/panel" + index)}>
-            <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
-              <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.short}</h4></Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <h4>{action.title}</h4>
-                <div className="section-two-col-flex">
-                  <div className="section-half border-right">
-                  {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
-                  </div>
-                  <div className="section-half">
-                    <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Timeframe:</span> <br/>{action.timeframe}</p>
-                    <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Status:</span> <br/>{action.status}</p>
-                    <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Type:</span> <br/>{action.type}</p>
-                    <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Primary Actor:</span> <br/>{action.actor}</p>
-                    <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Next Steps:</span> <br/>
-                      <ul style={{marginTop: 0, listStyle: "circle"}}>
-                        {action.steps.map((elem, i) => <li key={i} style={{listStyle: "circle", marginLeft: "1.2rem"}}>{elem}</li>)}
-                      </ul>
-                    </p>
-                  </div>
+      return <a href={"#actions/" + action.timeframe + "/panel" + index}>
+        <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
+          <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
+            <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.short}</h4></Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <h4>{action.title}</h4>
+              <div className="section-two-col-flex">
+                <div className="section-half border-right">
+                {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
                 </div>
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        </a>
-      </div>
+                <div className="section-half">
+                  <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Timeframe:</span> <br/>{action.timeframe}</p>
+                  <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Status:</span> <br/>{action.status}</p>
+                  <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Type:</span> <br/>{action.type}</p>
+                  <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Primary Actor:</span> <br/>{action.actor}</p>
+                  <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Next Steps:</span> <br/>
+                    <ul style={{marginTop: 0, listStyle: "circle"}}>
+                      {action.steps.map((elem, i) => <li key={i} style={{listStyle: "circle", marginLeft: "1.2rem"}}>{elem}</li>)}
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </a>
     })
   };
 
   return (
     <div>
-      <h3>Immediate</h3>
-      {createAccordions(immediate)}
       <h3>Intermediate</h3>
       {createAccordions(intermediate)}
-      <h3>Long-term</h3>
-      {createAccordions(longterm)}
     </div>
   );
 }
