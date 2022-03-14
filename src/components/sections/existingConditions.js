@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import Connection from "../existingConditions/connection";
-import Literacy from "../existingConditions/literacy";
 import Service from "../existingConditions/service";
 import Infrastructure from "../existingConditions/infrastructure";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
