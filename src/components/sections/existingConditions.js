@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import Connection from "../existingConditions/connection";
-import Literacy from "../existingConditions/literacy";
 import Service from "../existingConditions/service";
 import Infrastructure from "../existingConditions/infrastructure";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -19,7 +18,7 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
 
   return (
     <div>
-      <div className="section section-bottom" id="tabs">
+      <div className="section section-bottom">
         <h2>Existing Conditions</h2>
         <p>Currently, access to the internet is not managed as a public utility with , guaranteeingd access to for all residents. Without that guarantee, access to the internet is heavily influenced by the economic and societal makeup of a community. Having a low household income, living with a high number of individuals per household, not understanding the language for which guidance or marketing materials are produced, being older and non-digital native can all be compounding barriers to internet access.</p>
         <p>Using the accompanying chart, we can explore a variety of census data about our the communities (Chelsea, Everett, and Revere). We can see that tThe cities of Chelsea, Everett, and Revere are some of the most diverse communities in Massachusetts, w. With a higher-than-average number of languages spoken in the communities than in most MA communities as well a high rate of foreign-born population.</p>
@@ -32,6 +31,7 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
         <Tabs 
           selectedIndex={tabIndex} 
           onSelect={(index) => setTabIndex(index)}
+          id="tabs"
         >
           <TabList>
             <Tab><h4>Connection & Access</h4></Tab>
