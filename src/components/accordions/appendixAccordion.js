@@ -10,6 +10,8 @@ import Research from "../appendix/research";
 import Maps from "../appendix/maps";
 import Reports from "../appendix/reports";
 import Literature from "../appendix/literature";
+import Slides from "../appendix/slides";
+import Tableaus from "../appendix/tableaus";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -53,20 +55,6 @@ export default function AppendixAccordion() {
     
     setExpanded(newExpanded ? panel : false);
 
-    const viewportOffset = event.target.getBoundingClientRect();
-    const top = viewportOffset.top;
-    const scrollHeight = window.pageYOffset + top;
-
-    console.log("window.pageYOffset", window.pageYOffset);
-    console.log("window.innerHeight", window.innerHeight);
-    console.log("top", top);
-    
-    window.scrollTo({
-      top: scrollHeight ,
-      left: 0,
-      behavior: "smooth",
-    });
-
   };
 
   const appendixSections = [
@@ -89,6 +77,14 @@ export default function AppendixAccordion() {
     {
       title: "Municipal Models Draft Literature Review",
       accordion: <Literature />
+    },
+    {
+      title: "Slides",
+      accordion: <Slides />
+    },
+    {
+      title: "Tableaus",
+      accordion: <Tableaus />
     },
   ]
 

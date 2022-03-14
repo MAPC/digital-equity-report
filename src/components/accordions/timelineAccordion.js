@@ -43,37 +43,56 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function TimelineAccordion() {
   const [expanded, setExpanded] = React.useState('panel0');
-  
-  // const [prevYOffset, setPrevYOffset] = useState(window.pageYOffset);
-  // const prevYRef = useRef();
-
-  // useEffect(() => {
-  //   prevYRef.current = prevYOffset;
-  // }, [prevYOffset]);
-
 
   const handleChange = (panel) => (event, newExpanded) => {
 
+
+
     setExpanded(newExpanded ? panel : false);
-
-    // console.log("prevYOffset", prevYOffset);
-    // setPrevYOffset(window.pageYOffset);
-    // console.log("newYOffset", prevYOffset);
-
-    // const viewportOffset = event.target.getBoundingClientRect();
-    // const top = viewportOffset.top;
-    // const scrollHeight = window.pageYOffset + top; // will line to the top, if no other acc open
-
-    // console.log("window.pageYOffset", window.pageYOffset);
-    // console.log("window.innerHeight", window.innerHeight);
-    // console.log("top", top);
-    // console.log("prevYOffset", prevYOffset);
     
+    const accordionTitles = event.target.closest('.MuiPaper-root').parentNode.closest('div').querySelectorAll('.MuiButtonBase-root');
+
+    console.log("accordionTitles", accordionTitles);
+    
+    
+    const offset = event.target.closest('.MuiPaper-root').parentNode.closest('div').getBoundingClientRect().top + window.scrollY;
+    const pnlIdx = parseInt(panel.substring(panel.length - 1));
+    let titleOffset = 0;
+    accordionTitles.forEach((elem, index) => {
+      if (index <= pnlIdx) {
+        titleOffset += elem.offsetHeight;
+      }      
+    });
+
+    let totalOffset = offset + titleOffset;
+
+    window.scrollTo(0, totalOffset);
+
+
+
+
+    // setExpanded(newExpanded ? panel : false);
+
+    // console.log("event", event);
+    // console.log("event.target", event.target);
+    // console.log("event.target.closest('.MuiPaper-root').offsetHeight", event.target.closest('.MuiPaper-root').offsetHeight);
+
+    // // let offset = event.target.closest('.MuiPaper-root').getBoundingClientRect().top;
+    // // console.log("event.target.closest('.MuiPaper-root').getBoundingClientRect().top", offset);
+
+    // // console.log("event.pageY", event.pageY);
+    // // console.log("window.pageYOffset", window.pageYOffset);
+    // // console.log("window.innerHeight", window.innerHeight);
+
+    // // const windowTop = window.pageYOffset - offset;
+
+    // // console.log("pageYOffset", event.target.closest('.MuiPaper-root').pageYOffset);
+
     // window.scrollTo({
-    //   top: scrollHeight ,
+    //   top: window.pageYOffset + event.target.closest('.MuiPaper-root').offsetHeight,
     //   left: 0,
     //   behavior: "smooth",
-    // });
+    // })
 
   };
 
