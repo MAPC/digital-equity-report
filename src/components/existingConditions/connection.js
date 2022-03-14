@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import Literacy from "./literacy";
 import chart1 from "../../images/bar-chart-placeholder.png";
 import chart2 from "../../images/without-internet.png";
 import pew1 from "../../images/pew.png";

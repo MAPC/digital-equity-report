@@ -22,7 +22,6 @@ const Service = () => {
         <h4>How much does broadband service cost in our communities? </h4>
         <p>How much does broadband service cost in our communities? </p>
         <p>As we saw in the self-reported FCC data, Comcast, RCN, Verizon, netBlazer, and Starry are the main providers that have any service in the area. While these plans might not be available at every address in the three municipalities, we list here the services packages that can be found at sample addresses from the communities. These are residential service advertised prices. Commercial providers like Crown Castle, FirstLight, Windstream, or Comcast Business are not included in this chart.</p>
-        {/* <iframe src="https://public.tableau.com/views/ProviderCosts/Dashboard1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe> */}
         <iframe src="https://public.tableau.com/views/ProviderCosts_16468396544930/Dashboard1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
       </div>
       <div className="section">
@@ -37,7 +36,7 @@ const Service = () => {
         <h4>For those that are connected, what are they experiencing?</h4>
         <p>In addition to 15-19% of households we saw that were not connected to the internet, we can see from speed test that that an additional XX40% may not consistently be experiencing broadband level of speed. Those that have purchased an internet service plan that is classified as broadband level (25/3) may not be experiencing broadband levels of speed. (See Recommendation on change to 100/100).</p>
         <p>If we look at speed test data form from Microsoft and speed test sites (MLab / Ookla) they suggest the problem is significantly larger because a sizeable share of households with internet service do not operate at broadband speeds. </p>
-        <iframe src="https://public.tableau.com/views/ProviderBroadband/Story1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+        <iframe src="https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
       </div>
     </div>
   )
