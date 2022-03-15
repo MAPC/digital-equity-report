@@ -16,7 +16,6 @@ $color-smoke: #BEB6B6;
 $color-cornflower: #6495ED;
 $color-powder-blue: #8799c0;
 $color-ash-purple: #7774AA;
-// $color-midnight: #07215B;
 $color-midnight: navy;
 $color-white: #ffffff;
 
@@ -48,7 +47,7 @@ html, body {
 }
 
 a {
-  border-bottom: 2px dotted cornflowerblue;
+  border-bottom: 2.5px dotted $color-deep-gold;
 }
 // default for all links not specifically styled
 a, a:focus, a:active {
@@ -57,7 +56,7 @@ a, a:focus, a:active {
 }
 
 a:hover {
-  border-bottom: 2px solid cornflowerblue;
+  border-bottom: 2.5px solid $color-deep-gold;
 }
 
 h1 {

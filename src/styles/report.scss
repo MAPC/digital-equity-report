@@ -71,13 +71,14 @@
     @include media(small) {
       width: 100%;
     }
-    h3, h4 {
+    h3:first-child, h4:first-child {
       margin-top: 0;
     }
-    p {
+    p:first-child {
       margin-bottom: 0;
       margin-top: 0;
     }
+
     width: 45%;
   }
   &-two-col-flex {
@@ -105,4 +106,17 @@
   color: $color-smoke;
   // font-size: $font_size-xxsmall;
   margin-top: 0.5rem;
+  a {
+    border-bottom: 2px dotted $color-smoke;
+    &:hover {
+      border-bottom: 2px solid $color-smoke;
+    }
+  }
+}
+
+.fullbleed {
+  // box-shadow: none;
+  margin-left: calc(-14rem - ((100vw - 45rem - 14rem) / 2));
+  width: 100vw;
+  z-index: -1;
 }

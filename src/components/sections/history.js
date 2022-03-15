@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // import 'react-tabs/style/react-tabs.css';
 import CalloutQuote from "../modules/calloutQuote";
+import cables from "../../images/cables.jpg"
 
 const History = () => {
 
@@ -40,6 +41,7 @@ const History = () => {
             <p>Digital literacy is the ability to use a device and internet effectively and in a way that enables an individual to easily navigate needed uses and services. Understanding the different uses and needs of various segments of Everett’s community will assist in creating a plan for improving literacy in a way that meets community needs and culture. </p>
           </TabPanel>
         </Tabs>
+        <img className="fullbleed" src={cables} />
       </div>
       <div className="section">
         <h3>How Does the Internet Function?</h3>

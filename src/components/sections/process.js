@@ -17,24 +17,26 @@ const Process = () => {
   ];
 
   const everett = [
-    "Deanna Deveny, Director of Communications",
-    "Erin Deveny, Chief of Staff",
-    "Kim Tsai, Deputy Superintendent of Schools",
-    "Priya Tahiliani, Superintendent of Schools",
-    "Charlie Obremski, Assistant Superintendent of Operations", 
-    "Kevin Shaw, Assistant Superintendent",
-    "Kevin Dorgan, Director of Information Technology"
+    "Deanna Deveny, Director of Communications, City of Everett",
+    "Erin Deveny, Chief of Staff, City of Everett",
+    "Kim Tsai, Deputy Superintendent, Everett Public Schools",
+    "Priya Tahiliani, Superintendent, Everett Public Schools",
+    "Charlie Obremski, Assistant Superintendent of Operations, Everett Public Schools", 
+    "Kevin Shaw, Assistant Superintendent Everett Public Schools",
+    "Kevin Dorgan, Director of Information Technology , City of Everett",
+    "Stephanie Martins, City Councilor, City of Everett",
+
   ];
 
   const chelsea = [
-    "Ramon Garcia, Chief Information Officer",
-    "Monica Lamboy, Director of Administration and Finance",     
-    "Karl Allen, Economic Development Planner", 
-    "Matt Frank, Supportive Services Manager, Chelsea Housing Authority", 
-    "Alexander Train, Director, Housing and Community Development Department",
-    "Paul Nowicki, Director of Operations, Chelsea Housing Authority", 
+    "Ramon Garcia, Chief Information Officer, City of Chelsea",
+    "Monica Lamboy, Director of Administration and Finance, City of Chelsea",     
+    "Karl Allen, Economic Development Planner, City of Chelsea", 
+    "Matt Frank, Supportive Services Manager, Chelsea Housing Authority, Chelsea", 
+    "Alexander Train, Director, Housing and Community Development Department, City of Chelsea",
+    "Paul Nowicki, Director of Operations, Chelsea Housing Authority, City of Chelsea",
     "Rich Pilcher, Chief Technology Officer, Chelsea Public Schools",
-    "Almi Abeyta, Superintendent, Chelsea Public Schools" 
+    "Almi Abeyta, Superintendent, Chelsea Public Schools"
   ]
 
   const revere = [
@@ -43,6 +45,25 @@ const Process = () => {
     "Lourenco Garcia, Assistant Superintendent of Equity and Inclusion, Revere Public Schools",
     "Jaime Flynn, Executive Director of Data and Accountability, Revere Public Schools ",
     "Dianne Kelly, Superintendent, Revere Public Schools"
+  ]
+
+  const community = [
+    "Lucy Pineda, Executive Director Latinos Unidos en Massachusetts (LUMA), Everett",
+    "Jamie Lederer, Community Health Improvement Department, Cambridge Health Alliance, [city] ",
+    "Rev Myrlande Desrosie, Associate Pasteur and Director , Everett Haitian Community Center, Everett",
+    "Penny Hasselli, MetroNorth Workforce Board, [City]",
+    "Chris Albrizio-Lee, MetroNorth Workforce Board [City]",
+    "Melora Ruhg, MassHire MetroNorth Workforce Board, [City]",
+    "Stefanie  Shull, TND Connect, [City]",
+    "Dini Paulino, La Colaborativa, [City]",
+    "Eva Daniggelis, Americorp Vista, The Neighborhood Developers ",
+    "Evie Heffernan, Workforce Manager, The Neighborhood Developers",
+    "Sean Mock, Senior Program Manager, The Neighborhood Developers",
+    "Cheryl Coss, Economic Stability Program Manager, Center for Community Health Improvement, [City]",
+    "Syliva Chiang, Revere CARES Massachusetts General Hospital, [City]",
+    "Kelly Washburn, Massachusetts General Hospital Evaluation Team, [City]",
+    "Mike Stanek, Senior Manager at Health Policy Coalition, [City]",
+    "Caroline Kinuth, Senior Policy Manager at Health Policy Coalition, [City]"
   ]
 
   function createList(data) {
@@ -66,10 +87,6 @@ const Process = () => {
         </div>
         <div className="section-half">
           <h3>Community Advisory Members</h3>
-          <h4>MAPC Staff</h4>
-          <ul className="">
-            {createList(mapc)}
-          </ul>
           <h4>City of Everett</h4>
           <ul>
             {createList(everett)}
@@ -82,12 +99,20 @@ const Process = () => {
           <ul>
             {createList(revere)}
           </ul>
+          <h4>Community Organizations</h4>
+          <ul>
+            {createList(community)}
+          </ul>
+          <h4>MAPC Staff</h4>
+          <ul>
+            {createList(mapc)}
+          </ul>
         </div>
       </div>
       <div className="section">
         <h3>Project Goals</h3>
-        <p>Few Massachusetts municipalities of Chelsea, Everett, or Revere’s size have adopted a clear strategy for providing fast, reliable, and affordable internet to residents and businesses.  Most cities and towns within the state do not have a clear understanding of the role of local government in the area of digital access., Few Massachusetts municipalities of Chelsea, Everett, or Revere’s sizecities have adopted a clear strategy for providing fast, reliable, and affordable internet to residents and businesses.  and as sucThere is no clear template for doing so. Revere, Chelsea, and Everett h, these communities are set to become leaders within the Commonwealth by developing a plan that is scaled to fit the capacity of municipal staff while leveraging a strong resource network of local, state, and federal resources that cross the public, private, educational, and nonprofit sectors.</p>
-        <p>MAPC has structured this plan to be used by municipalities and their partner stakeholders in accomplishing the following goals:</p>
+        <p>Local governments rarely understand their role in digital access: few have strategies for providing fast, reliable, and affordable internet to residents and businesses. Revere, Chelsea, and Everett are leading the Commonwealth in developing a plan that is both scaled to fit the capacity of municipal staff and that leverages a strong network of local, state, and federal public, private, educational, and nonprofit resources. MAPC has structured this plan to be a template for municipalities and their partner stakeholders.</p>
+        <p>The plan goals are as follows: </p>
         <Tabs>
           <TabList>
             <Tab><h4>Advise Capital Investment</h4></Tab>
@@ -96,26 +121,16 @@ const Process = () => {
           </TabList>
 
           <TabPanel>
-            <p>Recent federal actions through the American Rescue Plan Act and the Infrastructure Investment and Jobs Act have created an unprecedented amount of potential resources available for capital investment in broadband infrastructure. Municipalities will have discretionary resources, as well as the opportunity to apply for state and federal grants to invest in infrastructure, and this plan aims to provide a framework within which to municipalities can make sound decisions for that future investment.</p>
+            <p>The American Rescue Plan Act and the Infrastructure Investment and Jobs Act have created resources for capital investment in broadband infrastructure. Municipalities will have discretionary resources, as well as the opportunity to apply for state and federal grants to invest in infrastructure. This plan aims to provide a framework within which to municipalities can make sound decisions for that future investment.  </p>
           </TabPanel>
           <TabPanel>
-            <p>While not involved in the direct provision of internet services, municipalities have a significant amount of regulatory power in the permitting and licensing of internet service providers and other technologies that will enable broader internet access. This includes the administration of cable franchise agreements, permitting of 5g infrastructure, and licensing right of way use for cable and fiber infrastructure. This plan aims to give municipal actors a fuller picture of how that regulatory power can improve digital access within their communities. </p>
-            <p>Further, municipalities have the ability to enact policies that will address the social and systemic barriers that inhibit the adoption or use of broadband internet. Establishing discretionary funding sources, convening critical stakeholders, and collecting community data are all within the purview of municipal activity. </p>
+            <p>While not involved in the direct provision of internet services, municipalities have significant regulatory power in the permitting and licensing of internet service providers and in technologies that enable internet access. This includes administering cable franchise agreements, permitting 5G infrastructure, and licensing right-of-way use for cable and fiber infrastructure. This plan shows how that regulatory power can be used to improve digital access in a community. </p>
+            <p>Municipalities can also enact policies that address the social and systemic barriers that inhibit the adoption or use of broadband internet. Establishing discretionary funding sources, convening critical stakeholders, and collecting community data are all in the purview of municipal activity. </p>
           </TabPanel>
           <TabPanel>
-            <p>Historically, the landscape of digital access programs has been sparse, and mostly focused on building basic digital literacy skills. There is a major opportunity to build a robust ecosystem of programs available to support basic to advanced digital skills in multilingual curriculums, expanded workforce development initiatives, and community scale programs that will build capacity and expertise in this critical area.</p>
+            <p>The few digital access programs that exist are mostly focused on building basic digital literacy skills. There is a need for programs that support basic-to-advanced digital skills in multilingual curricula, for expanded workforce development initiatives, and for community scale programs that build capacity and expertise in this critical area.  </p>
           </TabPanel>
         </Tabs> 
-      </div>
-      <div className="section">
-        <p>Building on these broad goals, MAPC worked with the community advisory committees in the three communities to establish a vision that ultimately was used to establish a suite of short, medium, and long term recommendations. The vision as follows: </p>
-      </div>
-      <div className="section">
-        <h3>Project Vision</h3>
-        <h4>Remove barriers <span style={{fontFamily: 'AvenirNextLTPro-Regular'}}>to adoption that prevent universal access to reliable and high speed (100/100) internet.</span></h4> 
-        <h4>Augment the capacity <span style={{fontWeight: "200"}}>of key stakeholders such as IT Departments, School Districts, Libraries, Community based organizations, and municipal staff to address the digital divide</span></h4>
-        <h4><span style={{fontWeight: "200"}}>Ensure all residents who desire to improve their digital / technology literacy have a</span> pathway to educational opportunities <span style={{fontWeight: "200"}}>at a range of skill levels, offered in community appropriate languages and settings.</span></h4>
-        <h4>Promote competition <span style={{fontWeight: "200"}}>among internet service providers offering broadband service.</span></h4>
       </div>
       <div className="section section-bottom">
         <h3>Timeline</h3>
