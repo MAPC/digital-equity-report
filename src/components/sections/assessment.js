@@ -179,7 +179,7 @@ const Assessment = () => {
             </div>
 
 
-            <div className="section-two-col-flex">
+            <div className="section-two-col-flex section">
               <div className="section-half border-right">
                 <h4>Affordability</h4>
                 <p>70% of survey respondents have had to change or cancel their internet subscription because it was too expensive 
