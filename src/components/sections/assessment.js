@@ -113,14 +113,23 @@ const Assessment = () => {
     <div>
       <div className="section">
         <h2>Community Needs Assessment</h2>
-        <p>Expanding on the existing conditions analysis, MAPC worked to further understand the specific experiences of residents in the three communities accessing and using the internet. MAPC worked with community partners to identify the key functional needs of the internet in daily life, current ability to use the internet for those key functions, and barriers or challenges impacting that ability to use the internet.</p>
-        <p>Expanding on the existing conditions analysis, MAPC worked to further understand the specific experiences of residents in the three communities accessing and using the internet. MAPC worked with community partners to identify the key functional needs of the internet in daily life, current ability to use the internet for those key functions, and barriers or challenges impacting that ability to use the internet. </p>
+        <div className="section-two-col-flex">
+          <div className="section-half border-right">
+            <p>Expanding on the existing conditions analysis, MAPC worked to further understand the specific experiences of residents in the three communities accessing and using the internet. MAPC worked with community partners to identify the key functional needs of the internet in daily life, current ability to use the internet for those key functions, and barriers or challenges impacting that ability to use the internet. </p>
+          </div>
+          <div className="section-half">
+            <CalloutQuote 
+              quote="MAPC collected 2,165 surveys, far in excess of the survey goal."
+            />
+          </div>
+        </div> 
+        <p>MAPC worked with key stakeholders in the community to execute this assessment through a series of one-on-one stakeholder interviews, group focus groups, and a comprehensive digital access survey of over 2,000 residents. The following assessment has been organized around the framework of internet connectivity, device access, and digital literacy.</p>
         <p>MAPC sought to execute 500 surveys in each community in order to gather a representative sample of the community populations. The survey was distributed through a number of municipal and community channels, and was conducted both digitally, in person, and via phone outreach.</p>
-        <p>In sum, MAPC collected 2165 surveys, far in excess of the survey goal.</p>
+        <p>In sum, MAPC collected 2,165 surveys, far in excess of the survey goal.</p>
         <p>MAPC collected 793 surveys from Chelsea residents, 388 from Everett residents, and 825 from Revere residents. The key findings in this report will summarize the total of the three communities, but specific community-level findings can be viewed using the tableau data tool to the XXXX. </p>
-      </div>  
+      </div>
       <div className="section">
-        <h3>Demographics</h3>
+        <h3>Survey Respondent Demographics</h3>
         <Tabs>
           <TabList>
             <Tab><h4>Language</h4></Tab>
@@ -133,10 +142,11 @@ const Assessment = () => {
             {createFloats(languageFloats)}
           </TabPanel>
           <TabPanel>
-            {createFloats(raceFloats)}
+            <p>{createFloats(raceFloats)}</p>
             {createPercents(racePercents)}
           </TabPanel>
           <TabPanel>
+            <p>Respondents to the survey represented a diverse cross section of family types and household sizes within the three communities.</p>
             {createPercents(hhPercents)}
           </TabPanel>
         </Tabs> 
