@@ -44,36 +44,26 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function TimelineAccordion() {
   const [expanded, setExpanded] = React.useState('panel0');
   
-  // const [prevYOffset, setPrevYOffset] = useState(window.pageYOffset);
-  // const prevYRef = useRef();
-
-  // useEffect(() => {
-  //   prevYRef.current = prevYOffset;
-  // }, [prevYOffset]);
-
-
   const handleChange = (panel) => (event, newExpanded) => {
-
     setExpanded(newExpanded ? panel : false);
-
-    // console.log("prevYOffset", prevYOffset);
-    // setPrevYOffset(window.pageYOffset);
-    // console.log("newYOffset", prevYOffset);
-
-    // const viewportOffset = event.target.getBoundingClientRect();
-    // const top = viewportOffset.top;
-    // const scrollHeight = window.pageYOffset + top; // will line to the top, if no other acc open
-
-    // console.log("window.pageYOffset", window.pageYOffset);
-    // console.log("window.innerHeight", window.innerHeight);
-    // console.log("top", top);
-    // console.log("prevYOffset", prevYOffset);
     
-    // window.scrollTo({
-    //   top: scrollHeight ,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
+    const accordionTitles = event.target.closest('.MuiPaper-root').parentNode.closest('div').querySelectorAll('.MuiButtonBase-root');
+    const offset = event.target.closest('.MuiPaper-root').parentNode.closest('div').getBoundingClientRect().top + window.scrollY;
+    const pnlIdx = parseInt(panel.substring(panel.length - 1));
+    let titleOffset = 0;
+    
+    accordionTitles.forEach((elem, index) => {
+      if (index <= pnlIdx && index !== 0) {
+        titleOffset += accordionTitles[index - 1].offsetHeight;
+        if (index === 3) {
+          titleOffset += 25;
+        }
+      }      
+    });
+    
+    let totalOffset = offset + titleOffset;
+
+    window.scrollTo(0, totalOffset);
 
   };
 

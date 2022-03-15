@@ -45,24 +45,28 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function ActionsAccordion() {
   const [expanded, setExpanded] = useState();
 
-  const handleChange = (panel) => (event, newExpanded) => {
+  const handleChange = (panel, type) => (event, newExpanded) => {
     
     setExpanded(newExpanded ? panel : false);
-
-    const viewportOffset = event.target.getBoundingClientRect();
-    const top = viewportOffset.top;
-    const scrollHeight = window.pageYOffset + top;
-
-    console.log("window.pageYOffset", window.pageYOffset);
-    console.log("window.innerHeight", window.innerHeight);
-    console.log("top", top);
+    console.log('event', event.target.closest(`.acc-action-${type}`).children.length, type);
+    const accordionTitles = event.target.closest(`.acc-action-${type}`).children;
+    const offset = event.target.closest(`.acc-action-${type}`).getBoundingClientRect().top + window.scrollY;
+    const pnlIdx = parseInt(panel.substring(panel.length - 1));
+    let titleOffset = pnlIdx * 80;
+  
+    // Array.prototype.forEach.call(accordionTitles, (elem, index) => {
+    //   if (index <= pnlIdx && index !== 0) {
+    //     titleOffset += accordionTitles[index - 1].offsetHeight;
+    //   }      
+    //   if (pnlIdx === pnlIdx) {
+    //     let totalOffset = offset + titleOffset;
+    //     window.scrollTo(0, totalOffset);
+    //   }
+    // });
     
-    window.scrollTo({
-      top: scrollHeight ,
-      left: 0,
-      behavior: "smooth",
-    });
+    let totalOffset = offset + titleOffset;
 
+    window.scrollTo(0, totalOffset);
   };
 
   const immediate = [
@@ -297,9 +301,9 @@ export default function ActionsAccordion() {
     },
   ]
 
-  function createAccordions(actions) {
+  function createAccordions(actions, type) {
     return actions.map((action, index) => {
-      return <Accordion expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index)}>
+      return <Accordion className="actionAccordion" expanded={expanded === 'panel' + index} onChange={handleChange('panel' + index, type)}>
         <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
           <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.short}</h4></Typography>
         </AccordionSummary>
@@ -336,11 +340,17 @@ export default function ActionsAccordion() {
   return (
     <div>
       <h3>Immediate</h3>
-      {createAccordions(immediate)}
+      <div class="acc-action-immediate">
+        {createAccordions(immediate, 'immediate')}
+      </div>
       <h3>Intermediate</h3>
-      {createAccordions(intermediate)}
+      <div class="acc-action-intermediate">
+      {createAccordions(intermediate, 'intermediate')}
+      </div>
       <h3>Long-term</h3>
-      {createAccordions(longterm)}
+      <div class="acc-action-longterm">
+      {createAccordions(longterm, 'longterm')}
+      </div>
     </div>
   );
 }
