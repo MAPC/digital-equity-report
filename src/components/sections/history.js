@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // import 'react-tabs/style/react-tabs.css';
 import CalloutQuote from "../modules/calloutQuote";
 import cables from "../../images/cables.jpg"
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const History = () => {
 
@@ -41,7 +42,11 @@ const History = () => {
             <p>Digital literacy is the ability to use a device and internet effectively and in a way that enables an individual to easily navigate needed uses and services. Understanding the different uses and needs of various segments of Everett’s community will assist in creating a plan for improving literacy in a way that meets community needs and culture. </p>
           </TabPanel>
         </Tabs>
-        <img className="fullbleed" src={cables} />
+        <ParallaxBanner
+          layers={[{ image: '/static/cables-03e9cf14a3d7e78ee0a6aead2d019c43.jpg', speed: -30 }]}
+          style={{height: "30rem", width: "100vw"}}
+          className="fullbleed" 
+        />
       </div>
       <div className="section">
         <h3>How Does the Internet Function?</h3>

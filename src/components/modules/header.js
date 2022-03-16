@@ -10,15 +10,13 @@ const Header = () => {
         <div className="section-half"> 
           <Link to="/" className="header__link">
             <img src={logo} alt="MAPC Logo" className="header__logo" />
-            <h5>Digital Equity Report</h5>
+            <h4>Digital Equity Plan</h4>
           </Link>
         </div>
         <div className="section-half-right">
           <Link to="/report" className="header__link">
-            {/* <img src={logo} alt="MAPC Logo" className="header__logo" /> */}
-            <h5>Read the Report</h5>
+            <h4>Read the Report</h4>
           </Link>
-          {/* <Menu /> */}
         </div>
       </div>
     </div>

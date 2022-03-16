@@ -14,13 +14,16 @@ import chart1 from "../images/bar-chart-placeholder.png";
 import { PopupContext, PopupProvider } from "../components/contexts/popupContext";
 import ReportWrapper from "../components/reportWrapper";
 import "../styles/index.scss";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Report = () => {
 
   return (
-    <PopupProvider>
-      <ReportWrapper />
-    </PopupProvider>
+    <ParallaxProvider>
+      <PopupProvider>
+        <ReportWrapper />
+      </PopupProvider>
+    </ParallaxProvider>
   )
 }
 

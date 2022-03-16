@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import ImageModal from "../modules/imageModal";
 import cities from "../../images/background-cropped.jpg"
+import test from "../../images/background.jpg"
 import chart1 from "../../images/comcast_census_blocks_2022-02-18_3pm.png";
 import chart2 from "../../images/residential_fiber_blocks.png";
 import CalloutQuote from "../modules/calloutQuote";
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const Summary = () => {
 
@@ -16,7 +18,11 @@ const Summary = () => {
         <p>Nowhere was this push felt more than in the cities of Chelsea, Everett, and Revere – communities with high populations of low income, people of color, and immigrant residents – population groups that have been disproportionately impacted by the health and economic disruptions of COVID . Residents in these communities were also experiencing average internet speeds much lower than available, advertised <a href="https://datacommon.mapc.org/calendar/2020/december">speeds</a>. In fact, the data showed these communities to have some of the lowest average download speeds of any municipality in the region. These disadvantages are only compounded by the numerous residents without devices that can take full advantage of the internet, and the many with digital literacy challenges.</p>
         <p>City staff quickly identified the critical need to understand the role of municipal government in ensuring internet connectivity for residents and engaged with the Metropolitan Area Planning Council to create the Commonwealth’s first coordinated regional digital access plan.</p>
         <p>Through a comprehensive planning process MAPC evaluated available data, coordinated a digital access survey with over 2,000 responses, attended school district meetings, held focus groups in multiple languages, evaluated existing infrastructure, and worked closely with municipal staff and executive leadership to fully understand not only the symptoms, but root causes of digital inequities. This report outlines those findings and sets a path forward for these municipalities, and others, to improve not only digital connectivity and use, but the economic, health, and social well-being of all community residents.</p>
-        <img className="fullbleed" src={cities} />
+      <ParallaxBanner
+        layers={[{ image: '/static/background-1627d99df96450aab4508e393aab33c1.jpg', speed: -30 }]}
+        style={{height: "30rem", width: "100vw"}}
+        className="fullbleed" 
+      />
       </div>
       <div className="section">
         <h3>Key Findings</h3>

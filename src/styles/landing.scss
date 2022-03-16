@@ -1,24 +1,22 @@
 .landing {
   &-bg {
-    background-image: url(../images/background.jpg);
+    // background-image: url(../images/background.jpg);
     background-position: center;
     background-size: cover;
-    // min-height: 100vh; 
   }
   &-overlay {
-    background-color: rgba(16, 51, 51, 0.7);
+    // background-color: rgba(16, 51, 51, 0.7);
+    background: linear-gradient(rgba(16, 51, 51, 0.3), rgba(16, 51, 51, 1));
     color: $color-white;
   }
   &-copy {
     color: $color-white;
     h1 {
-      color: transparent;
-      // -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-      // -webkit-text-stroke-width: 2px;
-      // -webkit-text-stroke-color: $color-white;
-      -webkit-text-stroke: 1px $color-white;
+      color: white;
+      // color: transparent;
+      // -webkit-text-stroke: 2px $color-white;
     }
-    span {
+    .highlight {
       color: $color-pale-butter;
       -webkit-text-stroke: 0px;
     }
@@ -26,11 +24,71 @@
       color: $color-white;
     }
   }
-
 }
 
-.border-left {
+.title-container {
+  margin: 8rem 0;
+}
+
+.body-container {
   border-left: 5px solid $color-white;
-  margin-left: 2rem;
+  margin: 8rem 0 8rem 2rem;
   padding-left: 2rem;
+  p {
+    font-size: $font_size-xsmall;
+  }
+}
+
+.call-to-action-container {
+  display: flex;
+  justify-content: center;
+  margin: 8rem 0;
+  width: 100%;
+}
+
+
+.button {
+  &-link {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+  background: none;
+  border: 3px solid white;
+  color: white;
+  font-family: AvenirNextLTPro;
+  font-size: $font_size-medium;
+  letter-spacing: 1px;
+  min-width: 5rem;
+  padding: 1rem 3rem;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: white;
+    border-color: white;
+    color: $color-deep-gold;
+    cursor: pointer;
+  }
+}
+
+
+section.module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.parallax-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parallax-banner h1 {
+  position: relative;
+  z-index: 10;
 }
