@@ -36,6 +36,7 @@
     "react-icons": "^4.3.1",
     "react-markdown": "^8.0.0",
     "react-router-dom": "^6.2.1",
+    "react-scroll-parallax": "^3.0.5",
     "react-tabs": "^3.2.3",
     "rehype-raw": "^6.1.1",
     "rehype-sanitize": "^5.0.1",

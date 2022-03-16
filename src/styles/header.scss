@@ -1,19 +1,19 @@
 .header {
   &__link {
     align-items: center;
+    border-bottom: none;
     color: $color-white;
     display: flex;
     text-decoration: none;
-    border-bottom: none;
     &:hover {
       border-bottom: none;
-      color: $color-pale-butter;
     }
-    a {
+    a, h4 {
     color: $color-white;
+    transition: all 0.3s ease-in-out;
       &:hover {
         border-bottom: none;
-        color: $color-pale-butter;
+        color: $color-deep-gold;
       }
     }
   }

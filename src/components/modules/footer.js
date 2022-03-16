@@ -9,11 +9,11 @@ const Footer = () => {
   return (
     <footer className="footer padding">
       <section className="footer__column footer__column--about">
-        <h3 className="h3 footer__title">About MAPC</h3>
+        <h4 className="h4 footer__title">About MAPC</h4>
         <p className="footer__paragraph">The Metropolitan Area Planning Council (MAPC) is the regional planning agency serving the people who live and work in the 101 cities and towns of Metropolitan Boston.</p>
       </section>
       <section className="footer__column footer__column--links">
-        <h3 className="h3 footer__title">Quick Links</h3>
+        <h4 className="h4 footer__title">Quick Links</h4>
         <ul className="footer__list">
           <li className="footer__list-item">
             <a href="https://metrocommon.mapc.org/" className="footer__link">MetroCommon Home</a>
@@ -27,7 +27,7 @@ const Footer = () => {
         </ul>
       </section>
       <section className="footer__column footer__column--explore">
-        <h3 className="h3 footer__title">Explore</h3>
+        <h4 className="h4 footer__title">Explore</h4>
         <ul className="footer__list">
           <li className="footer__list-item">
             <a href="https://metrocommon.mapc.org/" className="footer__link">MetroCommon x 2050</a>
@@ -47,7 +47,7 @@ const Footer = () => {
         </ul>
       </section>
       <section className="footer__column footer__column--contact">
-        <h3 className="h3 footer__title">Contact Us</h3>
+        <h4 className="h4 footer__title">Contact Us</h4>
         <a href="https://goo.gl/maps/5GP7YcEtS1E2" className="footer__link">
           60 Temple Place<br />
           Boston, MA 02111

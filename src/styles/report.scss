@@ -78,7 +78,9 @@
       margin-bottom: 0;
       margin-top: 0;
     }
-
+    p:last-child {
+      margin-bottom: 0;
+    }
     width: 45%;
   }
   &-two-col-flex {
@@ -98,14 +100,13 @@
   @include media(small) {
     border-right: none;
   }
-  border-right: 5px solid $color-deep-gold;
+  border-right: 3px solid $color-deep-gold;
   padding-right: 5%;
 }
 
 .citation {
   color: $color-smoke;
-  // font-size: $font_size-xxsmall;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   a {
     border-bottom: 2px dotted $color-smoke;
     &:hover {
@@ -115,7 +116,6 @@
 }
 
 .fullbleed {
-  // box-shadow: none;
   margin-left: calc(-14rem - ((100vw - 45rem - 14rem) / 2));
   width: 100vw;
   z-index: -1;
