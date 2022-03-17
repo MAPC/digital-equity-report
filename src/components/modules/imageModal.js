@@ -29,7 +29,7 @@ const ImageModal = ({source}) => {
         <div className="modal-expand-overlay">
           <FaExpand 
             size={"2em"} 
-            style={expand ? {color: "#FFE6AF"} : {color: "navy"}}             
+            style={expand ? {color: "#BEB6B6"} : {color: "black"}}             
             onClick={() => {
               setPopupSource(source);
               togglePopup(!popup);

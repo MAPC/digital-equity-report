@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
-// import Header from "../components/modules/header"; 
 import Header from "./modules/header";
 import ReportMenu from "./reportMenu";
 import Summary from "./sections/summary";
@@ -10,8 +9,9 @@ import Assessment from "./sections/assessment";
 import Actions from "./sections/actions";
 import Appendix from "./sections/appendix";
 import Footer from "./modules/footer";
-import chart1 from "../images/bar-chart-placeholder.png";
 import { PopupContext } from "./contexts/popupContext";
+import { ParallaxBanner } from 'react-scroll-parallax';
+import { Link } from "gatsby";
 
 const ReportWrapper = () => {
 
@@ -65,13 +65,26 @@ const ReportWrapper = () => {
           onClick={() => togglePopup(!popup)}
         />
       </div>
-      <div className="report-header padding">
+      
+      <ParallaxBanner
+        layers={[{ image: 'https://source.unsplash.com/6KJ-htnXv-8/2400x1350', speed: -20 }]}
+        style={{height: "28rem"}}
+      >
+        <div style={{position: "absolute", width: "100%"}}>
+          <div className="padding report-header">
+            <Header />
+            <h2 style={{width: "100%", color: "white", padding: "3rem 0"}}>Digital Equity Plan:<br/><span>Everett, Chelsea, & Revere</span></h2>
+          </div>
+        </div>
+      </ParallaxBanner>
+
+      {/* <div className="report-header padding">
         <Header />
         <div className="report-header-copy">
           <h4>Digital Equity Report:</h4>
           <h2>Everett, Chelsea, & Revere</h2> 
         </div>
-      </div>
+      </div> */}
       <div className="report-content padding">
         <div className="report-content__col-1">
           <ReportMenu 
@@ -87,7 +100,7 @@ const ReportWrapper = () => {
             <Summary />
           </div>
           
-          <div ref={processRef} id="background">
+          <div ref={processRef} id="process">
             <Process />
           </div>
           

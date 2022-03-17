@@ -5,9 +5,9 @@
     background-size: cover;
   }
   &-overlay {
-    // background-color: rgba(16, 51, 51, 0.7);
-    background: linear-gradient(rgba(16, 51, 51, 0.3), rgba(16, 51, 51, 1));
+    background: linear-gradient(rgba(18, 62, 75, 0.25), rgba(18, 62, 75,  1));
     color: $color-white;
+    min-height: 200vh;
   }
   &-copy {
     color: $color-white;
@@ -35,7 +35,7 @@
   margin: 8rem 0 8rem 2rem;
   padding-left: 2rem;
   p {
-    font-size: $font_size-xsmall;
+    font-size: 20px;
   }
 }
 
@@ -71,7 +71,6 @@
     cursor: pointer;
   }
 }
-
 
 section.module {
   display: flex;
