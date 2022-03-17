@@ -60,7 +60,7 @@ export default function ActionsAccordion() {
         titleOffset += accordionTitles[index - 1].offsetHeight;
       }      
       if (pnlIdx === pnlIdx) {
-        let totalOffset = offset + titleOffset;
+        const totalOffset = offset + titleOffset;
         window.scrollTo(0, totalOffset);
       }
     });
@@ -74,7 +74,7 @@ export default function ActionsAccordion() {
     const pnlIdx = parseInt(panel.substring(panel.length - 1));
     let titleOffset = pnlIdx * 80;
     
-    let totalOffset = offset + titleOffset;
+    const totalOffset = offset + titleOffset;
 
     window.scrollTo(0, totalOffset);
   };
@@ -86,19 +86,7 @@ export default function ActionsAccordion() {
     const pnlIdx = parseInt(panel.substring(panel.length - 1));
     let titleOffset = pnlIdx * 80;
     
-    let totalOffset = offset + titleOffset;
-
-    window.scrollTo(0, totalOffset);
-  };
-
-  const handleChangeLongTerm = (panel) => (event, newExpanded) => {
-    
-    setExpandedLongTerm(newExpanded ? panel : false);
-    const offset = event.target.closest(`.acc-action-longterm`).getBoundingClientRect().top + window.scrollY;
-    const pnlIdx = parseInt(panel.substring(panel.length - 1));
-    let titleOffset = pnlIdx * 80;
-    
-    let totalOffset = offset + titleOffset;
+    const totalOffset = offset + titleOffset;
 
     window.scrollTo(0, totalOffset);
   };
@@ -344,7 +332,6 @@ export default function ActionsAccordion() {
         <AccordionDetails>
           <Typography>
           <h4>{action.title}</h4>
-
           <div className="section-two-col-flex">
             <div className="section-half border-right">
             {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
@@ -361,9 +348,6 @@ export default function ActionsAccordion() {
               </p>
             </div>
           </div>
-
-
-
           </Typography>
         </AccordionDetails>
       </Accordion>

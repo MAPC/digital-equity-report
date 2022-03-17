@@ -55,13 +55,10 @@ export default function TimelineAccordion() {
     accordionTitles.forEach((elem, index) => {
       if (index <= pnlIdx && index !== 0) {
         titleOffset += accordionTitles[index - 1].offsetHeight;
-        if (index === 3) {
-          titleOffset += 25;
-        }
       }      
     });
     
-    let totalOffset = offset + titleOffset;
+    const totalOffset = offset + titleOffset;
 
     window.scrollTo(0, totalOffset);
 
