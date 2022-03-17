@@ -26,7 +26,6 @@ const AccordionSummary = styled((props) => (
   backgroundColor:
     theme.palette.mode === 'dark'
       ? 'rgba(0, 0, 0, .03)'
-      // : 'rgba(255, 230, 175, 0.5)',
       : 'rgba(100, 149, 237, 0.15)',
   border: '2px solid white',
   flexDirection: 'row-reverse',

@@ -2,8 +2,6 @@ import React from "react";
 import Header from "./modules/header";
 import Footer from "./modules/footer";
 import { Link } from "gatsby";
-import { useParallax } from 'react-scroll-parallax';
-import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 const Landing = () => {
@@ -14,9 +12,9 @@ const Landing = () => {
         // layers={[{ image: '/public/background.jpg', speed: -20 }]}
         // layers={[{ image: 'https://source.unsplash.com/user/knguyenmapc/4013x1923', speed: -20 }]}
         layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -20 }]}
-        style={{height: "auto", minHeight: "180vh"}}
+        style={{height: "200vh"}}
       >
-        <div style={{position: "absolute"}}>
+        <div style={{position: "absolute", minHeight: "200vh"}}>
           <div className="padding landing-overlay">
             <div className="landing-copy">
               <Header />
@@ -35,7 +33,6 @@ const Landing = () => {
         </div>
       </ParallaxBanner>
       <Footer />
-
     </div>
 
     // <div>
