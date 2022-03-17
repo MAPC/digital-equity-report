@@ -5,6 +5,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import Glossary from "../appendix/glossary";
 import Online from "../appendix/online";
 import Research from "../appendix/research";
 import Maps from "../appendix/maps";
@@ -58,6 +59,10 @@ export default function AppendixAccordion() {
   };
 
   const appendixSections = [
+    {
+      title: "Glossary",
+      accordion: <Glossary />
+    },
     {
       title: "Online Articles & Blog Posts",
       accordion: <Online />
