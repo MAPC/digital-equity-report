@@ -10,8 +10,10 @@ const Landing = () => {
   return (
     <div>
       <ParallaxBanner
-        layers={[{ image: '/public/background.jpg', speed: -20 }]}
-        // layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0', speed: -20 }]}
+        // layers={[{ image: '/background.jpg', speed: -20 }]}
+        // layers={[{ image: '/public/background.jpg', speed: -20 }]}
+        // layers={[{ image: 'https://source.unsplash.com/user/knguyenmapc/4013x1923', speed: -20 }]}
+        layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -20 }]}
         style={{height: "auto", minHeight: "180vh"}}
       >
         <div style={{position: "absolute"}}>

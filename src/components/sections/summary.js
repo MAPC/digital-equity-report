@@ -19,7 +19,7 @@ const Summary = () => {
         <p>City staff quickly identified the critical need to understand the role of municipal government in ensuring internet connectivity for residents and engaged with the Metropolitan Area Planning Council to create the Commonwealth’s first coordinated regional digital access plan.</p>
         <p>Through a comprehensive planning process MAPC evaluated available data, coordinated a digital access survey with over 2,000 responses, attended school district meetings, held focus groups in multiple languages, evaluated existing infrastructure, and worked closely with municipal staff and executive leadership to fully understand not only the symptoms, but root causes of digital inequities. This report outlines those findings and sets a path forward for these municipalities, and others, to improve not only digital connectivity and use, but the economic, health, and social well-being of all community residents.</p>
       <ParallaxBanner
-        layers={[{ image: '/static/background-1627d99df96450aab4508e393aab33c1.jpg', speed: -30 }]}
+        layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
         style={{height: "30rem", width: "100vw"}}
         className="fullbleed" 
       />
