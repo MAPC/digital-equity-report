@@ -43,7 +43,7 @@ const History = () => {
           </TabPanel>
         </Tabs>
         <ParallaxBanner
-          layers={[{ image: '/static/cables-03e9cf14a3d7e78ee0a6aead2d019c43.jpg', speed: -30 }]}
+          layers={[{ image: '/cables.jpg', speed: -30 }]}
           style={{height: "30rem", width: "100vw"}}
           className="fullbleed" 
         />
