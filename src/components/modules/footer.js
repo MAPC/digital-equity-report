@@ -4,6 +4,7 @@ import {
   faTwitter, faInstagram, faFacebookSquare, faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import logo from "../../images/mapc-logo.svg";
+import { Link } from "gatsby";
 
 const Footer = () => {
   return (
@@ -16,13 +17,25 @@ const Footer = () => {
         <h4 className="h4 footer__title">Quick Links</h4>
         <ul className="footer__list">
           <li className="footer__list-item">
-            <a href="https://metrocommon.mapc.org/" className="footer__link">MetroCommon Home</a>
+            <Link to="/" className="footer__link">Home</Link>
           </li>
           <li className="footer__list-item">
-            <a href="https://metrocommon.mapc.org/process-details" className="footer__link">MetroCommon Process Details</a>
+            <Link to="/report/#summary" className="footer__link">Executive Summary</Link>
           </li>
           <li className="footer__list-item">
-            <a href="https://metrocommon.mapc.org/events" className="footer__link">MetroCommon Events</a>
+            <Link to="/report/#process" className="footer__link">Process</Link>
+          </li>
+          <li className="footer__list-item">
+            <Link to="/report/#existing-conditions" className="footer__link">Existing Conditions</Link>
+          </li>
+          <li className="footer__list-item">
+            <Link to="/report/#assessment" className="footer__link">Community Needs Assessment</Link>
+          </li>
+          <li className="footer__list-item">
+            <Link to="/report/#actions" className="footer__link">Actions To Take</Link>
+          </li>
+          <li className="footer__list-item">
+            <Link to="/report/#appendix" className="footer__link">Appendix</Link>
           </li>
         </ul>
       </section>
@@ -55,7 +68,7 @@ const Footer = () => {
         <br />
         <span className="footer__link">617-933-0700</span>
         <p className="footer__paragraph">
-          <a href="https://metrocommon.mapc.org" className="footer__link">metrocommon.mapc.org</a>
+          <a href="https://mapc.org" className="footer__link">mapc.org</a>
         </p>
       </section>
       <div className="footer__image-block">
