@@ -11,11 +11,11 @@ const Connection = () => {
       <div className="section">
         <h4>Connected to the Internet</h4>
         <p>The American Community Survey also captures data on internet connection. The current survey asks… [if you have internet, what kind of plan—summarize how the question is asked.] As shown in the data viz below, almost 16% of Everett households, and more than 18% of Revere and Chelsea households, have no internet connection at home.</p>
-        <iframe src="https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/U_S_CensusQuestions?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+        <iframe src="https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/NoComputer_1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
         <p>The percentage of households with only broadband cellular plan also stands out when compared with (REGION/STATE/US/World bank compare?)</p>
         <iframe src="https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/U_S_CensusQuestions?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
         <p>The connection to the internet is not distributed equally. While the number of households with a fiber / broadband level speed lags behinds the state and region, the lack of connection is even more pronounced to for those households living below 200% of below the poverty threshold.</p>
-        <iframe src="https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/U_S_CensusQuestions?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+        <iframe src="https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/HouseholdsWithInternetbyIncome_1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
         <p>Access to the internet is also a racial equity issue. Analysis of the digital divide shows that Black and Latinx residents are also disproportionately represented in “Unconnected Communities,” defined as….   We know nationally disconnect households are disproportionately impacting communities of color.</p>
         <p>The Census data above highlights that these three communities have some of the highest 	populations of Black and Latinx populations in region and state.</p>
         <p>Another source of data is the required federal self-reporting done by internet service providers to help understand connection. The FCC requires that twice a year internet service providers self-report service coverage online through Form 477. The data from these filings gives one picture of internet connection across the country. While the data is open and available, it can exaggerate the available service area given data and reporting limitations.</p>
