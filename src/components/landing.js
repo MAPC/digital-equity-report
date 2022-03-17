@@ -10,8 +10,8 @@ const Landing = () => {
   return (
     <div>
       <ParallaxBanner
-        layers={[{ image: '/static/background-1627d99df96450aab4508e393aab33c1.jpg', speed: -20 }]}
-        style={{height: "200vh"}}
+        layers={[{ image: '/background.jpg', speed: -20 }]}
+        style={{height: "auto", minHeight: "180vh"}}
       >
         <div style={{position: "absolute"}}>
           <div className="padding landing-overlay">
