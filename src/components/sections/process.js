@@ -80,7 +80,7 @@ const Process = () => {
         <p>To skill up on this area of planning and research, MAPC connected and partnered with organizations steeped in this work for decades and internally staffed to be able to partner and provide planning services to this area of focus demanding attention. Guided by newly <a href="https://www.speedtest.net/insights/blog/announcing-ookla-open-datasets/">released open data</a> and inspired by <a href="https://pcrd.purdue.edu/the-real-digital-divide-advertised-vs-actual-internet-speeds/">research</a> from other states, MAPC produced the December 2020 <a href="https://datacommon.mapc.org/calendar/2020/december">“Need for Speed”</a> data visualization that looked at speed test data across the 101 municipalities in MAPC’s region.</p>
         <p>This work connected us to connect with communities hit hard by the pandemic and with populations most in need of recovery assistance and future resiliency. MAPC partnered with leaders in Everett, Chelsea, & Revere who were working to address digital access issues, residents had raised in their communities. Residents in these communities were experiencing average internet speeds much lower than the available, advertised interest speeds along with device and literacy challenges related to the internet. The MAPC visualization of speed data depicted these communities with some of the lowest average download speeds of any municipality in the region. To explore the challenges and opportunities further, MAPC and the Cities partnered to develop this plan that is scaled to fit the capacity of municipal staff while leveraging a strong resource network of local, state, and federal resources that cross the public, private, educational, and nonprofit sectors. </p>
       </div>
-      <div className="section-two-col-flex">
+      {/* <div className="section-two-col-flex">
         <div className="section-half border-right">
           <h3>Community Advisory Team</h3>
           <p>To achieve outcomes that enhance the wellbeing of the community, it’s essential that community perspective guides the work. A community advisory team served as a core working group which meet throughout the process to provide feedback, responses to proposed strategies and data analysis. This group was essential in assisting with the distribution and completion of the community needs assessment. The perspective provided by the community advisory helped inform the development of this plans vision and goals, and shaped the focus and framing of this report. Ultimately, it will be this set of stakeholders will be able to take actionable measures towards the goals this report intends to achieve.</p>
@@ -108,7 +108,7 @@ const Process = () => {
             {createList(mapc)}
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className="section">
         <h3>Project Goals</h3>
         <p>Local governments rarely understand their role in digital access: few have strategies for providing fast, reliable, and affordable internet to residents and businesses. Revere, Chelsea, and Everett are leading the Commonwealth in developing a plan that is both scaled to fit the capacity of municipal staff and that leverages a strong network of local, state, and federal public, private, educational, and nonprofit resources. MAPC has structured this plan to be a template for municipalities and their partner stakeholders.</p>
