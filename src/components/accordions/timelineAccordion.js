@@ -43,56 +43,27 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function TimelineAccordion() {
   const [expanded, setExpanded] = React.useState('panel0');
-
+  
   const handleChange = (panel) => (event, newExpanded) => {
-
-
-
     setExpanded(newExpanded ? panel : false);
     
     const accordionTitles = event.target.closest('.MuiPaper-root').parentNode.closest('div').querySelectorAll('.MuiButtonBase-root');
-
-    console.log("accordionTitles", accordionTitles);
-    
-    
     const offset = event.target.closest('.MuiPaper-root').parentNode.closest('div').getBoundingClientRect().top + window.scrollY;
     const pnlIdx = parseInt(panel.substring(panel.length - 1));
     let titleOffset = 0;
+    
     accordionTitles.forEach((elem, index) => {
-      if (index <= pnlIdx) {
-        titleOffset += elem.offsetHeight;
+      if (index <= pnlIdx && index !== 0) {
+        titleOffset += accordionTitles[index - 1].offsetHeight;
+        if (index === 3) {
+          titleOffset += 25;
+        }
       }      
     });
-
+    
     let totalOffset = offset + titleOffset;
 
     window.scrollTo(0, totalOffset);
-
-
-
-
-    // setExpanded(newExpanded ? panel : false);
-
-    // console.log("event", event);
-    // console.log("event.target", event.target);
-    // console.log("event.target.closest('.MuiPaper-root').offsetHeight", event.target.closest('.MuiPaper-root').offsetHeight);
-
-    // // let offset = event.target.closest('.MuiPaper-root').getBoundingClientRect().top;
-    // // console.log("event.target.closest('.MuiPaper-root').getBoundingClientRect().top", offset);
-
-    // // console.log("event.pageY", event.pageY);
-    // // console.log("window.pageYOffset", window.pageYOffset);
-    // // console.log("window.innerHeight", window.innerHeight);
-
-    // // const windowTop = window.pageYOffset - offset;
-
-    // // console.log("pageYOffset", event.target.closest('.MuiPaper-root').pageYOffset);
-
-    // window.scrollTo({
-    //   top: window.pageYOffset + event.target.closest('.MuiPaper-root').offsetHeight,
-    //   left: 0,
-    //   behavior: "smooth",
-    // })
 
   };
 

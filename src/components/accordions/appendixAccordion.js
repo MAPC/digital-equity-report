@@ -56,6 +56,18 @@ export default function AppendixAccordion() {
   const handleChange = (panel) => (event, newExpanded) => {
     
     setExpanded(newExpanded ? panel : false);
+    const accordionTitles = event.target.closest('.MuiPaper-root').parentNode.closest('div').querySelectorAll('.MuiButtonBase-root');
+    const offset = event.target.closest('.MuiPaper-root').parentNode.closest('div').getBoundingClientRect().top + window.scrollY;
+    const pnlIdx = parseInt(panel.substring(panel.length - 1));
+    let titleOffset = 
+    
+    accordionTitles.forEach((elem, index) => {
+      if (index <= pnlIdx && index !== 0) {
+        titleOffset += accordionTitles[index - 1].offsetHeight;
+      }      
+    });
+    
+    let totalOffset = offset + titleOffset;
 
   };
 
