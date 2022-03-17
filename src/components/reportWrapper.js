@@ -57,7 +57,6 @@ const ReportWrapper = () => {
   } 
 
   return (
-    // <PopupProvider>
     <div className="report-container" onScroll={handleScroll}>
       <div className={popup ? "report-image" : "hidden"}>
         <img 
