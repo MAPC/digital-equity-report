@@ -8,6 +8,7 @@ import chart4 from "../../images/learn-more.png";
 import chart5 from "../../images/it.png";
 import PercentBar from "../modules/percentBar";
 import ImageModal from "../modules/imageModal";
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const Assessment = () => {
 
@@ -111,6 +112,13 @@ const Assessment = () => {
   
   return (
     <div>
+      <div className="section">
+        <ParallaxBanner
+          layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+          style={{height: "24rem", width: "100vw"}}
+          className="fullbleed" 
+        />
+      </div>
       <div className="section">
         <h2>Community Needs Assessment</h2>
         <div className="section-two-col-flex">

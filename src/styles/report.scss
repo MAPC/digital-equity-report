@@ -44,8 +44,7 @@
         margin-right: 0;
         width: 10rem;
       }
-      margin-right: 4rem;
-      width: 10rem;
+      width: 8rem;
     }
     &__col-2 {
       @include media(large) {
@@ -116,6 +115,6 @@
 }
 
 .fullbleed {
-  margin-left: calc(-14rem - ((100vw - 45rem - 14rem) / 2));
+  margin-left: calc(-8rem - (100vw - 45rem - 8rem) / 2);
   width: 100vw;
 }

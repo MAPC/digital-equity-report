@@ -8,7 +8,6 @@ import ExistingConditions from "../components/sections/existingConditions";
 import Assessment from "../components/sections/assessment";
 import Actions from "../components/sections/actions";
 import Appendix from "../components/sections/appendix";
-import LiteratureReview from "../components/sections/literatureReview";
 import Footer from "../components/modules/footer";
 import chart1 from "../images/bar-chart-placeholder.png";
 import { PopupContext, PopupProvider } from "../components/contexts/popupContext";

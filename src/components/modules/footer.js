@@ -5,6 +5,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import logo from "../../images/mapc-logo.svg";
 import { Link } from "gatsby";
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Footer = () => {
   return (
@@ -17,25 +18,25 @@ const Footer = () => {
         <h4 className="h4 footer__title">Quick Links</h4>
         <ul className="footer__list">
           <li className="footer__list-item">
-            <Link to="/" className="footer__link">Home</Link>
+            <AnchorLink to="/" className="footer__link">Home</AnchorLink>
           </li>
           <li className="footer__list-item">
-            <Link to="/report/#summary" className="footer__link">Executive Summary</Link>
+            <AnchorLink to="/report/#summary" className="footer__link">Executive Summary</AnchorLink>
           </li>
           <li className="footer__list-item">
-            <Link to="/report/#process" className="footer__link">Process</Link>
+            <AnchorLink to="/report/#process" className="footer__link">Process</AnchorLink>
           </li>
           <li className="footer__list-item">
-            <Link to="/report/#existing-conditions" className="footer__link">Existing Conditions</Link>
+            <AnchorLink to="/report/#existing-conditions" className="footer__link">Existing Conditions</AnchorLink>
           </li>
           <li className="footer__list-item">
-            <Link to="/report/#assessment" className="footer__link">Community Needs Assessment</Link>
+            <AnchorLink to="/report/#assessment" className="footer__link">Community Needs Assessment</AnchorLink>
           </li>
           <li className="footer__list-item">
-            <Link to="/report/#actions" className="footer__link">Actions To Take</Link>
+            <AnchorLink to="/report/#actions" className="footer__link">Actions To Take</AnchorLink>
           </li>
           <li className="footer__list-item">
-            <Link to="/report/#appendix" className="footer__link">Appendix</Link>
+            <AnchorLink to="/report/#appendix" className="footer__link">Appendix</AnchorLink>
           </li>
         </ul>
       </section>

@@ -1,12 +1,10 @@
 import React from "react";
-import { Link } from "gatsby"
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Menu = () => {
   return (
     <div>
-      {/* <Link to="/">Home</Link>
-      <br/> */}
-      <Link to="/report">Read the Report</Link>
+      <AnchorLink to="/report">Read the Report</AnchorLink>
     </div>
   )
 }

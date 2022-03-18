@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "gatsby"
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
@@ -10,9 +9,9 @@ const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
     {type: "main", link: "process", title: "Process"},
     {type: "main", link: "history", title: "History & Background"},
     {type: "main", link: "existing-conditions", title: "Existing Conditions"},
-    {type: "sub", title: "Connection & Access", tab: 0, parent: "existing-conditions"},
-    {type: "sub", title: "Service & Affordability", tab: 1, parent: "existing-conditions"},
-    {type: "sub", title: "Infrastructure", tab: 2, parent: "existing-conditions"},
+    {type: "sub", link: "existing-conditions-tabs", title: "Connection & Access", tab: 0, parent: "existing-conditions"},
+    {type: "sub", link: "existing-conditions-tabs", title: "Service & Affordability", tab: 1, parent: "existing-conditions"},
+    {type: "sub", link: "existing-conditions-tabs", title: "Infrastructure", tab: 2, parent: "existing-conditions"},
     {type: "main", link: "assessment", title: "Community Needs Assessment"},
     {type: "main", link: "actions", title: "Actions To Take"},
     {type: "main", link: "appendix", title: "Appendix"}
@@ -24,16 +23,16 @@ const ReportMenu = ({isActive, setActive, tabIndex, setTabIndex}) => {
         {element.title}
       </AnchorLink>
     } else if (element.type === "sub") {
-      return <AnchorLink key={i} to={"#" + element.parent} onClick={() => handleClick(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</AnchorLink>
+      return <AnchorLink key={i} to={`#` + element.link} onAnchorLinkClick={() => handleTabsChange(element.tab)} className={isActive !== element.parent ? "report-menu__sublink hidden" : "report-menu__sublink" }>{element.title}</AnchorLink>
     } else {
       return undefined;
     }
   })
 
-  function handleClick (index) {
+  const handleTabsChange = (index) => {
     setTabIndex(index);
     console.log("tabIndex", tabIndex);
-  }
+  };
 
   return (
     <div className="report-menu">

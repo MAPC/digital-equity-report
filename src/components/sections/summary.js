@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import ImageModal from "../modules/imageModal";
-import cities from "../../images/background-cropped.jpg"
-import test from "../../images/background.jpg"
 import chart1 from "../../images/comcast_census_blocks_2022-02-18_3pm.png";
-import chart2 from "../../images/residential_fiber_blocks.png";
 import CalloutQuote from "../modules/calloutQuote";
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Summary = () => {
 
@@ -18,11 +17,6 @@ const Summary = () => {
         <p>Nowhere was this push felt more than in the cities of Chelsea, Everett, and Revere – communities with high populations of low income, people of color, and immigrant residents – population groups that have been disproportionately impacted by the health and economic disruptions of COVID . Residents in these communities were also experiencing average internet speeds much lower than available, advertised <a href="https://datacommon.mapc.org/calendar/2020/december">speeds</a>. In fact, the data showed these communities to have some of the lowest average download speeds of any municipality in the region. These disadvantages are only compounded by the numerous residents without devices that can take full advantage of the internet, and the many with digital literacy challenges.</p>
         <p>City staff quickly identified the critical need to understand the role of municipal government in ensuring internet connectivity for residents and engaged with the Metropolitan Area Planning Council to create the Commonwealth’s first coordinated regional digital access plan.</p>
         <p>Through a comprehensive planning process MAPC evaluated available data, coordinated a digital access survey with over 2,000 responses, attended school district meetings, held focus groups in multiple languages, evaluated existing infrastructure, and worked closely with municipal staff and executive leadership to fully understand not only the symptoms, but root causes of digital inequities. This report outlines those findings and sets a path forward for these municipalities, and others, to improve not only digital connectivity and use, but the economic, health, and social well-being of all community residents.</p>
-      <ParallaxBanner
-        layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
-        style={{height: "30rem", width: "100vw"}}
-        className="fullbleed" 
-      />
       </div>
       <div className="section">
         <h3>Key Findings</h3>
@@ -41,23 +35,37 @@ const Summary = () => {
             />
           </div>
         </div>
-        <div className="section-bottom">
+        <div className="section">
         <p>Anecdotal information gleaned from stakeholder engagement has also illustrated the specific issues facing larger households. Many households in the three communities are larger, with more than four people. In Chelsea, 33% of households have 4 people or more, in Everett 27%, and Revere 24%. 80% of respondents to the Digital Access and Equity Survey responded that frequently or always more than one person in their household needs to use the internet at the same time. Multiple users of the internet on lower service plans have caused significant challenges for students and parents who need to work or attend school remotely due to limited bandwidth and speed, as well issues stemming from outdated building wiring and equipment. </p>
         <p>Finally, MAPC explored the state of existing infrastructure in the three cities and found that while the wireline service providers have close to ubiquitous cable broadband coverage, there are significant gaps in the fiber backbone serving these areas. Currently, Everett and Revere are served by Comcast and RCN, and Chelsea is only served by Comcast. As much of the future federal funding through both the American Rescue Plan Act and Infrastructure Investment and Jobs Act specifically calls out an emphasis on fiber connections for both reliability and speed, it will be critical for these communities to work with public and private actors to expand the fiber connectivity.</p>
         <ImageModal
           source={chart1}
         />        
-        <ImageModal
-          source={chart2} 
-        />
       </div>
-      <div className="section">
+      <div className="section-bottom">
         <h3>Recommendations</h3>
         <p>Historically, digital access and equity has been an issue that municipal and community partners have recognized as important, but not one that has been a core focus of any one entity. While establishing a local point of contact for leading forward future efforts related to digital access and equity, it is also important to recognize that existing stakeholders can play in advancing program, policies, and investments.</p>
         <p>MAPC established the following framework for considering the roles of these local actors as follows: </p>
-        <iframe src="https://slides.com/mapc/everett-digital-access-plan-final-pres/embed?token=vfsce4A0#/4/1" width="100%" height="480" title="Everett Digital Access Plan - Final Pres" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe 
+          src="https://slides.com/mapc/everett-digital-access-plan-final-pres-809f36/embed?token=cwvrAva4" 
+          width="100%" 
+          height="480" 
+          title="Everett Digital Access Plan - Final Pres" 
+          scrolling="no" 
+          frameborder="0" 
+          allowFullScreen="true" 
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+        >
+        </iframe>
         <p>With that framework, MAPC recommends that the cities of Chelsea, Everett, and Revere take the following steps to advance digital access and equity in their communities.</p>
-        <iframe src="https://slides.com/mapc/copy-of-everett-digital-access-plan-final-pres/embed#/7" width="100%" height="480" title="Chelsea_Revere Digital Access Plan - Final Pres" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <AnchorLink 
+              to={`#actions`} 
+              className="anchor"
+            >
+              <FontAwesomeIcon icon={faArrowAltCircleDown} className="anchor__icon" />
+              <span className="anchor__helper-text">Read the Actions</span>
+        </AnchorLink>
       </div>
     </div>
   )

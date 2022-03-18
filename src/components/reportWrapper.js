@@ -11,7 +11,6 @@ import Appendix from "./sections/appendix";
 import Footer from "./modules/footer";
 import { PopupContext } from "./contexts/popupContext";
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { Link } from "gatsby";
 
 const ReportWrapper = () => {
 

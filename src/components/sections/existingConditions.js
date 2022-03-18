@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import Connection from "../existingConditions/connection";
 import Service from "../existingConditions/service";
 import Infrastructure from "../existingConditions/infrastructure";
@@ -6,18 +6,26 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "gatsby";
 import ImageModal from "../modules/imageModal";
 import chart1 from "../../images/bar-chart-placeholder.png";
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const ExistingConditions = ({tabIndex, setTabIndex}) => {
 
   const handleTabsChange = (index) => {
     setTabIndex(index);
+    console.log("tabIndex", tabIndex);
   };
 
   return (
     <div>
+      <div className="section">
+        <ParallaxBanner
+          layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+          style={{height: "24rem", width: "100vw"}}
+          className="fullbleed" 
+        />
+      </div>
       <div className="section section-bottom">
         <h2>Existing Conditions</h2>
         <p>Currently, access to the internet is not managed as a public utility with , guaranteeingd access to for all residents. Without that guarantee, access to the internet is heavily influenced by the economic and societal makeup of a community. Having a low household income, living with a high number of individuals per household, not understanding the language for which guidance or marketing materials are produced, being older and non-digital native can all be compounding barriers to internet access.</p>
@@ -30,8 +38,8 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
         />
         <Tabs 
           selectedIndex={tabIndex} 
-          onSelect={(index) => setTabIndex(index)}
-          id="tabs"
+          onSelect={(index) => handleTabsChange(index)}
+          id="existing-conditions-tabs"
         >
           <TabList>
             <Tab><h4>Connection & Access</h4></Tab>

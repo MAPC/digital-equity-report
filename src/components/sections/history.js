@@ -1,14 +1,19 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
 import CalloutQuote from "../modules/calloutQuote";
-import cables from "../../images/cables.jpg"
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 const History = () => {
 
   return (
     <div>
+      <div className="section">
+        <ParallaxBanner
+          layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
+          style={{height: "24rem", width: "100vw"}}
+          className="fullbleed" 
+        />
+      </div>
       <div className="section">
         <h2>History & Background</h2>
         <h4>An overview of digital access</h4>
@@ -42,17 +47,21 @@ const History = () => {
             <p>Digital literacy is the ability to use a device and internet effectively and in a way that enables an individual to easily navigate needed uses and services. Understanding the different uses and needs of various segments of Everett’s community will assist in creating a plan for improving literacy in a way that meets community needs and culture. </p>
           </TabPanel>
         </Tabs>
-        <ParallaxBanner
-          // layers={[{ image: '/cables.jpg', speed: -30 }]}
-          layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
-          style={{height: "30rem", width: "100vw"}}
-          className="fullbleed" 
-        />
       </div>
       <div className="section">
         <h3>How Does the Internet Function?</h3>
         <p>Let’s look at the technology that is relied upon to provide the internet to us.</p>
-        <iframe src="https://slides.com/mapc/internet-slides/embed" width="100%" height="480" title="Internet Slides" scrolling="no" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://slides.com/mapc/internet-slides/embed?byline=hidden" 
+          width="100%" 
+          height="480" 
+          title="Internet Slides" 
+          scrolling="no" 
+          frameborder="0" 
+          allowFullScreen="true" 
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+        >
+        </iframe>
       </div>
       <div className="section-two-col-flex">
         <div className="section-half border-right">
