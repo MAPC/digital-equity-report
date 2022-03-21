@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { AnchorLink } from 'gatsby-plugin-anchor-links'; 
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -46,8 +47,29 @@ export default function ActionsAccordion() {
   const [expandedIntermediate, setExpandedIntermediate] = useState();
   const [expandedLongTerm, setExpandedLongTerm] = useState();
 
+  useEffect(() => {
+    if (window.location.href.indexOf("immediate") > -1) {
+      const url = window.location.href;
+      const panel = url.substring(url.indexOf("immediate"));
+      setExpandedImmediate(panel);
+      handleChangeImmediate(panel);
+    } else if (window.location.href.indexOf("intermediate") > -1) {
+      const url = window.location.href;
+      const panel = url.substring(url.indexOf("intermediate"));
+      setExpandedIntermediate(panel);
+      handleChangeIntermediate(panel);
+    } else if (window.location.href.indexOf("longterm") > -1) {
+      const url = window.location.href;
+      const panel = url.substring(url.indexOf("longterm"));
+      setExpandedLongTerm(panel);
+      handleChangeLongTerm(panel);
+    } else {
+      return undefined;
+    }
+  }, []);
+
   const handleChangeImmediate = (panel) => (event, newExpanded) => {
-    
+    console.log("panel", panel);
     setExpandedImmediate(newExpanded ? panel : false);
     const accordionTitles = event.target.closest(`.acc-action-immediate`).children;
     const offset = event.target.closest(`.acc-action-immediate`).getBoundingClientRect().top + window.scrollY;
@@ -324,46 +346,48 @@ export default function ActionsAccordion() {
 
   function createAccordions(actions, type, changeFunction, expandSetting) {
     return actions.map((action, index) => {
-      return <Accordion className="actionAccordion" expanded={expandSetting === `panel${type}${index}`} onChange={changeFunction(`panel${type}${index}`)}>
-        <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
-          <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.short}</h4></Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          <h4>{action.title}</h4>
-          <div className="section-two-col-flex">
-            <div className="section-half border-right">
-            {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
+      return <AnchorLink to={`#${type}-panel${index}`}>
+        <Accordion className="actionAccordion" id={`${type}-panel${index}`} expanded={expandSetting === `${type}-panel${index}`} onChange={changeFunction(`${type}-panel${index}`)}  onLoad={changeFunction(`${type}-panel${index}`)}>
+          <AccordionSummary aria-controls={"panel" + index + "d-content"} id={"panel" + index + "d-header"}>
+            <Typography><h4 style={{color: "black", margin: "0.5rem"}}>{action.short}</h4></Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+            <h4>{action.title}</h4>
+            <div className="section-two-col-flex">
+              <div className="section-half border-right">
+              {action.description.map((elem, i) => <p key={i}>{elem}</p>)}
+              </div>
+              <div className="section-half">
+                <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Timeframe:</span> <br/>{action.timeframe}</p>
+                <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Status:</span> <br/>{action.status}</p>
+                <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Type:</span> <br/>{action.type}</p>
+                <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Primary Actor:</span> <br/>{action.actor}</p>
+                <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Next Steps:</span> <br/>
+                  <ul style={{marginTop: 0, listStyle: "circle"}}>
+                    {action.steps.map((elem, i) => <li key={i} style={{listStyle: "circle", marginLeft: "1.2rem"}}>{elem}</li>)}
+                  </ul>
+                </p>
+              </div>
             </div>
-            <div className="section-half">
-              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Timeframe:</span> <br/>{action.timeframe}</p>
-              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Status:</span> <br/>{action.status}</p>
-              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Type:</span> <br/>{action.type}</p>
-              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Primary Actor:</span> <br/>{action.actor}</p>
-              <p><span style={{fontWeight: "bold", fontFamily: "AvenirNextLTPro"}}>Next Steps:</span> <br/>
-                <ul style={{marginTop: 0, listStyle: "circle"}}>
-                  {action.steps.map((elem, i) => <li key={i} style={{listStyle: "circle", marginLeft: "1.2rem"}}>{elem}</li>)}
-                </ul>
-              </p>
-            </div>
-          </div>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </AnchorLink>
     })
   };
 
   return (
     <div>
         <h3>Immediate</h3>
-      <div class="acc-action-immediate">
+      <div class="acc-action-immediate" id="immediate">
         {createAccordions(immediate, 'immediate', handleChangeImmediate, expandedImmediate)}
       </div>
         <h3>Intermediate</h3>
         <div class="acc-action-intermediate">
         {createAccordions(intermediate, 'intermediate', handleChangeIntermediate, expandedIntermediate)}
       </div>
-        <h3>Long-term</h3>
+        <h3>Longterm</h3>
         <div class="acc-action-longterm">
         {createAccordions(longterm, 'longterm', handleChangeLongTerm, expandedLongTerm)}
       </div>
