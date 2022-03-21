@@ -1,16 +1,19 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CalloutQuote from "../modules/calloutQuote";
-import chart1 from "../../images/choppy.png";
-import chart2 from "../../images/laptop.png";
-import chart3 from "../../images/internet-connectivity.png";
-import chart4 from "../../images/learn-more.png";
-import chart5 from "../../images/it.png";
 import PercentBar from "../modules/percentBar";
-import ImageModal from "../modules/imageModal";
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Assessment = () => {
+
+  const [demosTab, setDemosTab] = useState(0);
+  const [connectTab, setConnectTab] = useState(0);
+
+  const handleTabsChange = (index, callback) => {
+    callback(index);
+  };
 
   const languageFloats = [
     {
@@ -113,13 +116,6 @@ const Assessment = () => {
   return (
     <div>
       <div className="section">
-        <ParallaxBanner
-          layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
-          style={{height: "24rem", width: "100vw"}}
-          className="fullbleed" 
-        />
-      </div>
-      <div className="section">
         <h2>Community Needs Assessment</h2>
         <div className="section-two-col-flex">
           <div className="section-half border-right">
@@ -138,7 +134,11 @@ const Assessment = () => {
       </div>
       <div className="section">
         <h3>Survey Respondent Demographics</h3>
-        <Tabs>
+        <Tabs
+          selectedIndex={demosTab} 
+          onSelect={(index) => handleTabsChange(index, setDemosTab)}
+          id="demographics-tabs"
+        >
           <TabList>
             <Tab><h4>Language</h4></Tab>
             <Tab><h4>Race and Ethnicity</h4></Tab>
@@ -146,16 +146,35 @@ const Assessment = () => {
           </TabList>
 
           <TabPanel>
-            <p>In addition to being available in English the digital access survey was translated into 5 languages spoken widely in the three cities; Spanish, Haitian Creole, Brazilian Portuguese, Arabic, and Khmer.</p>
-            {createFloats(languageFloats)}
+            <div className="section">
+              <p>In addition to being available in English the digital access survey was translated into 5 languages spoken widely in the three cities; Spanish, Haitian Creole, Brazilian Portuguese, Arabic, and Khmer.</p>
+              {createFloats(languageFloats)}
+              <FontAwesomeIcon 
+                style={{marginTop: "1rem"}}
+                icon={faArrowCircleRight} 
+                className="anchor__icon" 
+                onClick={() => setDemosTab(demosTab + 1)} 
+              />
+            </div>
+
           </TabPanel>
           <TabPanel>
-            <p>{createFloats(raceFloats)}</p>
-            {createPercents(racePercents)}
+            <div className="section">
+              <p>{createFloats(raceFloats)}</p>
+              {createPercents(racePercents)}
+              <FontAwesomeIcon 
+                style={{marginTop: "1rem"}}
+                icon={faArrowCircleRight} 
+                className="anchor__icon" 
+                onClick={() => setDemosTab(demosTab + 1)} 
+              />
+            </div>
           </TabPanel>
           <TabPanel>
-            <p>Respondents to the survey represented a diverse cross section of family types and household sizes within the three communities.</p>
-            {createPercents(hhPercents)}
+            <div className="section">
+              <p>Respondents to the survey represented a diverse cross section of family types and household sizes within the three communities.</p>
+              {createPercents(hhPercents)}
+            </div>
           </TabPanel>
         </Tabs> 
       </div>
@@ -163,7 +182,11 @@ const Assessment = () => {
         <h3>Key Findings</h3>
         <h4>Connectivity</h4>
         <p>Ensuring that residents are able to acquire internet services at an affordable price that meets their needs is a major component of digital access. The following key findings summarize respondents experience and perspective on internet subscriptions, internet affordability, and internet reliability.  </p>
-        <Tabs>
+        <Tabs
+          selectedIndex={connectTab} 
+          onSelect={(index) => handleTabsChange(index, setConnectTab)}
+          id="connectivity-tabs"
+        >
           <TabList>
             <Tab><h4>Internet Subscriptions</h4></Tab>
             <Tab><h4>Literacy</h4></Tab>
@@ -195,8 +218,6 @@ const Assessment = () => {
 
               In Revere and Everett where RCN is an available competitor to Comcast, those communities had about 20% of users subscribing to an alternative to Comcast. Indicating that where there is more choice in service providers, individuals will adopt.</p>
             </div>
-
-
             <div className="section-two-col-flex section">
               <div className="section-half border-right">
                 <h4>Affordability</h4>
@@ -227,7 +248,17 @@ const Assessment = () => {
 
                 Respondents who indicated that thre or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls </p>                
             </div>
-
+            <AnchorLink 
+              to={`#connectivity-tabs`} 
+              className="anchor"
+              onAnchorLinkClick={() => setConnectTab(connectTab + 1)}
+            >
+              <FontAwesomeIcon 
+                icon={faArrowCircleRight} 
+                className="anchor__icon" 
+              />
+              <span className="anchor__helper-text">Next Section: Literacy</span>
+            </AnchorLink>
           </TabPanel>
           <TabPanel>
             <div className="section">
@@ -262,6 +293,17 @@ const Assessment = () => {
               <p>However, twice as many respondents in Spanish indicated an interest in those same skill areas.  </p>
               <p>Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available. </p>
             </div>
+            <AnchorLink 
+              to={`#connectivity-tabs`} 
+              className="anchor"
+              onAnchorLinkClick={() => setConnectTab(connectTab + 1)}
+            >
+              <FontAwesomeIcon 
+                icon={faArrowCircleRight} 
+                className="anchor__icon" 
+              />
+              <span className="anchor__helper-text">Next Section: Device Access</span>
+            </AnchorLink>
           </TabPanel>
           <TabPanel>
             <div className="section">

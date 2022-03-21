@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CalloutQuote from "../modules/calloutQuote";
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const History = () => {
 
+  const [definitionsTab, setDefinitionsTab] = useState(0);
+
+  const handleTabsChange = (index) => {
+    setDefinitionsTab(index);
+  };
+
   return (
     <div>
-      <div className="section">
-        <ParallaxBanner
-          layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
-          style={{height: "24rem", width: "100vw"}}
-          className="fullbleed" 
-        />
-      </div>
       <div className="section">
         <h2>History & Background</h2>
         <h4>An overview of digital access</h4>
@@ -30,7 +30,11 @@ const History = () => {
         </div>
       </div>
       <div className="section">
-        <Tabs>
+        <Tabs
+          selectedIndex={definitionsTab} 
+          onSelect={(index) => handleTabsChange(index)}
+          id="definitions-tabs"
+        >
           <TabList>
             <Tab><h4>Device</h4></Tab>
             <Tab><h4>Access</h4></Tab>
@@ -39,9 +43,19 @@ const History = () => {
 
           <TabPanel>
             <p>In order to utilize the internet for critical personal services such as education, healthcare, and job search / online applications individuals need a computing device with a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet but is not a substitute for a personal computing devices function. </p>
+            <FontAwesomeIcon 
+              icon={faArrowCircleRight} 
+              className="anchor__icon" 
+              onClick={() => setDefinitionsTab(definitionsTab + 1)} 
+            />
           </TabPanel>
           <TabPanel>
             <p>Ensuring that residents and businesses are able to acquire internet services at an affordable price that meets their needs will be a central focus of the Everett Internet Access and Equity Plan. Suite of options that would improve the access to affordable, high speed, and reliable internet in the City. </p>
+            <FontAwesomeIcon 
+              icon={faArrowCircleRight} 
+              className="anchor__icon" 
+              onClick={() => setDefinitionsTab(definitionsTab + 1)} 
+            />
           </TabPanel>
           <TabPanel>
             <p>Digital literacy is the ability to use a device and internet effectively and in a way that enables an individual to easily navigate needed uses and services. Understanding the different uses and needs of various segments of Everett’s community will assist in creating a plan for improving literacy in a way that meets community needs and culture. </p>

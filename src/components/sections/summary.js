@@ -42,7 +42,7 @@ const Summary = () => {
           source={chart1}
         />        
       </div>
-      <div className="section-bottom">
+      <div className="section">
         <h3>Recommendations</h3>
         <p>Historically, digital access and equity has been an issue that municipal and community partners have recognized as important, but not one that has been a core focus of any one entity. While establishing a local point of contact for leading forward future efforts related to digital access and equity, it is also important to recognize that existing stakeholders can play in advancing program, policies, and investments.</p>
         <p>MAPC established the following framework for considering the roles of these local actors as follows: </p>
@@ -59,12 +59,14 @@ const Summary = () => {
         >
         </iframe>
         <p>With that framework, MAPC recommends that the cities of Chelsea, Everett, and Revere take the following steps to advance digital access and equity in their communities.</p>
+      </div>
+      <div className="section">
         <AnchorLink 
-              to={`#actions`} 
-              className="anchor"
-            >
-              <FontAwesomeIcon icon={faArrowAltCircleDown} className="anchor__icon" />
-              <span className="anchor__helper-text">Read the Actions</span>
+          to={`#actions`} 
+          className="anchor"
+        >
+          <FontAwesomeIcon icon={faArrowAltCircleDown} className="anchor__icon" />
+          <span className="anchor__helper-text">Read the Actions</span>
         </AnchorLink>
       </div>
     </div>

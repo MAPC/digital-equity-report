@@ -1,19 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TimelineAccordion from "../accordions/timelineAccordion";
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Process = () => {
+  
+  const [goalsTab, setGoalsTab] = useState(0);
 
+  const handleTabsChange = (index) => {
+    setGoalsTab(index);
+  };
   return (
     <div>
-      <div className="section">
-        <ParallaxBanner
-          layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
-          style={{height: "24rem", width: "100vw"}}
-          className="fullbleed" 
-        />
-      </div>
       <div className="section">
         <h2>Process</h2>
         <p>The COVID-19 pandemic has upended daily life in Greater Boston and around the world. Thousands of people can’t report to work, and millions are being told to cease nonessential travel. Never before has the internet been so essential for working remotely and staying connected. MAPC’s urban communities have identified access to fast, reliable, and affordable internet was a challenge to residents and businesses.</p>
@@ -26,7 +25,11 @@ const Process = () => {
         <h3>Project Goals</h3>
         <p>Local governments rarely understand their role in digital access: few have strategies for providing fast, reliable, and affordable internet to residents and businesses. Revere, Chelsea, and Everett are leading the Commonwealth in developing a plan that is both scaled to fit the capacity of municipal staff and that leverages a strong network of local, state, and federal public, private, educational, and nonprofit resources. MAPC has structured this plan to be a template for municipalities and their partner stakeholders.</p>
         <p>The plan goals are as follows: </p>
-        <Tabs>
+        <Tabs
+          selectedIndex={goalsTab} 
+          onSelect={(index) => handleTabsChange(index)}
+          id="plan-goals-tabs"
+        >
           <TabList>
             <Tab><h4>Advise Capital Investment</h4></Tab>
             <Tab><h4>Inform Policy Decisions</h4></Tab>
@@ -34,14 +37,30 @@ const Process = () => {
           </TabList>
 
           <TabPanel>
-            <p>The American Rescue Plan Act and the Infrastructure Investment and Jobs Act have created resources for capital investment in broadband infrastructure. Municipalities will have discretionary resources, as well as the opportunity to apply for state and federal grants to invest in infrastructure. This plan aims to provide a framework within which to municipalities can make sound decisions for that future investment.  </p>
+            <div className="section">
+              <p>The American Rescue Plan Act and the Infrastructure Investment and Jobs Act have created resources for capital investment in broadband infrastructure. Municipalities will have discretionary resources, as well as the opportunity to apply for state and federal grants to invest in infrastructure. This plan aims to provide a framework within which to municipalities can make sound decisions for that future investment.  </p>
+              <FontAwesomeIcon 
+                icon={faArrowCircleRight} 
+                className="anchor__icon" 
+                onClick={() => setGoalsTab(goalsTab + 1)} 
+              />
+            </div>
           </TabPanel>
           <TabPanel>
-            <p>While not involved in the direct provision of internet services, municipalities have significant regulatory power in the permitting and licensing of internet service providers and in technologies that enable internet access. This includes administering cable franchise agreements, permitting 5G infrastructure, and licensing right-of-way use for cable and fiber infrastructure. This plan shows how that regulatory power can be used to improve digital access in a community. </p>
-            <p>Municipalities can also enact policies that address the social and systemic barriers that inhibit the adoption or use of broadband internet. Establishing discretionary funding sources, convening critical stakeholders, and collecting community data are all in the purview of municipal activity. </p>
+            <div className="section">
+              <p>While not involved in the direct provision of internet services, municipalities have significant regulatory power in the permitting and licensing of internet service providers and in technologies that enable internet access. This includes administering cable franchise agreements, permitting 5G infrastructure, and licensing right-of-way use for cable and fiber infrastructure. This plan shows how that regulatory power can be used to improve digital access in a community. </p>
+              <p>Municipalities can also enact policies that address the social and systemic barriers that inhibit the adoption or use of broadband internet. Establishing discretionary funding sources, convening critical stakeholders, and collecting community data are all in the purview of municipal activity. </p>
+              <FontAwesomeIcon 
+                icon={faArrowCircleRight} 
+                className="anchor__icon" 
+                onClick={() => setGoalsTab(goalsTab + 1)} 
+              />
+            </div>
           </TabPanel>
           <TabPanel>
-            <p>The few digital access programs that exist are mostly focused on building basic digital literacy skills. There is a need for programs that support basic-to-advanced digital skills in multilingual curricula, for expanded workforce development initiatives, and for community scale programs that build capacity and expertise in this critical area.  </p>
+            <div className="section">
+              <p>The few digital access programs that exist are mostly focused on building basic digital literacy skills. There is a need for programs that support basic-to-advanced digital skills in multilingual curricula, for expanded workforce development initiatives, and for community scale programs that build capacity and expertise in this critical area.  </p>
+            </div>
           </TabPanel>
         </Tabs> 
       </div>
