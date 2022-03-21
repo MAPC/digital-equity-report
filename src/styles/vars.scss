@@ -1,4 +1,5 @@
 // Font Sizes
+
 $font_size-xlarge: 5.625rem; // 90px
 $font_size-large: 3.75rem; // 60px 
 $font_size-medium: 2.25rem; // 36px 
@@ -7,6 +8,7 @@ $font_size-xsmall: 1rem; // 16px
 $font_size-xxsmall: 0.75rem; // 12px
 
 // Colors
+
 $color-dark-teal: #123e4b;
 $color-light-teal: cadetblue;
 $color-deep-gold: rgb(209, 176, 42);
@@ -20,6 +22,7 @@ $color-midnight: navy;
 $color-white: #ffffff;
 
 // Media Query
+
 @mixin media($size) {
   @if $size == 'x-small' {
     @media only screen and (max-width: 500px) { @content; }
@@ -44,14 +47,18 @@ $color-white: #ffffff;
 html, body {
   margin: 0;
   max-width: 100%;
-  overflow-x: hidden;
   padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a {
   border-bottom: 2.5px dotted $color-deep-gold;
 }
-// default for all links not specifically styled
+
 a, a:focus, a:active {
   color: inherit;
   text-decoration: none !important;
