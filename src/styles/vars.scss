@@ -47,13 +47,18 @@ $color-white: #ffffff;
 html, body {
   margin: 0;
   max-width: 100%;
+  overflow-x: hidden;
   padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
+// body::-webkit-scrollbar {
+//   display: none;
+// }
 
 a {
   border-bottom: 2.5px dotted $color-deep-gold;
