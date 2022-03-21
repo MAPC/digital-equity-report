@@ -11,5 +11,10 @@ a.anchor {
     color: $color-deep-gold;
     font-size: $font_size-medium;
     padding-right: 2rem;
+    &:hover {
+      border-bottom: none;
+      color: $color-pale-butter;
+      cursor: pointer;
+    }
   }
 }

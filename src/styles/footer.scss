@@ -70,7 +70,9 @@
   }
 
   &__list-item {
+    line-height: 1;
     list-style-type: none;
+    margin-bottom: 0.65rem;
   }
 
   &__link {

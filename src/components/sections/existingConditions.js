@@ -1,12 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import Connection from "../existingConditions/connection";
 import Service from "../existingConditions/service";
 import Infrastructure from "../existingConditions/infrastructure";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "gatsby";
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import ImageModal from "../modules/imageModal";
 import chart1 from "../../images/bar-chart-placeholder.png";
 
@@ -30,8 +29,8 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
         />
         <Tabs 
           selectedIndex={tabIndex} 
-          onSelect={(index) => setTabIndex(index)}
-          id="tabs"
+          onSelect={(index) => handleTabsChange(index)}
+          id="existing-conditions-tabs"
         >
           <TabList>
             <Tab><h4>Connection & Access</h4></Tab>
@@ -42,22 +41,22 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
           <TabPanel>
             <Connection />
             <AnchorLink 
-              to={`#tabs`} 
+              to={`#existing-conditions-tabs`} 
               className="anchor"
               onAnchorLinkClick={() => setTabIndex(tabIndex + 1)}
             >
-              <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
+              <FontAwesomeIcon icon={faArrowCircleRight} className="anchor__icon" />
               <span className="anchor__helper-text">Next Section: Service & Affordability</span>
             </AnchorLink>
           </TabPanel>
           <TabPanel>
             <Service />
             <AnchorLink 
-              to={`#tabs`} 
+              to={`#existing-conditions-tabs`} 
               className="anchor"
               onAnchorLinkClick={() => setTabIndex(tabIndex + 1)}
             >
-              <FontAwesomeIcon icon={faArrowAltCircleUp} className="anchor__icon" />
+              <FontAwesomeIcon icon={faArrowCircleRight} className="anchor__icon" />
               <span className="anchor__helper-text">Next Section: Infrastructure</span>
             </AnchorLink>
           </TabPanel>

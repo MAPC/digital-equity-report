@@ -11,7 +11,6 @@ import Appendix from "./sections/appendix";
 import Footer from "./modules/footer";
 import { PopupContext } from "./contexts/popupContext";
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { Link } from "gatsby";
 
 const ReportWrapper = () => {
 
@@ -65,7 +64,6 @@ const ReportWrapper = () => {
           onClick={() => togglePopup(!popup)}
         />
       </div>
-      
       <ParallaxBanner
         layers={[{ image: 'https://source.unsplash.com/6KJ-htnXv-8/2400x1350', speed: -20 }]}
         style={{height: "28rem"}}
@@ -77,14 +75,6 @@ const ReportWrapper = () => {
           </div>
         </div>
       </ParallaxBanner>
-
-      {/* <div className="report-header padding">
-        <Header />
-        <div className="report-header-copy">
-          <h4>Digital Equity Report:</h4>
-          <h2>Everett, Chelsea, & Revere</h2> 
-        </div>
-      </div> */}
       <div className="report-content padding">
         <div className="report-content__col-1">
           <ReportMenu 
@@ -95,43 +85,76 @@ const ReportWrapper = () => {
           />
         </div>
         <div className="report-content__col-2">
-
           <div ref={summaryRef} id="summary">
             <Summary />
           </div>
-          
+          <div className="section">
+            <ParallaxBanner
+              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              style={{height: "30rem", width: "100vw"}}
+              className="fullbleed" 
+            />
+          </div>
           <div ref={processRef} id="process">
             <Process />
           </div>
-          
+          <div className="section">
+            <ParallaxBanner
+              layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
+              style={{height: "30rem", width: "100vw"}}
+              className="fullbleed" 
+            />
+          </div>
           <div ref={historyRef} id="history">
             <History />
           </div>
-          
+          <div className="section">
+            <ParallaxBanner
+              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              style={{height: "30rem", width: "100vw"}}
+              className="fullbleed" 
+            />
+          </div>
           <div ref={existingRef} id="existing-conditions">
             <ExistingConditions 
               tabIndex={tabIndex}
               setTabIndex={setTabIndex}
             />
           </div>
-          
+          <div className="section">
+            <ParallaxBanner
+              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              style={{height: "30rem", width: "100vw"}}
+              className="fullbleed" 
+            />
+          </div>
           <div ref={assessRef} id="assessment">
             <Assessment />
           </div>
-          
+          <div className="section">
+            <ParallaxBanner
+              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              style={{height: "30rem", width: "100vw"}}
+              className="fullbleed" 
+            />
+          </div>
           <div ref={actionsRef} id="actions">
             <Actions />
           </div>
-          
+          <div className="section">
+            <ParallaxBanner
+              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              style={{height: "30rem", width: "100vw"}}
+              className="fullbleed" 
+            />
+          </div>
           <div ref={appendixRef} id="appendix">
             <Appendix />
           </div>
-        
         </div>
       </div>
       <Footer />
     </div>
-    // </PopupProvider>
   )
 }
 
