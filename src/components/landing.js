@@ -7,11 +7,12 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 const Landing = () => {
   return (
     <div>
+      <div style={{height: "auto", minHeight: "200vh"}}>
       <ParallaxBanner
         layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -20 }]}
-        style={{height: "200vh"}}
+        className="landing-parallax"
       >
-        <div style={{position: "absolute", minHeight: "200vh"}}>
+        <div style={{position: "absolute", height: "100%", minHeight: "200vh"}}>
           <div className="padding landing-overlay">
             <div className="landing-copy">
               <Header />
@@ -29,6 +30,7 @@ const Landing = () => {
           </div>
         </div>
       </ParallaxBanner>
+      </div>
       <Footer />
     </div>
   )

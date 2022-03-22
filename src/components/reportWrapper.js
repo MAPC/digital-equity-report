@@ -65,7 +65,7 @@ const ReportWrapper = () => {
         />
       </div>
       <ParallaxBanner
-        layers={[{ image: 'https://source.unsplash.com/6KJ-htnXv-8/2400x1350', speed: -20 }]}
+        layers={[{ image: 'https://source.unsplash.com/8QB8r4I18_U/2400x1602', speed: -20 }]}
         style={{height: "28rem"}}
       >
         <div style={{position: "absolute", width: "100%"}}>
@@ -100,7 +100,7 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
+              layers={[{ image: 'https://source.unsplash.com/NSsLcazOOSM/2400x1369', speed: -30 }]}
               style={{height: "30rem", width: "100vw"}}
               className="fullbleed" 
             />
@@ -110,7 +110,7 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
               style={{height: "30rem", width: "100vw"}}
               className="fullbleed" 
             />
@@ -123,7 +123,7 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              layers={[{ image: 'https://source.unsplash.com/BbMfhyLcU30/2400x1600', speed: -30 }]}
               style={{height: "30rem", width: "100vw"}}
               className="fullbleed" 
             />
@@ -133,7 +133,7 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              layers={[{ image: 'https://source.unsplash.com/V7J2wjdz4Cc/2400x1599', speed: -30 }]}
               style={{height: "30rem", width: "100vw"}}
               className="fullbleed" 
             />
@@ -143,7 +143,7 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
+              layers={[{ image: 'https://source.unsplash.com/XPkjweA1EBA/2400x3200', speed: -30 }]}
               style={{height: "30rem", width: "100vw"}}
               className="fullbleed" 
             />
