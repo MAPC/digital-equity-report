@@ -37,7 +37,7 @@ const Slides = () => {
 
   return (
     <div>
-      <div className="section-two-col-flex">
+      <div className="section-two-col">
         {slidesCitations}
       </div>
     </div>
