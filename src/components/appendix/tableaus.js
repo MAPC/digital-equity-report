@@ -1,27 +1,45 @@
 import React from "react";
+import thumbnail from "../../images/thumbnail-tableau.png"
 
 const Tableaus = () => {
 
   const tableausSources = [
     {
-      title: "Digital Equity Census Internet Questions",
-      link: "https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/U_S_CensusQuestions?:retry=yes&:embed=y&:display_count=n&:origin=viz_share_link",
-      embed: "https://public.tableau.com/views/DigitalEquityCensusInternetQuestions/U_S_CensusQuestions?:showVizHome=no&:embed=true"
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
     }
   ]
 
   const tableausCitations = tableausSources.map((citation, index) => {
-    return <div key={index} className="section">
-        <a href={citation.link}>
-          <h4>{citation.title}</h4>
-        </a>
-        <iframe src={citation.embed} width="100%" height="600"></iframe>
+    return <div key={index}>
+      <img src={citation.thumbnail} />
+      <a href={citation.link} target="blank">
+        <h4 className="citation__link citation__link-below">{citation.title}</h4>
+      </a>
     </div>
   })
 
   return (
-    <div>
+    <div> 
+      <div className="section-two-col-flex">
       {tableausCitations}
+      </div>
     </div>
   )
 }

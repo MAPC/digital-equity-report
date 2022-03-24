@@ -43,7 +43,7 @@ const Reports = () => {
   const reportCitations = reportSources.map((citation, index) => {
     return <div key={index} className="section">
         <a href={citation.link}>
-          <h4>{citation.title}</h4>
+          <h4 className="citation__link">{citation.title}</h4>
         </a>
         {citation.description.map(p => <p>{p}</p>)}
     </div>

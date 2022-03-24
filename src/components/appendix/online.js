@@ -39,7 +39,7 @@ const Online = () => {
   const onlineCitations = onlineSources.map((citation, index) => {
     return <div key={index} className="section">
         <a href={citation.link}>
-          <h4><span style={{fontWeight: "200"}}>{citation.author}.</span> {citation.title} <span style={{fontWeight: "200"}}>{citation.misc}.</span></h4>
+          <h4 className="citation__link"><span style={{fontWeight: "200"}}>{citation.author}.</span> {citation.title} <span style={{fontWeight: "200"}}>{citation.misc}.</span></h4>
         </a>
         {citation.description.map(p => <p>{p}</p>)}
     </div>

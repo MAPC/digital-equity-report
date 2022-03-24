@@ -1,4 +1,5 @@
 import React from "react";
+import thumbnail from "../../images/thumbnail.png"
 
 const Slides = () => {
 
@@ -6,22 +7,39 @@ const Slides = () => {
     {
       title: "Journey Through the Internet",
       link: "https://slides.com/mapc/internet-slides/",
-      embed: "https://slides.com/mapc/internet-slides/embed"
+      thumbnail: thumbnail
+    },
+    {
+      title: "Journey Through the Internet",
+      link: "https://slides.com/mapc/internet-slides/",
+      thumbnail: thumbnail
+    },
+    {
+      title: "Journey Through the Internet",
+      link: "https://slides.com/mapc/internet-slides/",
+      thumbnail: thumbnail
+    },
+    {
+      title: "Journey Through the Internet",
+      link: "https://slides.com/mapc/internet-slides/",
+      thumbnail: thumbnail
     }
   ]
 
   const slidesCitations = slidesSources.map((citation, index) => {
-    return <div key={index} className="section">
-        <a href={citation.link}>
-          <h4>{citation.title}</h4>
-        </a>
-        <iframe src={citation.embed} width="100%" height="480" title={citation.title} scrolling="no" frameborder="0" allowfullscreen></iframe>
+    return <div key={index}>
+      <img src={citation.thumbnail} />
+      <a href={citation.link} target="blank">
+        <h4 className="citation__link citation__link-below">{citation.title}</h4>
+      </a>
     </div>
   })
 
   return (
     <div>
-      {slidesCitations}
+      <div className="section-two-col-flex">
+        {slidesCitations}
+      </div>
     </div>
   )
 }
