@@ -81,13 +81,25 @@
       margin-bottom: 0;
     }
     width: 45%;
+    &-right {
+      display: flex;
+      justify-content: end;
+    }
+  }
+  &-two-col {
+    @include media(small) {
+      display: block;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    div {
+      width: 45%;
+    }
   }
   &-two-col-flex {
     @include media(small) {
       display: block;
-    }
-    div {
-      width: 45%;
     }
     display: flex;
     flex-flow: row wrap;

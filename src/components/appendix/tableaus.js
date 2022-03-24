@@ -28,7 +28,7 @@ const Tableaus = () => {
 
   const tableausCitations = tableausSources.map((citation, index) => {
     return <div key={index}>
-      <img src={citation.thumbnail} />
+      <img className="citation__thumbnail" src={citation.thumbnail} />
       <a href={citation.link} target="blank">
         <h4 className="citation__link citation__link-below">{citation.title}</h4>
       </a>
@@ -37,7 +37,7 @@ const Tableaus = () => {
 
   return (
     <div> 
-      <div className="section-two-col-flex">
+      <div className="section-two-col">
       {tableausCitations}
       </div>
     </div>
