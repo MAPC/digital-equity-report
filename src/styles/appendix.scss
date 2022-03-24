@@ -1,0 +1,11 @@
+.citation {
+  &__link {
+    &-below{
+      margin-top: 0.75rem;
+    }
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $color-smoke;
+    }
+  }
+}
