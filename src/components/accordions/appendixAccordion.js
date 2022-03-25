@@ -101,13 +101,13 @@ export default function AppendixAccordion() {
       accordion: <Literature />
     },
     {
-      title: "Slides",
+      title: "Slides and Visualizations",
       accordion: <Slides />
     },
-    {
-      title: "Tableaus",
-      accordion: <Tableaus />
-    },
+    // {
+    //   title: "Tableaus",
+    //   accordion: <Tableaus />
+    // },
   ]
 
   function createAccordions(sections) {
