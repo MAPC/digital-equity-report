@@ -1,5 +1,4 @@
 import React from "react";
-import { Title, Link, Meta } from "react-head";
 import hero from "../../images/background.jpg"
 import {Helmet} from "react-helmet";
 
@@ -15,6 +14,11 @@ const Seo = () => (
       <meta property="og:description" content="This site is an online report on digital access and equity for Everett, Chelsea, and Revere. Digital equity for all is achievable." />
       <meta property="og:image" content={hero} />
       <meta property="og:url" content="https://mapc.github.io/digital-equity-report/" />
+      <meta property="og:type" content="website" />
+      <meta property="twitter:title" content="Digital Equity Report" />
+      <meta property="twitter:description" content="This site is an online report on digital access and equity for Everett, Chelsea, and Revere. Digital equity for all is achievable." />
+      <meta property="twitter:image" content={hero} />
+
     </Helmet>
   </>
 );
