@@ -1,4 +1,15 @@
 .header {
+  &__title {
+    align-items: center;
+    border-bottom: none;
+    color: $color-white;
+    display: flex;
+    text-decoration: none;
+    h4 {
+      color: $color-white;
+      transition: all 0.3s ease-in-out;
+    }
+  }
   &__link {
     align-items: center;
     border-bottom: none;
