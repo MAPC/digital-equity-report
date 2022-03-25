@@ -8,10 +8,13 @@
       color: $color-smoke;
     }
   }
-  // &__thumbnail {
-  //   &:hover {
-  //     height: 90%;
-  //     width: auto;
-  //   }
-  // }
+  &__thumbnail {
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+    // &:hover {
+    //   height: 90%;
+    //   width: auto;
+    // }
+  }
 }
