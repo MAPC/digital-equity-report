@@ -196,6 +196,7 @@ const Assessment = () => {
           <TabPanel>
             <div className="section">
               <iframe src="https://public.tableau.com/shared/P4HHTP4R3?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>12% of survey respondents do not have an internet subscription, slightly lower than what is represented in the Census 
 
               6% Do not have any internet at their home 
@@ -263,6 +264,7 @@ const Assessment = () => {
           <TabPanel>
             <div className="section">
               <iframe src="https://public.tableau.com/shared/77TSJBM84?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>Digital Access can be defined as the ability to use a device and internet effectively and in a way that enables an individual to easily use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills.  These skills are a foundational element of digital access and are frequently observed as the most difficult of the three legs of the stool to address due to different levels of experience with technology, language barriers, and other issues. </p>
               <h4>Use of Technology</h4>
               <p>82% of survey respondents indicate that the feel confident in their ability to use a laptop/Chromebook. 
@@ -308,6 +310,7 @@ const Assessment = () => {
           <TabPanel>
             <div className="section">
               <iframe src="https://public.tableau.com/shared/K3Z38NZS3?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>In order to utilize the internet for critical personal services such as education, healthcare, and job search / online applications individuals need a computing device with  a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet, but is not a substitute for a personal computing devices function.</p>
               <p>21.5% of respondents disagreed with the statement “People in my household always have access to a computer if they need one.” 
 
