@@ -10,10 +10,29 @@ import apt from "../../images/thumbnails/apt.png"
 import arpa from "../../images/thumbnails/arpa.png"
 import brownbag from "../../images/thumbnails/brownbag.png"
 import staff from "../../images/thumbnails/staff.png"
-
+import thumbnail from "../../images/thumbnail-tableau.png"
+import fiberlines from "../../images/thumbnails/fiberlines.png"
+import homefiber from "../../images/thumbnails/homefiber.png"
+import providercoverage from "../../images/thumbnails/providercoverage.png"
+ 
 const Slides = () => {
 
   const slidesSources = [
+    {
+      title: "FCC Reported Provider Coverage",
+      link: "https://mapc.github.io/fcc-map/",
+      thumbnail: providercoverage
+    },
+    {
+      title: "Fiber Access by Census Blocks",
+      link: "",
+      thumbnail: fiberlines
+    },
+    {
+      title: "Residential Fiber Access by Census Blocks",
+      link: "",
+      thumbnail: homefiber
+    },
     {
       title: "Chelsea and Revere Digital Access Municipal Presentation",
       link: "https://slides.com/mapc/chelsea-and-revere-digital-access-municipal-presentation",
@@ -69,6 +88,26 @@ const Slides = () => {
       link: "https://slides.com/mapc/apartment-wifi-how-to",
       thumbnail: apt
     },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    },
+    {
+      title: "MLab Speed Tests",
+      link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",
+      thumbnail: thumbnail
+    }
   ]
 
   const slidesCitations = slidesSources.map((citation, index) => {
