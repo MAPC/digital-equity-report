@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-react-head",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
