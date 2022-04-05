@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import chart1 from "../../images/comcast_census_blocks_2022-02-18_3pm.png";
+import chart1 from "../../images/fiber_200ft_combined_final_2022-03-31.jpg";
 import chart2 from "../../images/residential_fiber_blocks.png";
 import ImageModal from "../modules/imageModal";
 

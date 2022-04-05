@@ -180,63 +180,46 @@ const Assessment = () => {
       </div>
       <div className="section section-bottom">
         <h3>Key Findings</h3>
-        <h4>Connectivity</h4>
-        <p>Ensuring that residents are able to acquire internet services at an affordable price that meets their needs is a major component of digital access. The following key findings summarize respondents experience and perspective on internet subscriptions, internet affordability, and internet reliability.  </p>
         <Tabs
           selectedIndex={connectTab} 
           onSelect={(index) => handleTabsChange(index, setConnectTab)}
           id="connectivity-tabs"
         >
           <TabList>
-            <Tab><h4>Internet Subscriptions</h4></Tab>
+            <Tab><h4>Connectivity</h4></Tab>
             <Tab><h4>Literacy</h4></Tab>
             <Tab><h4>Device Access</h4></Tab>
           </TabList>
 
           <TabPanel>
             <div className="section">
-              <iframe src="https://public.tableau.com/shared/P4HHTP4R3?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p>Ensuring that residents are able to acquire internet services at an affordable price that meets their needs is a major component of digital access. The following key findings summarize respondents experience and perspective on internet subscriptions, internet affordability, and internet reliability.  </p>
+              <h4>Internet Subscriptions</h4>
+              <p>15.5% of survey respondents do not have an internet subscription, slightly lower than what is represented in the Census [ADD Census %], but still a significant number of individuals. 6% of that non-internet-subscription population have chosen instead to leverage a cellular subscription and MiFi device to connect. This may be because programs either through schools, libraries, community groups have made them free and available. HoweverHowever, unlike most internet subscription plan, cellular plans, may have monthly data caps, limited cell reception, and limited speeds that may not make viable alternative.    </p>
+              <iframe src="https://public.tableau.com/views/QuestionsAboutInternetConnection/Connection?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
-              <p>12% of survey respondents do not have an internet subscription, slightly lower than what is represented in the Census 
-
-              6% Do not have any internet at their home 
-
-              75% of those who do not have internet access cite affordability as the reason why they don’t have internet. 
-
-              6% rely only on a WiFi hotspot 
-
-              The majority of survey respondents in the three cities are Comcast subscribers. 
-
-              In Chelsea, where Comcast is the only cable ISP, 80% of respondents used Comcast. In Revere and Everett that number was between 63 and 67%, with an average of 20% of respondents using RCN as an available competitor. 
-
-              In all three communities, about 6% of respondents were still using Verizon DSL services. 
-
-              About 8% of respondents in all communities rely on T Mobile or MetroPCS Hotspot mobile subscriptions. 
-
-              Chelsea had the highest number of T-Mobile or MetroPCS wireless service subscriptions as the primary form of internet service. 
-
-              Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service. 
-
-              In Revere and Everett where RCN is an available competitor to Comcast, those communities had about 20% of users subscribing to an alternative to Comcast. Indicating that where there is more choice in service providers, individuals will adopt.</p>
             </div>
-            <div className="section-two-col-flex section">
-              <div className="section-half border-right">
-                <h4>Affordability</h4>
-                <p>70% of survey respondents have had to change or cancel their internet subscription because it was too expensive 
+            <div className="section">
+              <div className="section-two-col-flex section">
+                <div className="section-half border-right">
+                  <h4>Affordability</h4>
+                  <p>70% of survey respondents have had to change or cancel their internet subscription because it was too expensive 
 
-                Overall, only 50% of respondents agreed with the statement “My internet is affordable” 
+                  Overall, only 50% of respondents agreed with the statement “My internet is affordable” 
 
-                Subscribers to RCN were slightly more likely to indicate that their internet was affordable – 60% as compared to 50% of Comcast subscribers. This may indicate that competition  
+                  Subscribers to RCN were slightly more likely to indicate that their internet was affordable – 60% as compared to 50% of Comcast subscribers. This may indicate that competition  
 
-                While a smaller sample pool, 75% of respondents using Starry indicate that their internet is affordable. 
+                  While a smaller sample pool, 75% of respondents using Starry indicate that their internet is affordable. 
 
-                This is likely due to the bundling of cable TV services from Comcast and RCN</p>
+                  This is likely due to the bundling of cable TV services from Comcast and RCN</p>
+                </div>
+                <div className="section-half">
+                  <CalloutQuote quote="Necesitamos que el costo del internet sea mas justo." byline="We need the cost of the internet to be fairer." />
+                </div>
               </div>
-              <div className="section-half">
-                <CalloutQuote quote="Necesitamos que el costo del internet sea mas justo." byline="We need the cost of the internet to be fairer." />
-              </div>
+              <iframe src="https://public.tableau.com/views/AffordabilityByProvider/AffordabilitybyProvider?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
-
             <div className="section">
                 <h4>Reliability</h4>
                 <p>37% of survey respondents have had to leave their home to use internet at another location because internet at their home is unreliable 
@@ -247,7 +230,9 @@ const Assessment = () => {
 
                 Those respondents who disagreed with the statement my internet is affordable (45% of all respondents), that number jumps to 45% indicating they always or frequently have issues with dropped video calls, potentially indicating that they are unable to pay for the speed package needed to serve their household. 
 
-                Respondents who indicated that thre or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls </p>                
+                Respondents who indicated that thre or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls </p>    
+                <iframe src="https://public.tableau.com/views/AffordabilityByProvider/Reliability?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+                <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
             <AnchorLink 
               to={`#connectivity-tabs`} 
@@ -293,7 +278,7 @@ const Assessment = () => {
 
             Learning advanced technology skills </p>
               <p>However, twice as many respondents in Spanish indicated an interest in those same skill areas.  </p>
-              <p>Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available. </p>
+              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyLiteracyLearnAbout/Iwouldliketolearnmoreabout?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
             </div>
             <AnchorLink 
               to={`#connectivity-tabs`} 
