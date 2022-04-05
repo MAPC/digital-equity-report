@@ -1,6 +1,6 @@
 import React from "react";
 import ImageModal from "../modules/imageModal";
-import chart1 from "../../images/comcast_census_blocks_2022-02-18_3pm.png";
+import chart1 from "../../images/fiber_200ft_combined_final_2022-03-31.jpg";
 import CalloutQuote from "../modules/calloutQuote";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
@@ -22,7 +22,7 @@ const Summary = () => {
         <h3>Key Findings</h3>
         <p>Through this planning process, the degree to which digital equity gaps are impacting community residents in these three cities was found to be not just significant, but critical. Data from the 2019 US Census indicates that 15% to 19% of residents within the three communities do not have internet connections. For those households making less than $75,000 / year that number jumps to 55% in Everett, 65% in Chelsea, and 64% in Revere. And while the majority of residents do have an internet subscription, <a href="https://broadbandnow.com/report/fcc-broadband-definition/">an evaluation of speed test data</a> from MLab and Microsoft indicate that between 30% and 50% of these subscribers do not receive broadband speed as defined by the FCC (25 megabits per second download speed, 3 megabits per second upload speed).</p>
         <p>While affordability remains the primary barrier to internet adoption, 70% of survey takers responded Yes to the question “Have you ever had to change or cancel your internet subscription because it was too expensive?” MAPC also identified barriers to internet adoption stemming from language isolation, concerns about privacy, and lack of information regarding internet subsidies and training programs. For example, respondents who completed MAPC’s Digital Access survey in a language other than English were less likely to feel confident in the use of a laptop/chromebook as well as resolving internet connectivity issues, <a href="#assessment">indicating the need for language specific programming.</a></p>
-        <iframe src="https://public.tableau.com/views/Ifnotwhynot/Ifnotwhynot?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+        <iframe src="https://public.tableau.com/views/Ifnotwhynot_16491332923730/Ifnotwhynot?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
         </div>
         <div className="section-two-col-flex">
           <div className="section-half border-right">
