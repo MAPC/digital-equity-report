@@ -49,21 +49,21 @@ const Acknowledgements = () => {
 
   const community = [
     "Lucy Pineda, Executive Director Latinos Unidos en Massachusetts (LUMA), Everett",
-    "Jamie Lederer, Community Health Improvement Department, Cambridge Health Alliance, [city] ",
-    "Rev Myrlande Desrosie, Associate Pasteur and Director , Everett Haitian Community Center, Everett",
-    "Penny Hasselli, MetroNorth Workforce Board, [City]",
-    "Chris Albrizio-Lee, MetroNorth Workforce Board [City]",
-    "Melora Ruhg, MassHire MetroNorth Workforce Board, [City]",
-    "Stefanie  Shull, TND Connect, [City]",
-    "Dini Paulino, La Colaborativa, [City]",
-    "Eva Daniggelis, Americorp Vista, The Neighborhood Developers ",
+    "Jamie Lederer, Community Health Improvement Department, Cambridge Health Alliance",
+    "Rev Myrlande Desrosie, Associate Pasteur and Director , Everett Haitian Community Center",
+    "Penny Hasselli, MetroNorth Workforce Board",
+    "Chris Albrizio-Lee, MetroNorth Workforce Board",
+    "Melora Ruhg, MassHire MetroNorth Workforce Board",
+    "Stefanie  Shull, TND Connect",
+    "Dini Paulino, La Colaborativa",
+    "Eva Daniggelis, Americorp Vista, The Neighborhood Developers",
     "Evie Heffernan, Workforce Manager, The Neighborhood Developers",
     "Sean Mock, Senior Program Manager, The Neighborhood Developers",
-    "Cheryl Coss, Economic Stability Program Manager, Center for Community Health Improvement, [City]",
-    "Syliva Chiang, Revere CARES Massachusetts General Hospital, [City]",
-    "Kelly Washburn, Massachusetts General Hospital Evaluation Team, [City]",
-    "Mike Stanek, Senior Manager at Health Policy Coalition, [City]",
-    "Caroline Kinuth, Senior Policy Manager at Health Policy Coalition, [City]"
+    "Cheryl Coss, Economic Stability Program Manager, Center for Community Health Improvement",
+    "Syliva Chiang, Revere CARES Massachusetts General Hospital",
+    "Kelly Washburn, Massachusetts General Hospital Evaluation Team",
+    "Mike Stanek, Senior Manager, Health Policy Coalition",
+    "Caroline Kinuth, Senior Policy Manager, Health Policy Coalition"
   ]
 
   function createList(data) {
