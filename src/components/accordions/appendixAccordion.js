@@ -86,7 +86,7 @@ export default function AppendixAccordion() {
       accordion: <Additional />
     },
     {
-      title: "Municipal Models Draft Literature Review",
+      title: "Internet Ownership Models Review",
       accordion: <Literature />
     },
     {

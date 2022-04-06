@@ -4,7 +4,7 @@
   }
   &-image {
     align-items: center;
-    background-color: rgba(238, 194, 194, 0.8);
+    background-color: rgb(190 182 182 / 80%);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -62,7 +62,7 @@
 }
 
 .section {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   &-full {  
     margin-bottom: 2rem;
   }
@@ -93,6 +93,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin-top: 2.8rem;
     div {
       width: 45%;
     }
@@ -104,9 +105,10 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin: 2.8rem 0;
   }
   &-bottom {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -132,4 +134,8 @@
 .fullbleed {
   margin-left: calc(-8rem - (100vw - 45rem - 8rem) / 2);
   width: 100vw;
+}
+
+.viz-description {
+  margin-bottom: 0.75rem;
 }

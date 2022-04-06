@@ -7,10 +7,16 @@ a.anchor {
 }
 
 .anchor {
+  align-items: center;
+  display: flex;
   &__icon, &__helper-text {
     color: $color-deep-gold;
     font-size: $font_size-medium;
     padding-right: 2rem;
+    h3, h4, h5 {
+      color: $color-deep-gold;
+      display: inline;
+    }
     &:hover {
       border-bottom: none;
       color: $color-pale-butter;

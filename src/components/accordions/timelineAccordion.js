@@ -66,34 +66,31 @@ export default function TimelineAccordion() {
 
   const timelineData = [
     {
-      phase: "1A",
       title: "Existing Conditions",
       time: "February - April",
       description: [
-        "Assessment of the current internet service providers available in Everett and their associated service offerings. Identify and analyze existing data sources to better understand community device and internet access."
+        "Assess current internet service providers and their service offerings. Identify and analyze existing data sources to better understand community devices and internet access."
       ],
       deliverables: [
-        "Spatially map publicly owned digital infrastructure including broadband fiber, telephone poles, cell towers, public Wi-Fi, data centers, etc.",
-        "Slide deck outlining Everett’s existing level of service and public infrastructure and provide data files and code in standard formats used in the analysis."
+        "Map of publicly owned digital infrastructure, including broadband fiber, telephone poles, cell towers, public Wi-Fi, data centers, etc.",
+        "Slide deck outlining Everett’s existing level of service and public infrastructure. Data files and code in standard formats used in the analysis."
       ]
     },
     {
-      phase: "1B",
       title: "Community Needs Assessment",
       time: "April - June",
       description: [
-        "To understand the specific internet access needs of the Everett community, MAPC worked with community partners to identify the key functional needs of the internet in daily life, current ability to use the internet for those key functions, and barriers or challenges impacting that ability to use the internet. This assessment was structured within the framework of internet availability, device access, and digital literacy and designed to reflect certain specific population needs within the community. "
+        "Assess internet availability, device access, and digital literacy among specific populations in Everett community. With community partners, identify specific internet functions needed in daily life, current ability to use them, and barriers or challenges to doing so."
       ],
       deliverables: [
-        "Data and analysis from the digital community needs assessment and implications for potential recommendations."
+        "Data and analysis from the digital community needs assessment. Outline implications of this assessment for use in future recommendations."
       ]
     },
     {
-      phase: "2",
       title: "Infrastructure and Technology Evaluation ",
       time: "June - August",
       description: [
-        "Reviewed available data sources to catalog the state of digital infrastructure in the City of Everett. Undertook analysis to understand the extent that private ISP’s have invested in the community and if there are gaps in private service infrastructure. In addition evaluated relevant infrastructure elements as recommended by the City and partners."
+        "Determine the state of digital infrastructure in the City of Everett. Analyze the extent to which private Internet Service Providers (ISPs) have invested in the community, and if there are gaps in private service infrastructure. Evaluate relevant infrastructure elements as recommended by the City and partners."
       ],
       deliverables: [
         "Data and analysis related to the inventory of digital infrastructure in Everett. This inventory will also outline the implications for future investment based on current infrastructure.",
@@ -102,15 +99,14 @@ export default function TimelineAccordion() {
       ]
     },
     {
-      phase: "3",
       title: "Plan Development",
       time: "August - November",
       description: [
-        "Synthesis of earlier phases of work to inform policy, program, and capital investments to address specific barriers and needs in Everett."
+        "Synthesize earlier phases of work to inform policy, program, and capital investments that address specific barriers and needs in Everett."
       ],
       deliverables: [
-        "Public document of key digital needs and issues within the City of Everett, the collective vision for digital access, and specific strategies that will need to be implemented to achieve success.",
-        "Presentation of findings, strategies and an evaluation framework to working group."
+        "Public document of key digital needs and issues in the City of Everett, the vision for digital access, and specific strategies that will needed to meet the vision.",
+        "Presentation to working group of findings, strategies, and an evaluation framework."
       ]
     }
   ]
