@@ -20,7 +20,7 @@ const Landing = () => {
                 <h1>Digital Equity Plan:<br/><span className="highlight">Everett, Chelsea, & Revere</span></h1>
               </div>
               <div className="body-container">
-                <h3>Digital Equity for all is Achievable</h3>
+                <h3>Digital Equity for all is achievable</h3>
                 <p className="section-half">Equity is the condition of fair and just inclusion into a society. Equity will exist when those who have been most marginalized have equal access to opportunities, power, participation and resources and all have avenues to safe, healthy, productive, and fulfilling lives. As the COVID pandemic has highlighted, being able to leverage a digital internet connection is an essential utility that enables access to opportunities, power, and full participation in society. MAPC conducted a comprehensive planning process with the cities of Chelsea, Everett, and Revere to produce this report. This report outlines findings and sets a path forward for these municipalities, and others, to improve the economic, health, and social well-being of all community residents through digital connectivity.</p>
               </div>
               <div className="call-to-action-container">

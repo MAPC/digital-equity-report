@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CalloutQuote from "../modules/calloutQuote";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const History = () => {
 
@@ -16,20 +17,17 @@ const History = () => {
     <div>
       <div className="section">
         <h2>History & Background</h2>
-        <h4>An overview of digital access</h4>
-        <p>Digital access is more than getting a wifi password so you can read some email or stream a show. It’s a complicated, interconnected [topic] that includes three main elements: a good connection to the internet, an adequate device, and knowledge of how to use it. It’s important to define “Digital Access” and provide a framework for interventions and actions aimed at achieving community outcomes. In this report we use the framework of the “three-legged stool” to represent the many facets that make up this complicated, interconnected topic. It’s not a comprehensive analogy but does provide a reminder that solutions or interventions must not only work for resolving isolated challenges, but be part of a larger web actions, rooted in systemic and social justice.  </p>
-      </div>
-      <div className="section-two-col-flex">
-        <div className="section-half border-right">
-          <h3>Defining "Digital Access"</h3>
+        <div className="section-two-col-flex">
+          <div className="section-half border-right">
+            <h3>Defining "digital equity"</h3>
+          </div>
+          <div className="section-half">
+            <CalloutQuote 
+              quote="Digital equity is a condition in which all individuals and communities have the information technology capacity needed for full participation in our society, democracy, and economy. Digital equity is necessary for civic and cultural participation, employment, lifelong learning, and access to essential services." 
+            />
+          </div>
         </div>
-        <div className="section-half">
-          <CalloutQuote 
-            quote="Digital Divide — the gap between those with access to the reliable internet essential to navigating everyday tasks like job searches, homework, and digital communications; and those who don’t." 
-          />
-        </div>
-      </div>
-      <div className="section">
+        <p>Achieving digital equity is more than providing Wi-Fi. It's a complicated, interconnected challenge that includes three main elements: a good connection to the internet, an adequate device, and knowledge of how to use it. These are the three legs of the stool. Solutions and interventions must not only resolve isolated challenges but be part of a larger web of actions rooted in systemic and social justice.</p>
         <Tabs
           selectedIndex={definitionsTab} 
           onSelect={(index) => handleTabsChange(index)}
@@ -40,9 +38,9 @@ const History = () => {
             <Tab><h4>Access</h4></Tab>
             <Tab><h4>Digital Literacy</h4></Tab>
           </TabList>
-
           <TabPanel>
-            <p>In order to utilize the internet for critical personal services such as education, healthcare, and job search / online applications individuals need a computing device with a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet but is not a substitute for a personal computing devices function. </p>
+            <h5>Access to an Adequate Computing Device</h5>
+            <p>To use the internet for critical personal services such as education, healthcare, and job searches or online applications, you need a computing device with a certain speed and functionality. The proliferation of smartphone technology has helped millions gain access to the communications benefits of the internet but is not currently a substitute for a personal computing devices function.</p>
             <FontAwesomeIcon 
               icon={faArrowCircleRight} 
               className="anchor__icon" 
@@ -50,7 +48,8 @@ const History = () => {
             />
           </TabPanel>
           <TabPanel>
-            <p>Ensuring that residents and businesses are able to acquire internet services at an affordable price that meets their needs will be a central focus of the Everett Internet Access and Equity Plan. Suite of options that would improve the access to affordable, high speed, and reliable internet in the City. </p>
+            <h5>Access to Affordable, High Speed, and Reliable Internet Connection</h5>
+            <p>Ensuring that residents and businesses can acquire an internet connection that meets their needs at an affordable price is an essential element to full participation in our society, democracy, and economy.</p>
             <FontAwesomeIcon 
               icon={faArrowCircleRight} 
               className="anchor__icon" 
@@ -58,23 +57,25 @@ const History = () => {
             />
           </TabPanel>
           <TabPanel>
-            <p>Digital literacy is the ability to use a device and internet effectively and in a way that enables an individual to easily navigate needed uses and services. Understanding the different uses and needs of various segments of Everett’s community will assist in creating a plan for improving literacy in a way that meets community needs and culture. </p>
+            <h5>Digital Literacy Skills to Safely and Effectively Navigate the Internet</h5>
+            <p>Ensuring all residents know how to use a given device, how to navigate the internet, how to be a smart consumer of information, and how to avoid danger online. The National Digital Inclusion Alliance (NDIA) defines digital literacy as “the ability to use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills.” Digital literacy is the ability to use a device and internet effectively.</p>
           </TabPanel>
         </Tabs>
       </div>
-      <div className="section-two-col-flex">
-        <div className="section-half border-right">
-          <h3>Who owns the internet? </h3>
+      <div className="section section-bottom">
+        <h3>How Does the Internet Function?</h3>
+        <p>To understand what actions and responsibilities could be taken to close the digital divide, it's important to look at the internet ownership model that exists today. As the slides below highlight, the internet is comprised of many technologies, each leveraged to transfer the information as bits across the globe and to your screen. Let's take a journey through the technology of the Internet on which we rely upon.</p>
+        <div className="section-two-col-flex">
+          <div className="section-half border-right">
+            <h4>Who owns the internet?</h4>
+          </div>
+          <div className="section-half">
+            <CalloutQuote 
+              quote="[Broadband] isn't a luxury; it's now a necessity, like water and electricity."
+              byline="- President Joseph Biden" 
+            />
+          </div>
         </div>
-        <div className="section-half">
-          <CalloutQuote 
-            quote="[Broadband] isn’t a luxury; it’s now a necessity, like water and electricity."
-            byline="- President Biden" 
-          />
-        </div>
-      </div>
-      <div className="section">
-        <p>To understand what actions and responsibilities could be taken to close the digital divide, it’s important to look at the internet ownership model that exists today. As the slides below highlight, the internet is comprised of many technologies, each leveraged to transfer the information as bits across the globe and to your screen. Let’s take a journey through the technology of the Internet on which we rely upon. </p>
         <iframe src="https://slides.com/mapc/internet-slides/embed?byline=hidden" 
           width="100%" 
           height="480" 
@@ -86,15 +87,11 @@ const History = () => {
           mozallowfullscreen="true"
         >
         </iframe>
-      </div>
-      <div className="section section-bottom">
-        <p>To understand what actions and responsibilities could be taken, it’s important to look at the ownership model that exists today. As the slides above highlight, the internet is comprised of many technologies, each leveraged to transfer information as bits across the globe and to your screen. Who owns, manages or regulates those technologies and infrastructure is even more varied. </p>
-        <p>In our three communities, as is true Aacross the United States today,  the internet and the infrastructure that underpins it, is not treated as a public utility. Public utilities like such as water, electricity or public infrastructure like highways have a different ownership and regulation model from internet infrastructure. While water, electricity, or our highways may each have a varied different model of ownership and regulations; they all have some level of public management. The infrastructure that makes up our highway, sewer, or electric system are all publicly owned infrastructure and assets.  </p>
-        <p>While our three municipalities do manage fiber, conduit and connection center equipment, they do so for an internal public network that connects police, fire, and city staff to the internet and each other. Several municipalities across the commonwealth have extended or built publicly owned networks, under different models, that have extended beyond municipal needs or activities. A small-scale example of this is the extending of “public” networks at town halls or libraries through open public access points. This extension of the network draws on the capacity of the IT for the municipality either internal or contracted.  </p>
-        <p>Municipalities in some more rural parts of Massachusetts have taken on the role of providing publicly-owned broadband networks and resident access, often by establishing or leveraging the organizational structure and capacity of their municipal power and light plants (LINK TO LIST OF MUNI ACTIVITIES OR ILSR MAP) to become an ISP. Larger scale expansion of internet service, reliant on publicly owned infrastructure, has a number of examples in western MA To date, this model is commonly used often where no private company was willing to make the investment in wired connection of householdsto very low density areas. Municipalities have taken on the role of establishing or leveraging power and light plants (LINK TO LIST OF MUNI ACTIVITIES OR ILSR MAP) to become an ISP. Serving households or businesses with the potential to connect to other municipalities, or research institutions. In many cases the municipality have chosen to become the owner of infrastructure technology (tech referenced in slides above) as well as the provider of service ISP. This requires substantial planning (Link to and check out Cambridge and Boston, Quincy planning) as well as capacity and staffing either at a municipality, power and light utility, or private public partnership. Some government entities have also taken on the role of just owning the infrastructure and not becoming an ISP, but rather creating an open market for ISP to lease from the government their technology/infrastructure/fiber. This model is referred to as Open Access Networks and is common in other parts of the world. More example about this model can be found here: </p>
-        <p>Case studies of Government run Open Access Networks </p>
-        <p>Municipal Models Draft Literature Review </p>
-        <p>The majority of pipes/conduit, fiber and copper cables, poles and connection center equipment that run through Everett, Chelsea, and Revere are owned by private companies. For example, while the city of Chelsea may own some light poles on Broadway the majority of telephone poles across the cities are owned by the telecom company Verizon. Additionally, Comcast asserts that they only leverage infrastructure owned and managed by them in their hybrid coaxial / fiber network. (link to slides from Everett town council meeting Jan 21). Other providers we will see later in this report like Crown Castle, First Light serve as owners of infrastructure/fiber who may lease to other companies like RCN or Starry to provide residential service. In the Existing Condition: Infrastructure section we will look further into the touch points municipalities have with private companies that provide internet as a services Internet Service Providers (ISPs). </p>
+        <p>This technology infrastructure that is relied on to send bits of data across the globe has many different owners and many different operators. Different distributed networks with different models of ownership, management, and regulation connect together to form the larger Internet. There is no single owner of the internet, it is a varied and distributed collection of different types of ownership. </p>
+        <p>In the cities of Chelsea, Everett, and Revere ownership of the fiber lines, cable lines, telephone poles and other physical network infrastructure is owned and operated almost exclusively by private corporate entities. These same entities are also often the services providers that manage and operate the networks, also known as internet service providers ISPs. While some internet service providers like Starry, or netBlazer may lease infrastructure from other companies, Comcast exclusively provides services on infrastructure they own and maintain. More information about the service providers in Chelsea, Everett, and Revere can be found in the existing condition section. </p>
+        <p>As this map of community and municipal networks from the Institute for Local Self Reliance shows, there are other models of ownership and operation here in Massachusetts. In often rural parts of Massachusetts municipalities have been able to provide resident service through publicly-owned broadband networks. To do this, they often leverage the organizational structure and capacity of their municipal power and light plants. This model of public ownership and public operation is commonly used where no private company is willing to invest in wired connections of very low-density areas.</p>
+        <p>Full public ownership and operation or private ownership and operation are not the only models being explored in Massachusetts. One other model to note is the Open Access model. In this model operating a network is separate from the ownership of the network infrastructure. Municipalities in urban areas across the country, including Quincy and Fairhaven Massachusetts, are exploring how this open access model may direct public investment into a public-owned infrastructure without signing municipalities up to become an internet service provider. Municipalities, public entities, or a company could own the infrastructure, such as fiber, and let ISPs compete to deliver service to business and residents. Public bodies like municipalities can ensure residents and businesses are connected with infrastructure. While also increasing the number of service operators, driving up competition, and lowering costs for residents, as examples like UTOPIA Fiber in Utah have demonstrated. This model of ownership would treat the internet more like electricity, water, or sewer utilities. </p>
+        <p>Detailed descriptions of different models of ownership and operation along with examples can be found here in the <a href="https://airtable.com/shrkbXWC0AX6y14Os/tblj5k1d9mghQf5IO?backgroundColor=tealLight&viewControls=on">Internet Ownership Models Review</a>. As the recommendations of this plan describe there are short-term actions that can be taken by Chelsea, Everett, and Revere to explore the cost-benefit analysis of introducing a different model to address the connection struggles being faced by residents.</p>
       </div>
     </div>
   )
