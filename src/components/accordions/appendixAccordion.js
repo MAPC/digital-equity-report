@@ -7,6 +7,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import Acknowledgements from "../appendix/acknowledgements";
 import Glossary from "../appendix/glossary";
+import Additional from "../appendix/additional";
 import Online from "../appendix/online";
 import Research from "../appendix/research";
 import Maps from "../appendix/maps";
@@ -81,33 +82,21 @@ export default function AppendixAccordion() {
       accordion: <Glossary />
     },
     {
-      title: "Online Articles & Blog Posts",
-      accordion: <Online />
-    },
-    {
-      title: "Research Articles",
-      accordion: <Research />
-    },
-    {
-      title: "Maps/Data",
-      accordion: <Maps />
-    },
-    {
-      title: "Reports",
-      accordion: <Reports />
+      title: "Additional Resources",
+      accordion: <Additional />
     },
     {
       title: "Municipal Models Draft Literature Review",
       accordion: <Literature />
     },
     {
-      title: "Slides and Visualizations",
+      title: "Slides",
       accordion: <Slides />
     },
-    // {
-    //   title: "Tableaus",
-    //   accordion: <Tableaus />
-    // },
+    {
+      title: "Data Visualizations",
+      accordion: <Tableaus />
+    },
   ]
 
   function createAccordions(sections) {

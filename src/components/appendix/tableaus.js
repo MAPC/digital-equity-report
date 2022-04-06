@@ -1,9 +1,27 @@
 import React from "react";
 import thumbnail from "../../images/thumbnail-tableau.png"
+import fiberlines from "../../images/thumbnails/fiberlines.png"
+import homefiber from "../../images/thumbnails/homefiber.png"
+import providercoverage from "../../images/thumbnails/providercoverage.png"
 
 const Tableaus = () => {
 
   const tableausSources = [
+    {
+      title: "FCC Reported Provider Coverage",
+      link: "https://mapc.github.io/fcc-map/",
+      thumbnail: providercoverage
+    },
+    {
+      title: "Fiber Access by Census Blocks",
+      link: "",
+      thumbnail: fiberlines
+    },
+    {
+      title: "Residential Fiber Access by Census Blocks",
+      link: "",
+      thumbnail: homefiber
+    },
     {
       title: "MLab Speed Tests",
       link: "https://public.tableau.com/views/ProviderBroadband_16472866665260/Story1?:embed=y&:display_count=n&:origin=viz_share_link",

@@ -25,12 +25,12 @@ const Infrastructure = () => {
         <ImageModal
           source={chart1}
         />
-        <p className="citation">Data provided by Comcasta/RCN through Everett, Chelsea, Revere cable franchise agreements.</p>
+        <p className="citation">Data provided by Comcast/RCN through Everett, Chelsea, Revere cable franchise agreements.</p>
         <p>Another look at the availability of fiber is to look at the FCC ISP self-reported data mentioned in the access section. This data highlights the census blocks, which at min could be just one building per block, that are connected with fiber. The map below shows for the 4 major residential providers in the communities and served Comcast, RCN, Starry and NetBlazer only Starry and NetBlazer report having any census blocks connected by fiber, and in total only 9 blocks are reported. </p>
         <ImageModal
           source={chart2} 
         />
-        <p className="citation">Data provided by Comcasta/RCN through Everett, Chelsea, Revere cable franchise agreements.</p>
+        <p className="citation">Data provided by Comcast/RCN through Everett, Chelsea, Revere cable franchise agreements.</p>
         <p>While neighboring suburbs have more fiber to the home connection option available. Residents in these communities do not have that option available to them.  Verizon is one ISP with residential fiber options (FIOS) that does not report serving census blocks in Everett, Chelsea, Revere as they do in other parts of the MAPC region.</p>
         <p>While copper lines will cotinine to play a role as we look towards federal and private investment gear towards making infrastructure investments, including ARPA and IIJA, it is important to make investments in the technologies that will be needed to serve us all in 10, 20, 30 years down the line. Just as public investments in roads, sewers, and highways have generational lifespans, we are now at the similar   </p>
       </div>
