@@ -27,5 +27,17 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Digital Equity Plan`,
+        short_name: `Digital Equity Plan`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/favicon.ico`, // This path is relative to the root of the site.
+      },
+    },
   ],
 };
