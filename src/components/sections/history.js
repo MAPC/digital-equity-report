@@ -62,9 +62,19 @@ const History = () => {
           </TabPanel>
         </Tabs>
       </div>
+      <div className="section-two-col-flex">
+        <div className="section-half border-right">
+          <h3>Who owns the internet? </h3>
+        </div>
+        <div className="section-half">
+          <CalloutQuote 
+            quote="[Broadband] isn’t a luxury; it’s now a necessity, like water and electricity."
+            byline="- President Biden" 
+          />
+        </div>
+      </div>
       <div className="section">
-        <h3>How Does the Internet Function?</h3>
-        <p>Let’s look at the technology that is relied upon to provide the internet to us.</p>
+        <p>To understand what actions and responsibilities could be taken to close the digital divide, it’s important to look at the internet ownership model that exists today. As the slides below highlight, the internet is comprised of many technologies, each leveraged to transfer the information as bits across the globe and to your screen. Let’s take a journey through the technology of the Internet on which we rely upon. </p>
         <iframe src="https://slides.com/mapc/internet-slides/embed?byline=hidden" 
           width="100%" 
           height="480" 
@@ -76,17 +86,6 @@ const History = () => {
           mozallowfullscreen="true"
         >
         </iframe>
-      </div>
-      <div className="section-two-col-flex">
-        <div className="section-half border-right">
-          <h3>Who owns the internet? </h3>
-        </div>
-        <div className="section-half">
-          <CalloutQuote 
-            quote="[Broadband] isn’t a luxury; it’s now a necessity, like water and electricity."
-            byline="- President Biden" 
-          />
-        </div>
       </div>
       <div className="section section-bottom">
         <p>To understand what actions and responsibilities could be taken, it’s important to look at the ownership model that exists today. As the slides above highlight, the internet is comprised of many technologies, each leveraged to transfer information as bits across the globe and to your screen. Who owns, manages or regulates those technologies and infrastructure is even more varied. </p>

@@ -1,26 +1,92 @@
-import React from "react";
-import hero from "../../images/background.jpg"
-import {Helmet} from "react-helmet";
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useLocation } from "@reach/router"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = () => (
-  <>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Digital Equity Report</title>
-      <meta name="author" content="Metropolitan Area Planning Council" />
-      <meta name="description" content="This site is an online report on digital access and equity for Everett, Chelsea, and Revere. Digital equity for all is achievable." />
-      <meta name="keywords" content="fiber, digital, equity, internet, broadband" />
-      <meta property="og:title" content="Digital Equity Report" />
-      <meta property="og:description" content="This site is an online report on digital access and equity for Everett, Chelsea, and Revere. Digital equity for all is achievable." />
-      <meta property="og:image" content={hero} />
-      <meta property="og:url" content="https://mapc.github.io/digital-equity-report/" />
-      <meta property="og:type" content="website" />
-      <meta property="twitter:title" content="Digital Equity Report" />
-      <meta property="twitter:description" content="This site is an online report on digital access and equity for Everett, Chelsea, and Revere. Digital equity for all is achievable." />
-      <meta property="twitter:image" content={hero} />
+const SEO = ({ title, description, image, article }) => {
+  const { pathname } = useLocation()
+  const { site } = useStaticQuery(query)
 
+  const {
+    defaultTitle,
+    titleTemplate,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+    twitterUsername,
+  } = site.siteMetadata
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname}`,
+  }
+
+  return (
+    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+
+      {seo.url && <meta property="og:url" content={seo.url} />}
+
+      {(article ? true : null) && <meta property="og:type" content="article" />}
+
+      {seo.title && <meta property="og:title" content={seo.title} />}
+
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+
+      {seo.image && <meta property="og:image" content={seo.image} />}
+
+      <meta name="twitter:card" content="summary_large_image" />
+
+      {twitterUsername && (
+        <meta name="twitter:creator" content={twitterUsername} />
+      )}
+
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+
+      {seo.description && (
+        <meta name="twitter:description" content={seo.description} />
+      )}
+
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
-  </>
-);
+  )
+}
 
-export default Seo;
+export default SEO
+
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.bool,
+}
+
+SEO.defaultProps = {
+  title: null,
+  description: null,
+  image: null,
+  article: false,
+}
+
+const query = graphql`
+  query MyQuery {
+    site {
+      siteMetadata {
+        description
+        image
+        title
+        titleTemplate
+        twitterUsername
+        url
+      }
+    }
+  }
+`
+
+

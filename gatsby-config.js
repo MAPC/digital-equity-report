@@ -1,8 +1,12 @@
 module.exports = {
   pathPrefix: "/digital-equity-report",
   siteMetadata: {
-      title: `Digital Equity Report`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: "Digital Equity Report",
+    titleTemplate: "%s · The Real Hero",
+    description: "Digital Equity for all is achievable.",
+    url: "https://mapc.github.io/digital-equity-report",
+    image: "/favicon.ico",
+    twitterUsername: "@mapc",
   },
   plugins: [
     "gatsby-plugin-sass",
