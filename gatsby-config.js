@@ -5,7 +5,7 @@ module.exports = {
     titleTemplate: "%s · The Real Hero",
     description: "Digital Equity for all is achievable.",
     url: "https://mapc.github.io/digital-equity-report",
-    image: "/favicon.ico",
+    image: "src/images/favicon.ico",
     twitterUsername: "@mapc",
   },
   plugins: [
