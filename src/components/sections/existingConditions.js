@@ -17,7 +17,7 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
 
   return (
     <div>
-      <div className="section">
+      <div className="section section-bottom">
         <h2>Existing Conditions</h2>
         <h3>Communities at a Glance</h3>
         <p>Access to the internet is heavily influenced by the economic and societal makeup of a community. ISPs will provide the highest quality service to places with the greatest ability to pay for it; while providing lower quality service to other neighborhoods where the revenue is likely to be lower. Having a limited household income, living with a high number of individuals per household, not understanding the language in which guidance or marketing materials are produced, being a non-digital native can all make it harder for people to either subscribe, buy a device, or know how to use it.</p>

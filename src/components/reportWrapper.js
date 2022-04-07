@@ -15,6 +15,7 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 const ReportWrapper = () => {
 
   const [tabIndex, setTabIndex] = useState(0);
+  const [assessIndex, setAssessIndex] = useState(0);
   const [isActive, setActive] = useState("summary");
   const { popupState, sourceState } = useContext(PopupContext)
   const [popup, togglePopup] = popupState;
@@ -80,8 +81,8 @@ const ReportWrapper = () => {
           <ReportMenu 
             isActive={isActive} 
             setActive={setActive}
-            tabIndex={tabIndex}
             setTabIndex={setTabIndex}
+            setAssessIndex={setAssessIndex}
           />
         </div>
         <div className="report-content__col-2">
@@ -129,7 +130,10 @@ const ReportWrapper = () => {
             />
           </div>
           <div ref={assessRef} id="assessment">
-            <Assessment />
+            <Assessment 
+              assessIndex={assessIndex} 
+              setAssessIndex={setAssessIndex}
+            />
           </div>
           <div className="section">
             <ParallaxBanner
