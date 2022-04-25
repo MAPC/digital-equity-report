@@ -73,7 +73,7 @@ export default function TimelineAccordion() {
       ],
       deliverables: [
         "Map of publicly owned digital infrastructure, including broadband fiber, telephone poles, cell towers, public Wi-Fi, data centers, etc.",
-        "Slide deck outlining Everett’s existing level of service and public infrastructure. Data files and code in standard formats used in the analysis."
+        "Slide deck outlining Everett’s existing level of service and public infrastructure. Data files and code in standard formats used in the analysis. "
       ]
     },
     {
@@ -93,20 +93,20 @@ export default function TimelineAccordion() {
         "Determine the state of digital infrastructure in the City of Everett. Analyze the extent to which private Internet Service Providers (ISPs) have invested in the community, and if there are gaps in private service infrastructure. Evaluate relevant infrastructure elements as recommended by the City and partners."
       ],
       deliverables: [
-        "Data and analysis related to the inventory of digital infrastructure in Everett. This inventory will also outline the implications for future investment based on current infrastructure.",
+        "Data and analysis related to the inventory of digital infrastructure in Everett. Outline implications for future investment based on current infrastructure.",
         "Technical memorandum outlining the relevant regulations and permitting for digital infrastructure.",
-        "Technical memorandum outlining major findings regarding strategic investment opportunities and policies that would yield the advancement of improved digital infrastructure in the City."
+        "Technical memorandum outlining major findings regarding strategic investment opportunities and policies that would improve digital infrastructure in the City."
       ]
     },
     {
       title: "Plan Development",
       time: "August - November",
       description: [
-        "Synthesize earlier phases of work to inform policy, program, and capital investments that address specific barriers and needs in Everett."
+        "Synthesize earlier phases of work to inform policy, program, and capital investments that address specific barriers and needs in Everett. "
       ],
       deliverables: [
-        "Public document of key digital needs and issues in the City of Everett, the vision for digital access, and specific strategies that will needed to meet the vision.",
-        "Presentation to working group of findings, strategies, and an evaluation framework."
+        "Public document of key digital needs and issues in the City of Everett, the vision for digital access, and specific strategies that will needed to meet the vision.   ",
+        "Presentation to working group of findings, strategies, and an evaluation framework. "
       ]
     }
   ]

@@ -115,13 +115,13 @@ export default function ActionsAccordion() {
   const immediate = [
     { 
       short: "Bridge to Broadband",
-      title: "Participate in Education Superhighway Bridge to Broadband Program Pilot",
+      title: <span>Participate in Education Superhighway <a href="https://www.educationsuperhighway.org/bridge-to-broadband/">Bridge to Broadband Program</a> Pilot</span>,
       timeframe: "Immediate (Fall 2021 – Winter 2022)",
       status: "Completed",
       type: "Connection",
       actor: "School District",
       description: [
-        "This program is a facilitated data exchange between school districts and Internet Service Providers. Massachusetts Department of Elementary and Secondary Education in Partnership with Education Superhighway established a pilot in MA, where school districts could establish data exchanges through data-sharing agreements brokered by the Student Data Privacy Alliance. Everett, Chelsea, and Revere were added to the initial pilot program and are now able to identify which students are or are not currently able to be served with a wired internet connection for an ISP serving the community."
+        <span>This program is a facilitated data exchange between school districts and Internet Service Providers. Massachusetts Department of Elementary and Secondary Education in Partnership with Education Superhighway established a pilot in MA, where school districts could establish data exchanges through data-sharing agreements brokered by the <a href="https://sdpc.a4l.org/about_alliance.php?state=MA">Student Data Privacy Alliance</a>. Everett, Chelsea, and Revere were added to the initial pilot program and are now able to identify which students are or are not currently able to be served with a wired internet connection for an ISP serving the community.  </span>
       ],
       steps: [
         "Complete data exchanges.", 
@@ -130,14 +130,31 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      short: "Align Capital Investments",
-      title: "Explore and Align Municipal Infrastructure Investments",
-      timeframe: "Immediate (March 2022) / Long term ", 
-      status: "Potential",
+      short: "Build Better Broadband Grant Application",
+      title: "Apply for funding to support regional strategic and financial planning of public infrastructure. ",
+      timeframe: "Immediate", 
+      status: "Underway",
       type: "Connection",
-      actor: "Municipal Staff",
+      actor: "Municipal Staff, MAPC",
       description: [
-        "Building on the infrastructure investments that have already been made by Everett, Chelsea, and Revere, to connect municipal buildings and assets. There is an opportunity to align in future investments and maintenance. The Division of Local Services has established a Municipal Fiber Grant Program that opens for the first time in March of 2020. Structured like other competitive Community Compact grants, this program allows more funds to go towards multi-jurisdictional projects up to a maximum of $500,000 may be awarded to a project.  This is an opportunity to address deficiencies in municipal networks identified in reports (like Chelsea’s Dewsbury report) while establishing robust fiber option networking to support network monitoring, cyber security, records management, and backup and recovery. Cohesive and collaborative inter-municipal network connection also creates opportunities to gain economies of scale by aggregating internet bandwidth purchases and the associated security infrastructure."
+        "To support the equitable expenditure of federal funds municipalities can together, with MAPC, submit a regional application for the Build Better Broadband grant funded by Connect Humanity. This grant will fund work to evaluate and provide cost estimate analysis for future public infrastructure investments. It will be important to further identify where public infrastructure investments can be leveraged to equitably close the digital divide. "
+      ],
+      steps: [
+        "Identify priority municipal infrastructure needs",
+        "Draft application(s) for Municipal Fiber Grant program "
+      ]
+    },
+    {
+      short: "Housing Authority Wi-Fi Pilot",
+      title: <span>Establish Wi-Fi deployments as part of <a href="https://www.mapc.org/massachusetts-broadband-institute-mbi-gateway-city-wifi-hotspot-program/">Mass Broadband Institute Gateway City WiFi Grant</a></span>,
+      timeframe: "Intermediate (Summer 2021 – 2024) ", 
+      status: "Immediate / Underway",
+      type: "Connection, Digital Literacy ",
+      actor: "Housing Authority, Municipal Staff",
+      description: [
+        "As part of the State’s Economic Recovery Plan, the Mass Broadband Institute has made funds available, through MAPC, to support Wi-Fi deployments to help connect individuals, families, or small businesses with sustainable internet access in Chelsea, Everett, Revere, Malden, and Quincy. The goal of these deployments is to provide broader internet access in communities that face barriers to connectivity.",
+        "Through enhanced Wi-Fi availability, this program aims to connect more individuals, families, and small businesses with sustainable internet access for daily use. The MAPC team has explored a first round of installations at public housing properties in Chelsea, Everett, and Revere using an open-access network model, similar to Wi-Fi systems in an airport. These networks will provide in-unit access to high-speed internet, leveraging network hardware installed in public spaces such as stairwells and hallways. The internet service will be provided through the procurement of one, high-speed commercial-grade internet connection. This service will be maintained by the municipalities after one year of service coverage by MAPC.",
+        "MAPC’s second round of grants will focus on building the capacity of stakeholders within the region to focus on digital access, equity, and inclusion. MAPC is exploring relationships with community colleges to establish in-house digital stewardship programs – a model in which students would receive specialized training in community organizing and networking technology/management and apply their training by building community networks with local stakeholders and partners. "
       ],
       steps: [
         "Identify priority municipal infrastructure needs",
@@ -146,72 +163,55 @@ export default function ActionsAccordion() {
     },
     {
       short: "Tech Goes Home Partnership",
-      title: "Brand Cities as \"Tech Goes Home\" Communities ",
+      title: "Expand Tech Goes Home Partnership",
       timeframe: "Immediate", 
       status: "Potential",
       type: "Digital Literacy",
       actor: "Municipal Staff",
       description: [
-        "Embed at least one Tech Goes Home instructor in every school and library in the City.  Ensure courses are offered in Spanish, Haitian Creole, Portuguese, and other community languages."
+        "Embed at least one Tech Goes Home instructor in every school and library in the City.  Ensure courses are offered in Spanish, Haitian Creole, Portuguese, and other community languages. "
       ],
       steps: [
-        "Adopt brand as policy and assess funding requirements "
+        "Adopt brand as policy and assess funding requirements."
+      ]
+    },
+    {
+      short: "Hire Digital Equity Officer",
+      title: "Hire a Regional Digital Access and Equity Officer",
+      timeframe: "Immediate", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        "Municipalities hire a shared digital equity officer model after similar positions 	across the country. This position could be a joint position across municipalities that is focused on the implementation of digital equity initiatives and strategies. "
+      ],
+      steps: [
+        "Connect with MAPC Regional Cyber officer work to explore hiring model ",
+        "Pull list of positions and job descriptions "
       ]
     },
   ]
 
   const intermediate = [
     {
-      short: "Housing Authority Wi-Fi",
-      title: "Establish Wi-Fi deployments as part of Mass Broadband Institute Gateway City WiFi Grant",
-      timeframe: "Intermediate (Summer 2021 – 2024)", 
-      status: "Underway",
-      type: "Connection, Digital Literacy",
-      actor: "Housing Authority, Municipal Staff",
-      description: [
-        "As part of the State’s Economic Recovery Plan, the Mass Broadband Institute has made funds available, through MAPC, to support Wi-Fi deployments to help connect individuals, families, or small businesses with sustainable internet access in Chelsea, Everett, Revere, Malden, and Quincy. The goal of these deployments is to provide broader internet access in communities that face barriers to connectivity.",
-        "Through enhanced Wi-Fi availability, this program aims to connect more individuals, families, and small businesses with sustainable internet access for daily use. The MAPC team has explored a first round of installations at public housing properties in Chelsea, Everett, and Revere using an open-access network model, similar to Wi-Fi systems in an airport. These networks will provide in-unit access to high-speed internet, leveraging network hardware installed in public spaces such as stairwells and hallways. The internet service will be provided through the procurement of one, high-speed commercial-grade internet connection. This service will be maintained by the municipalities after one year of service coverage by MAPC.",
-        "MAPC’s second round of grants will focus on building the capacity of stakeholders within the region to focus on digital access, equity, and inclusion. MAPC is exploring relationships with community colleges to establish in-house digital stewardship programs – a model in which students would receive specialized training in community organizing and networking technology/management and apply their training by building community networks with local stakeholders and partners."
-      ],
-      steps: [
-        "Continue efforts to establish free Wi-Fi at pilot public housing properties in each community.", 
-        "Connect with community members to learn from these pilot connection installations.", 
-        "Identify funds to continue the program if deemed successful by residents. "
-      ]
-    },
-    {
-      short: "Rooftop RFP",
-      title: "Inventory and release procurements for use of Municipal rooftop space",
-      timeframe: "Intermediate", 
-      status: "Potential",
-      type: "Connection",
-      actor: "Housing Authority, Municipal Staff",
-      description: [
-        "Rooftops of municipal buildings could be leveraged by internet service providers, like Starry and netBlazer, to provide competitive options. Building off Request for Proposals from neighboring communities (Cambridge) procurements could leverage public assets to obtain sustainable maintenance funds while enabling the expansion of subsidized internet access programs for residents Starry Connect, NetBlazer."
-      ],
-      steps: [
-        "Inventory and RFP municipal roofs, focusing on tall or elevated properties.", 
-        "Draft request for information or proposals that would lease rooftop space."
-      ]
-    },
-    {
-      short: "Last Mile RFI",
-      title: "Release a request for information about \"Last Mile\" fiber connections ",
+      short: "Analyze Provider Network Maps ",
+      title: "Leverage Cable Franchise to Map Connection ",
       timeframe: "Intermediate", 
       status: "Potential",
       type: "Connection",
       actor: "Municipal Staff",
       description: [
-        "Bringing fiber connections into residential buildings will improve speed and reliability for property tenants."
+        "As a potential local technical assistance funded project with MAPC, to further expand on the analysis that comes from fiber and cable mapping data provided by ISPs.  "
       ],
       steps: [
-        "Review fiber maps and ID priority areas for investment. "
+        "Apply to local technical assistance grants for potential project establishment", 
+        "Partners with other cities request maps as allowed in cable franchise agreements", 
       ]
     },
     {
       short: "Dig Once Policy",
-      title: "Establish Dig Once Policy",
-      timeframe: "Intermediate / Long term ", 
+      title: "Establish Dig Once Policy ",
+      timeframe: "Intermediate", 
       status: "Potential",
       type: "Connection",
       actor: "Municipal Staff",
@@ -223,111 +223,89 @@ export default function ActionsAccordion() {
       ]
     },
     {
-      short: "Standardize Small Cell Permits",
-      title: "Adopt a standard small cell permitting policy and practice",
-      timeframe: "Intermediate / Long term ", 
-      status: "Potential",
-      type: "Connection",
-      actor: "Municipal Staff",
-      description: [
-        "Municipalities currently approve or deny small cell permit applications of providers looking to build internet infrastructure. This process is not currently standard across 	municipalities. A shared understanding of guidelines and concerns could go a long way in clarifying processes and incentivizing safe and community approved investments."
-      ],
-      steps: [
-        "Review other municipal small cell permit applications and process",
-        "Draft and establish guidelines drawing on successful practices and community input"
-      ]
-    },
-    {
-      short: "Analyze Provider Network Maps",
-      title: "Leverage Cable Franchise to Map Connection",
-      timeframe: "Intermediate", 
-      status: "Potential",
-      type: "Connection",
-      actor: "Municipal Staff",
-      description: [
-        "MAPC will establish a process to expand on the analysis that comes from fiber and 	cable mapping data provided by ISPs."
-      ],
-      steps: [
-        "MACP to establish program and funds (DLTA?)"
-      ]
-    },
-    {
-      short: "Hire Digital Equity Officer",
-      title: "Hire a Regional Digital Access and Equity Officer ",
-      timeframe: "Intermediate", 
-      status: "Potential",
-      type: "Connection",
-      actor: "Municipal Staff",
-      description: [
-        "Municipalities hire a shared digital equity officer model after similar positions 	across the country. "
-      ],
-      steps: [
-        "Connect with MAPC Regional Cyber officer work",
-        "Pull list of positions and job descriptions "
-      ]
-    },
-    {
-      short: "Host Digital Navigator Program",
-      title: "Participate in Youth Works Digital Navigators Program",
-      timeframe: "Intermediate", 
-      status: "Underway",
-      type: "Digital Literacy",
-      actor: "Municipal Staff, Community Organizations",
-      description: [
-        "Through the Chelsea, Everett, Revere planning process, it was revealed that there were significant gaps in local capacity to help residents navigate the various public benefit resources related to digital access. To address this issue, MAPC worked with the MetroNorth Workforce Investment Board to seek funding through the State’s Commonwealth Corporation YouthWorks program, and additional corporate support from Comcast. By combining these funds, the MetroNorth Workforce Board was able to hire the National Digital Inclusion Alliance to train and support 15 young people, aged 17 – 21, in Everett, Revere, and Malden to provide digital resource navigation support.",
-        "MAPC is further supporting the workforce board by connecting the young people with entities who are working directly with the target population the navigators seek to serve. These include healthcare institutions like the Cambridge Health Alliance, school districts, housing authorities, and the Mass Healthy Aging Council.",
-        "This is the first youth-focused digital navigators program in the country. Municipalities responded to RFI, Spend residents to support and help make connections between new capacity and those that need support. Digital Navigators can be embedded in municipal offices, healthcare facilities, schools, or other CBO's to provide direct technology and resource support to the community."
-      ],
-      steps: [
-        "Connect residents to new service ",
-        "Add to training and City communications "
-      ]
-    },
-    {
-      short: "ECF Funding Application",
-      title: "Apply for and Distribute Emergency Connectivity Fund Resources",
-      timeframe: "Intermediate", 
-      status: "Potential",
-      type: "Digital Literacy, Device",
-      actor: "Municipal Staff",
-      description: [
-        "The Emergency Connectivity Fund assists schools and libraries purchase technology equipment and internet service.  Funds should be leveraged to supporting wired connections whenever possible."
-      ],
-      steps: [
-        "Submit ECF applications from School District and Library "
-      ]
-    },
-    {
-      short: "Digital Equity Fund",
-      title: "Establish a Digital Equity Trust Fund",
+      short: "Local Digital Equity Fund ",
+      title: "Establish a Digital Equity Trust Fund ",
       timeframe: "Intermediate", 
       status: "Potential",
       type: "Digital Literacy, Device, Connection",
       actor: "Municipal Staff",
       description: [
-        "A Digital Equity Trust would be a sustained funding source to assist residents purchase devices such as PC's or routers, as well as internet subscriptions when subsidies are unavailable."
+        "A Digital Equity Trust would be a continuing funding source to incentivize and support local efforts to address digital divide issues. This could include an application process for community groups to take on broadband work. This could be in the shape of local hotspots, larger area networks, adoption campaigns, skills training, and tech career programs."
       ],
       steps: [
-        "Establish a trust through legislative action."
+        "Establish trust through legislative action ", 
+        "Develop governing body and process for applications "
       ]
     },
     {
-      short: "Device Refurbishment Program",
-      title: "Support the Creation of a Tech Refurbishment Center (Long)",
+      short: "Device Refurbishment Program ",
+      title: "Support the Creation of a Tech Refurbishment Center  ",
       timeframe: "Intermediate", 
       status: "Potential",
       type: "Device",
       actor: "Municipal Staff",
       description: [
-        "A Tech Refurbishment program would divert e-waste, enable skill-building, and provide low-cost options for devices in the community."
+        "A Tech Refurbishment program would divert e-waste, enable skill-building, and provide low-cost options for devices in the community.  "
       ],
       steps: [
-        "Coordinate with private sector partners, School District, and Workforce Board"
+        "Coordinate with private sector partners, School District, and Workforce Board "
       ]
-    }
+    },
+    {
+      short: "Leverage Municipal Rooftop Assets",
+      title: "Inventory and release procurements for use of municipal assets",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Housing Authority, Municipal Staff",
+      description: [
+        <span>Rooftops of municipal buildings could be leveraged by internet service providers, like Starry and netBlazer, to provide competitive options. In addition to rooftops, sheds, buildings and other street furniture or City-owned lots could be used for in-the-field cabinets, edge computing/mini data centers or other equipment necessary for broadband infrastructure. Building off Request for Proposals from neighboring communities (<a href="https://cambridge-housing.org/wp-content/uploads/2021/02/RFP-to-lease-rooftop-space-FINAL-1.pdf">Cambridge</a>) procurements could leverage public assets to obtain sustainable maintenance funds while enabling the expansion of subsidized internet access programs for residents <a href="https://starry.com/starryconnect">Starry Connect</a>, <a href="https://www.netblazr.com/bostons-netblazr-and-kt-partner-to-supply-affordable-housing-residents-with-free-high-speed-internet/">NetBlazer</a>.</span>
+      ],
+      steps: [
+        "Inventory and RFP municipal roofs, focusing on tall or elevated properties. ",
+        "Inventory and RFP other spaces advantageous to existing or planned broadband infrastructure",
+        "Draft request for information or proposals that would lease rooftop or other spaces."
+      ]
+    },
+    {
+      short: "Broadband Consumer Protection",
+      title: "Support and advocate for local needs in current federal rule related to broadband ",
+      timeframe: "Intermediate", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        "Create a task force to create policy recommendations to submit to state and federal entities to shape broadband policy and investment. Suggested policies to explore",
+        <ul>
+          <li>Broadband Nutrition Label with detail comparable information. </li>
+          <li>Advocate for new definition of broadband 100/100.   </li>
+          <li>Advocate that competition requires at least 3 providers. </li>
+          <li>Advocate for federal funding to be distributed equitably and to consider affordability gap not just access gap </li>
+          <li>Advocate for a clear and easy to use system municipalities and local government will have to file complaints / grievances on Behalf of Residents New FCC rules put onus on gov to submit/prove speed / price issue with provider </li>
+        </ul>
+      ],
+      steps: [
+        "Recruit members and establish charter/goals for group"
+      ]
+    },
   ]
 
   const longterm = [
+    {
+      short: "Align Capital Investments",
+      title: "Explore and Align Municipal Infrastructure Investments",
+      timeframe: "Long term", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        <span>Building on the infrastructure investments that have already been made by Everett, Chelsea, and Revere to connect municipal buildings and assets, there is an opportunity to align future investments and maintenance. The Division of Local Services has established a <a href="https://www.mass.gov/municipal-fiber-grant-program">Municipal Fiber Grant Program</a> that opened for the first time in March of 2020. Structured like other competitive Community Compact grants, this program allows more funds to go towards multi-jurisdictional projects up to a maximum of $500,000 may be awarded to a project.  This is an opportunity to address deficiencies in municipal networks identified in reports (like Chelsea's <a href="https://mapc365.sharepoint.com/:f:/s/DigitalAccess/ErM3RPx1sz5BocIKT599V7kBHXnduTFtiquhvRDDpJ-iVg?e=KdN7uP">Dewsbury report</a>) while establishing robust fiber option networking to support network monitoring, cyber security, records management, and backup and recovery. Cohesive and collaborative inter-municipal network connection also creates opportunities to gain economies of scale by aggregating internet bandwidth purchases and the associated security infrastructure. </span>
+      ],
+      steps: [
+        "Identify priority municipal infrastructure needs",
+        "Draft application(s) for Municipal Fiber Grant program"
+      ]
+    },
     {
       short: "Expand on Community TV resource",
       title: "Reposition Community TV as a Digital Resource Hub",
@@ -340,6 +318,21 @@ export default function ActionsAccordion() {
       ],
       steps: [
         "Establish an advisory board to develop a strategic plan for local access stations "
+      ]
+    },
+    {
+      short: "Standardize Small Cell Permits ",
+      title: "Adopt a standard small cell permitting policy and practice",
+      timeframe: "Long term", 
+      status: "Potential",
+      type: "Connection",
+      actor: "Municipal Staff",
+      description: [
+        "Municipalities currently approve or deny small cell permit applications of providers looking to build internet infrastructure. This process is not currently standard across municipalities. A shared understanding of guidelines and concerns could go a long way in clarifying processes and incentivizing safe and community approved investments. "
+      ],
+      steps: [
+        "Review other municipal small cell permit applications and process ",
+        "Draft and establish guidelines drawing on successful practices and community input  "
       ]
     },
   ]

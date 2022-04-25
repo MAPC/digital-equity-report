@@ -137,7 +137,8 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
         <h2>Community Needs Assessment</h2>
         <div className="section-two-col-flex">
           <div className="section-half border-right">
-            <p>To further understand the specific experiences of residents in the three communities accessing and using the internet,. MAPC worked with community partners on a community needs assessment. The assessment worked to identify the key daily activities which thefunctional needs of the internet was usedin daily life, assess current ability to use leverage the the internet for those key functions, and barriers or challenges impacting that ability to use the internet.</p>
+            <p>To further understand the specific experiences of residents in the three communities accessing and using the internet, MAPC worked with community partners on a community needs assessment. The assessment worked to identify the key daily activities which the internet was used, assess current ability to use leverage the internet , and barriers or challenges impacting that ability to use the internet. </p>
+            <p>MAPC worked with the community advisor team to execute this assessment through a series of one-on-one stakeholder interviews, group focus groups, and a comprehensive survey of over 2,000 residents. The survey was conducted through the Summer and Fall of 2021. The survey was distributed through a number of municipal and community channels, and was conducted both digitally, in person, and via phone outreach.</p>
           </div>
           <div className="section-half">
             <CalloutQuote 
@@ -145,13 +146,11 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
             />
           </div>
         </div> 
-        <p>MAPC worked with key stakeholdersthe community advisor team in the community to execute this assessment through a series of one-on-one stakeholder interviews, group focus groups, and a comprehensive digital access survey of over 2,000 residents. The survey was conducted through the Summer and Fall of 2021. The survey was distributed through a number of municipal and community channels, and was conducted both digitally, in person, and via phone outreach. </p>
-
       </div>
       <div className="section">
-        <h3>Survey Respondent Demographics</h3>
-        <p>In sum, MAPC collected 2,165 surveys, far in excess of the survey goal.</p>
-        <p>MAPC collected 793 surveys from Chelsea residents, 388 from Everett residents, and 825 from Revere residents. The key findings in this report will summarize the total of the three communities, but specific community-level findings can be viewed using the tableau data toolsdata visualizations embedded in the following section. </p>
+      <h3>Survey Respondent Demographics</h3>
+        <p>In sum, MAPC collected 2,165 surveys, in excess of the survey goal.</p>
+        <p>MAPC collected 793 surveys from Chelsea residents, 388 from Everett residents, and 825 from Revere residents. The key findings in this report will summarize the total of the three communities, but specific community-level findings can be viewed using the data visualizations embedded in the following section. </p>
         <Tabs
           selectedIndex={demosTab} 
           onSelect={(index) => handleTabsChange(index, setDemosTab)}
@@ -159,7 +158,7 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
         >
           <TabList>
             <Tab><h4>Language</h4></Tab>
-            <Tab><h4>Race and Ethnicity</h4></Tab>
+            <Tab><h4>Race & Ethnicity</h4></Tab>
             <Tab><h4>Household Size</h4></Tab>
             <Tab><h4>Age</h4></Tab>
           </TabList>
@@ -178,6 +177,7 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
           </TabPanel>
           <TabPanel>
             <div className="section">
+              <p>1,404 respondents identified their race or ethnicity within the survey. </p>
               <p>{createFloats(raceFloats)}</p>
               {createPercents(racePercents)}
               <FontAwesomeIcon 
@@ -190,7 +190,7 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
           </TabPanel>
           <TabPanel>
             <div className="section">
-              <p>Respondents to the survey represented a diverse cross section of family types and household sizes within the three communities.</p>
+              <p>Respondents to the survey represented a diverse cross section of family types and household sizes within the three communities. </p>
               {createPercents(hhPercents)}
               <FontAwesomeIcon 
                 style={{marginTop: "1rem"}}
@@ -222,14 +222,15 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
 
           <TabPanel>
             <div className="section">
-              <p>Ensuring that residents are able to acquire internet services at an affordable price that meets their needs is a major component of digital access. The following key findings summarize respondents experience and perspective on internet subscriptions, internet affordability, and internet reliability.  </p>
+              <p>Ensuring that residents are able to acquire internet services at an affordable price that meets their needs is a major component of digital access. The following key findings summarize respondents' experience and perspective on internet subscriptions, internet affordability, and internet reliability.  </p>
             </div>
             <div className="section">
               <h4>Internet Subscriptions</h4>
-              <p>15.5% of survey respondents do not have an internet subscription, slightly lower than what is represented in the Census [ADD Census %], but still a significant number of individuals. 6% of that non-internet-subscription population have chosen instead to leverage a cellular subscription and MiFi device to connect. This may be because programs either through schools, libraries, community groups have made them free and available. HoweverHowever, unlike most internet subscription plan, cellular plans, may have monthly data caps, limited cell reception, and limited speeds that may not make viable alternative.    </p>
+              <p><span className="bold">15.5% of survey respondents do not have an internet subscription</span>, slightly lower than what is represented in the Census (18%) but still a significant number of individuals. 6% of that non-internet-subscription population have chosen instead to leverage a cellular subscription and MiFi device to connect. This may be because programs either through schools, libraries, or community groups have made them free and available. However, unlike most internet subscription plans, cellular plans may have monthly data caps, limited cell reception, and limited speeds that may not make viable alternatives.</p>
               <iframe src="https://public.tableau.com/views/QuestionsAboutInternetConnection/Connection?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
-              <p>The majority of survey respondents in the three cities are Comcast subscribers. In Chelsea, where Comcast is the only cable ISP, 80% of respondents used Comcast. As highlighted in the infrastructure section [link], RCN is an available competitor in Revere and Everett. In all three communities, about 6% of respondents were still using Verizon DSL services. Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service.</p>
+              <p><span className="bold">The majority of survey respondents in the three cities are Comcast subscribers.</span> In Chelsea, where Comcast is the only cable ISP, 80% of respondents used Comcast. As highlighted in the infrastructure section [link], RCN is an available competitor in Revere and Everett. In all three communities, about 6% of respondents were still using Verizon DSL services. Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service.</p>
+              <p>In all three communities, about 6% of respondents were still using Verizon DSL services. Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service.</p>
               <iframe src="https://public.tableau.com/views/DigitalEquitySurveyISPBreakdown/ISPBreakdown?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
@@ -237,7 +238,7 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
               <div className="section-two-col-flex section">
                 <div className="section-half border-right">
                   <h4>Affordability</h4>
-                  <p>70% of survey respondents have had to change or cancel their internet subscription because it was too expensive. Subscribers to RCN were slightly more likely to indicate that their internet was affordable – 60% as compared to 50% of Comcast subscribers. This may indicate that competition. While a smaller sample pool, 75% of respondents using Starry indicate that their internet is affordable. This is likely due to the bundling of cable TV services from Comcast and RCN.</p>
+                  <p><span className="bold">70% of survey respondents have had to change or cancel their internet subscription because it was too expensive. </span>Subscribers to RCN were slightly more likely to indicate that their internet was affordable – 60% as compared to 50% of Comcast subscribers. This may indicate that competition. While a smaller sample pool, 82% of respondents using Starry indicate that their internet is affordable. This is likely due to the bundling of cable TV services from Comcast and RCN </p>
                 </div>
                 <div className="section-half">
                   <CalloutQuote quote="Necesitamos que el costo del internet sea mas justo." byline="We need the cost of the internet to be fairer." />
@@ -251,8 +252,8 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
                 <p>37% of survey respondents have had to leave their home to use internet at another location because internet at their home is unreliable. Earlier in the infrastructure section, it was noted that many households in these cities, up to 42%, were not experiencing the minimum definition of broadband, impacting their experience and the reliability of their service. This survey is another clear example where the current state of service is impacting residents forcing them to leave their homes to find internet. When 32% of respondents indicate that they always or frequently have issues with dropped or choppy video calls, they cannot rely on home internet to be there for remote work, schooling, or healthcare.</p>    
                 <iframe src="https://public.tableau.com/views/AffordabilityByProvider/Reliability?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
                 <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
-                <p>Respondents who indicated that three or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls. </p>
-                <h5>How often does one of more person need to use internet at one time tableau </h5>
+                <p>Respondents who indicated that three or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls.  </p>
+                <iframe src="https://public.tableau.com/views/DigitalEquitySurveyUsevs_Quality/Dashboard1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
             </div>
             <AnchorLink 
               to={`#findings-tabs`} 
@@ -268,40 +269,27 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
           </TabPanel>
           <TabPanel>
             <div className="section">
-              <p>Digital Access can be defined as the ability to use a device and internet effectively and in a way that enables an individual to easily use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills.  These skills are a foundational element of digital access and are frequently observed as the most difficult of the three legs of the stool to address due to different levels of experience with technology, language barriers, and other issues. </p>
+              <p>Digital skills are needed to effectively use devices and internet to find, use, and communicate information. These are both cognitive and technical skills. These skills are a foundational element of digital access and are frequently observed as the most difficult of the three legs of the stool to address due to different levels of experience with technology, language barriers, and other issues. </p>
             </div>
             <div className="section">
               <h4>Use of Technology</h4>
-              <p>82% of survey respondents indicate that the feel confident in their ability to use a laptop/Chromebook. 
-
-              For respondents who took the survey in a language other than English that number dropped as follows: 
-
-              70% Arabic 
-
-              72% Spanish 
-
-              37.5% Portuguese 
-
-              Younger respondents also responded with higher levels of confidence than older respondents </p>
+              <p>82% of survey respondents indicate that the feel confident in their ability to use a laptop / Chromebook. It is encouraging that a high percentage of respondents felt confident in their abilities. To better understand those that indicated they were not confident, we can explore responses by language and age. For respondents who took the survey in a language other than English the number of confident their abilities dropped as follows (70% Arabic, 72% Spanish, 37.5% Portuguese). If we look by age where younger respondents responded with higher levels of confidence than older respondents. A smaller portion of respondents felt comfortable solving issues related directly to internet connectivity. Survey respondents in languages other than English also exhibited less confidence in resolving internet connectivity issues. Similarly, that number increased in higher age brackets. </p>
               <iframe src="https://public.tableau.com/views/DigitalEquityPlansConfidencebyAge/LiteracybyAge?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>A smaller portion of respondents felt comfortable solving issues related directly to internet connectivity. Similarly, that number increased in higher age brackets. </p>
             </div>
             <div className="section">
               <h4>Support Systems and Training</h4>
-              <p>Overall, 90% of respondents indicated that they would prefer to have a local resource that could support technology needs, rather than relying on internet service providers. In addition to preferring local resources there may be opportunities to encourage and support the growth of local trained professionals. 63% of respondents indicated they would be interested in a career in Tehcnology or IT. Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available.  </p>
+              <p>Overall, 90% of respondents indicated that they would prefer to have a local resource that could support technology needs, rather than relying on internet service providers. In addition to preferring local resources there may be opportunities to encourage and support the growth of local trained professionals. 63% of respondents indicated they would be interested in a career in Technology or IT. Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available.  </p>
               <iframe src="https://public.tableau.com/views/DigitalEquitySurveyLocalResource/LocalResource?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
-              <p>When asked about which digital skills respondents would like to learn more about, about a third of all respondents indicated interest in all of the following topics: 
-
-              Essential basic computer skills (identifying technology, using keyboard and mouse, using a web browser) 
-
-              Essential software skills (creating documents, creating slides, using email) 
-
-              Using technology in daily life (use online resources to find trustworthy information, find a job, use social media) 
-
-              Learning advanced technology skills 
-              </p>
+              <p>When asked about which digital skills respondents would like to learn more about, about a third of all respondents indicated interest in all of the following topics:</p>
+              <ul>
+                <li>Essential basic computer skills (identifying technology, using keyboard and mouse, using a web browser) </li>
+                <li>Essential software skills (creating documents, creating slides, using email) </li>
+                <li>Using technology in daily life (use online resources to find trustworthy information, find a job, use social media) </li>
+                <li>Learning advanced technology skills </li>
+              </ul>
               <p>However, twice as many respondents in Spanish indicated an interest in those same skill areas. </p>
               <iframe src="https://public.tableau.com/views/DigitalEquitySurveyLiteracyLearnAbout/Sheet1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
@@ -320,11 +308,11 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
           </TabPanel>
           <TabPanel>
             <div className="section">
-              <p>In order to utilize the internet for critical personal services such as education, healthcare, and job searches /, and online applications, individuals need a computing device with  a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet, but is not a substitute for a personal computing devices function.  </p>
+              <p>In order to utilize the internet for critical personal services such as education, healthcare, job searches, and online applications, individuals need a computing device with a certain speed and functionality. The proliferation of smartphone technology has helped millions of individuals gain access to the communications benefits of the internet but is not a substitute for a personal computing devices function.  </p>
             </div>
             <div className="section">
               <h4>Computers</h4>
-              <p>21.5% of respondents disagreed with the statement “People in my household always have access to a computer if they need one.”</p>
+              <p>21.5% of respondents disagreed with the statement “People in my household always have access to a computer if they need one.” </p>
               <iframe src="https://public.tableau.com/views/DigitalEquitySurveyDeviceAccess/DeviceAccess?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>41% of respondents have had to buy a new computer in the last three years </p>
