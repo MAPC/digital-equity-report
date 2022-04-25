@@ -66,8 +66,8 @@ const ReportWrapper = () => {
         />
       </div>
       <ParallaxBanner
-        layers={[{ image: 'https://source.unsplash.com/8QB8r4I18_U/2400x1602', speed: -20 }]}
-        style={{height: "28rem"}}
+        layers={[{ image: 'https://source.unsplash.com/F-SSkCfSEoo/2400x1404', speed: -20 }]}
+        style={{height: "32rem"}}
       >
         <div style={{position: "absolute", width: "100%"}}>
           <div className="padding report-header">
