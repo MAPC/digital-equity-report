@@ -15,7 +15,7 @@ const Actions = () => {
           <li style={{listStyle: "circle", marginLeft: "1.2rem"}}>Ensure all residents who desire to improve their digital / technology literacy have a pathway to educational opportunities at a range of skill levels, offered in community appropriate languages and settings.</li>
           <li style={{listStyle: "circle", marginLeft: "1.2rem"}}>Promote competition among internet service providers offering broadband service.</li>
         </ul>
-        <p>Below are actions that can be taken to address digital access and equity challenges facing our three communities. These recommendations range from immediate, intermediate, and long-term investments that can be made. These actions can build on each other to better and more sustainably connect residents and individuals in these communities.  </p>
+        <p>Below are actions that can be taken to address digital access and equity challenges facing our three communities. These recommendations range from immediate, intermediate, and long-term investments that can be made. These actions can build on each other to better and more sustainably connect residents and individuals in these communities. </p>
         <ActionsAccordion />
       </div>
     </div>
