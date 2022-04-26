@@ -82,7 +82,7 @@ const History = () => {
           title="Internet Slides" 
           scrolling="no" 
           frameborder="0" 
-          allowFullScreen="true" 
+          allowFullScreen 
           webkitallowfullscreen="true"
           mozallowfullscreen="true"
         >

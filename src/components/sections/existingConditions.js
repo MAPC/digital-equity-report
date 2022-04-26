@@ -1,6 +1,6 @@
 import React from "react";
 import Connection from "../existingConditions/connection";
-import Devices from "../existingConditions/connection";
+import Devices from "../existingConditions/devices";
 import Service from "../existingConditions/service";
 import Infrastructure from "../existingConditions/infrastructure";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -25,7 +25,14 @@ const ExistingConditions = ({tabIndex, setTabIndex}) => {
         <p>Using the accompanying chart, we can explore a variety of census data about Chelsea, Everett, and Revere. The cities are some of the most diverse communities in Massachusetts, with a higher-than-average number of languages spoken as well as a high rate of foreign-born population.  </p>
         <p>These communities also have many residents with limited income. The median household income is $61,600 [calculated #s to be checked].  In fact, more than 20 percent of households in the three cities are categorized as “extremely low income” meaning they make less than 30 percent of HUD’s Median Family Income.  </p>
         <p>Further, many households in the three communities have more than four people. More individuals with more devices are competing to pull and push data within the bounds of an internet service provider's plan. Multiple users of the internet on lower service plans can cause significant challenges for students and parents who need to work or attend school remotely. </p>
-        <iframe src="https://public.tableau.com/views/CommunitiesataGlance_16491319836230/Dashboard1?:showVizHome=no&:embed=true " width="100%" height="600"></iframe>
+        <iframe 
+          src="https://public.tableau.com/views/CommunitiesataGlance_16491319836230/Dashboard1?:showVizHome=no&:embed=true"
+          allowFullScreen="true" 
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true" 
+          width="100%" 
+          height="600"
+        ></iframe>
         <p className="citation">American Community Survey 2019 5 year:  Table S2801.</p>
       </div>
       <div className="section section-bottom">

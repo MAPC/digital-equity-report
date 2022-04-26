@@ -177,7 +177,6 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
           </TabPanel>
           <TabPanel>
             <div className="section">
-              <p>1,404 respondents identified their race or ethnicity within the survey. </p>
               <p>{createFloats(raceFloats)}</p>
               {createPercents(racePercents)}
               <FontAwesomeIcon 
@@ -227,11 +226,25 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
             <div className="section">
               <h4>Internet Subscriptions</h4>
               <p><span className="bold">15.5% of survey respondents do not have an internet subscription</span>, slightly lower than what is represented in the Census (18%) but still a significant number of individuals. 6% of that non-internet-subscription population have chosen instead to leverage a cellular subscription and MiFi device to connect. This may be because programs either through schools, libraries, or community groups have made them free and available. However, unlike most internet subscription plans, cellular plans may have monthly data caps, limited cell reception, and limited speeds that may not make viable alternatives.</p>
-              <iframe src="https://public.tableau.com/views/QuestionsAboutInternetConnection/Connection?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/QuestionsAboutInternetConnection_16509003934000/Connection?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p><span className="bold">The majority of survey respondents in the three cities are Comcast subscribers.</span> In Chelsea, where Comcast is the only cable ISP, 80% of respondents used Comcast. As highlighted in the infrastructure section [link], RCN is an available competitor in Revere and Everett. In all three communities, about 6% of respondents were still using Verizon DSL services. Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service.</p>
               <p>In all three communities, about 6% of respondents were still using Verizon DSL services. Wireless ISP providers like Starry and NetBlazer are available in all three communities, but have had limited market penetration, with only 1% of survey respondents using that service.</p>
-              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyISPBreakdown/ISPBreakdown?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquitySurveyISPBreakdown/ISPBreakdown?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
             <div className="section">
@@ -244,16 +257,37 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
                   <CalloutQuote quote="Necesitamos que el costo del internet sea mas justo." byline="We need the cost of the internet to be fairer." />
                 </div>
               </div>
-              <iframe src="https://public.tableau.com/views/AffordabilityByProvider/AffordabilitybyProvider?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/AffordabilityByProvider_16509010643700/AffordabilitybyProvider?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
             <div className="section">
                 <h4>Reliability</h4>
-                <p>37% of survey respondents have had to leave their home to use internet at another location because internet at their home is unreliable. Earlier in the infrastructure section, it was noted that many households in these cities, up to 42%, were not experiencing the minimum definition of broadband, impacting their experience and the reliability of their service. This survey is another clear example where the current state of service is impacting residents forcing them to leave their homes to find internet. When 32% of respondents indicate that they always or frequently have issues with dropped or choppy video calls, they cannot rely on home internet to be there for remote work, schooling, or healthcare.</p>    
-                <iframe src="https://public.tableau.com/views/AffordabilityByProvider/Reliability?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+                <p>37% of survey respondents have had to leave their home to use internet at another location because internet at their home is unreliable. Earlier in the infrastructure section, it was noted that many households in these cities, up to 42%, were not experiencing the minimum definition of broadband, impacting their experience and the reliability of their service. This survey is another clear example where the current state of service is impacting residents forcing them to leave their homes to find internet. When 32% of respondents indicate that they always or frequently have issues with dropped or choppy video calls, they cannot rely on home internet to be there for remote work, schooling, or healthcare.</p>   
+                <iframe 
+                  src="https://public.tableau.com/views/AffordabilityByProvider_16509010643700/Reliability?:showVizHome=no&:embed=true" 
+                  width="100%" 
+                  height="600"
+                  allowFullScreen="true" 
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true" 
+                ></iframe>
                 <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
                 <p>Respondents who indicated that three or more people needed to use the internet at any given time for work or education were more likely to experience choppy or dropped video calls.  </p>
-                <iframe src="https://public.tableau.com/views/DigitalEquitySurveyUsevs_Quality/Dashboard1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+                <iframe 
+                  src="https://public.tableau.com/views/DigitalEquitySurveyUsevs_Quality/Dashboard1?:showVizHome=no&:embed=true" 
+                  width="100%" 
+                  height="600"
+                  allowFullScreen="true" 
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true" 
+                ></iframe>
             </div>
             <AnchorLink 
               to={`#findings-tabs`} 
@@ -274,14 +308,28 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
             <div className="section">
               <h4>Use of Technology</h4>
               <p>82% of survey respondents indicate that the feel confident in their ability to use a laptop / Chromebook. It is encouraging that a high percentage of respondents felt confident in their abilities. To better understand those that indicated they were not confident, we can explore responses by language and age. For respondents who took the survey in a language other than English the number of confident their abilities dropped as follows (70% Arabic, 72% Spanish, 37.5% Portuguese). If we look by age where younger respondents responded with higher levels of confidence than older respondents. A smaller portion of respondents felt comfortable solving issues related directly to internet connectivity. Survey respondents in languages other than English also exhibited less confidence in resolving internet connectivity issues. Similarly, that number increased in higher age brackets. </p>
-              <iframe src="https://public.tableau.com/views/DigitalEquityPlansConfidencebyAge/LiteracybyAge?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquityPlansConfidencebyAge/LiteracybyAge?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>A smaller portion of respondents felt comfortable solving issues related directly to internet connectivity. Similarly, that number increased in higher age brackets. </p>
             </div>
             <div className="section">
               <h4>Support Systems and Training</h4>
               <p>Overall, 90% of respondents indicated that they would prefer to have a local resource that could support technology needs, rather than relying on internet service providers. In addition to preferring local resources there may be opportunities to encourage and support the growth of local trained professionals. 63% of respondents indicated they would be interested in a career in Technology or IT. Further, higher percentages of respondents in languages other than English indicated that they would be interested in careers in technology or IT if training were available.  </p>
-              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyLocalResource/LocalResource?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquitySurveyLocalResource/LocalResource?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>When asked about which digital skills respondents would like to learn more about, about a third of all respondents indicated interest in all of the following topics:</p>
               <ul>
@@ -291,7 +339,14 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
                 <li>Learning advanced technology skills </li>
               </ul>
               <p>However, twice as many respondents in Spanish indicated an interest in those same skill areas. </p>
-              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyLiteracyLearnAbout/Sheet1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquitySurveyLiteracyLearnAbout/Sheet1?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
             <AnchorLink 
@@ -313,17 +368,38 @@ const Assessment = ({assessIndex, setAssessIndex}) => {
             <div className="section">
               <h4>Computers</h4>
               <p>21.5% of respondents disagreed with the statement “People in my household always have access to a computer if they need one.” </p>
-              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyDeviceAccess/DeviceAccess?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquitySurveyDeviceAccess/DeviceAccess?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
               <p>41% of respondents have had to buy a new computer in the last three years </p>
               <p>Many of those individuals had to buy a computer to either replace an older computer, or because their household did not have an existing computer.</p>
-              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyDevicePurchase/DevicePurchase?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquitySurveyDevicePurchase/DevicePurchase?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
             <div className="section">
               <h4>Routers</h4>
               <p>60% of respondents lease a WiFi router from an internet service provider.</p>
-              <iframe src="https://public.tableau.com/views/DigitalEquitySurveyRouter/Router_1?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+              <iframe 
+                src="https://public.tableau.com/views/DigitalEquitySurveyRouter/Router_1?:showVizHome=no&:embed=true" 
+                width="100%" 
+                height="600"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true" 
+              ></iframe>
               <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
             </div>
           </TabPanel>
