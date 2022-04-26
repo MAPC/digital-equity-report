@@ -22,7 +22,14 @@ const Summary = () => {
         <h3>Key Findings</h3>
         <p>Through this planning process, the degree to which digital equity gaps are impacting community residents in these three cities was found to be not just significant, but critical. Data from the 2019 US Census indicates that 15% to 19% of residents within the three communities do not have internet connections. For those households making less than $75,000 / year that number jumps to 55% in Everett, 65% in Chelsea, and 64% in Revere. And while the majority of residents do have an internet subscription, an evaluation of speed test data from MLab and Microsoft indicate that between 30% and 40% of these subscribers do not receive broadband speed as defined by the <a href="https://broadbandnow.com/report/fcc-broadband-definition/">FCC</a> (25 megabits per second download speed, 3 megabits per second upload speed).</p>
         <p>Affordability remains the primary barrier to internet adoption in these three cities, 70% of survey takers responded, ‘Yes’ to the question “Have you ever had to change or cancel your internet subscription because it was too expensive?” Additional barriers to internet adoption stemming from language isolation, concerns about privacy, and lack of information regarding internet subsidies and training programs. For example, respondents who completed MAPC’s Digital Access survey in a language other than English were less likely to feel confident in the use of a laptop/Chromebook as well as resolving internet connectivity issues, indicating the need for language-specific programming.</p>
-        <iframe src="https://public.tableau.com/views/Ifnotwhynot_16491332923730/Ifnotwhynot?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+        <iframe 
+          src="https://public.tableau.com/views/Ifnotwhynot_16491332923730/Ifnotwhynot?:showVizHome=no&:embed=true" 
+          width="100%" 
+          height="600"
+          allowFullScreen="true" 
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true" 
+        ></iframe>
         <p className="citation">MAPC Digital Access and Equity Survey for the Cities of Chelsea, Everett, and Revere.</p>
         <div className="section-two-col-flex">
           <div className="section-half border-right">

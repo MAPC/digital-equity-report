@@ -373,15 +373,15 @@ export default function ActionsAccordion() {
   return (
     <div>
         <h3>Immediate</h3>
-      <div class="acc-action-immediate" id="immediate">
+      <div className="acc-action-immediate" id="immediate">
         {createAccordions(immediate, 'immediate', handleChangeImmediate, expandedImmediate)}
       </div>
         <h3>Intermediate</h3>
-        <div class="acc-action-intermediate">
+        <div className="acc-action-intermediate">
         {createAccordions(intermediate, 'intermediate', handleChangeIntermediate, expandedIntermediate)}
       </div>
         <h3>Longterm</h3>
-        <div class="acc-action-longterm">
+        <div className="acc-action-longterm">
         {createAccordions(longterm, 'longterm', handleChangeLongTerm, expandedLongTerm)}
       </div>
     </div>

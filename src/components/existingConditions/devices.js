@@ -19,8 +19,15 @@ const Devices = () => {
             />
           </div>
         </div>
-        <p className="viz-description">In addition to an internet subscription, owning a device that can connect and access the internet is an essential to full participation. Closing the digital divide includes enabling and empowering residents and businesses with connected devices. While the price of a personal computer has fallen [ X since X get source] still in [2019] nearly one in five households in [three communities] did not have a desktop or laptop to serve as a computing device. While mobile devices may someday be capable of connecting residents to a full set of services, not having a device today can leave households unable to work remotely, attend virtual classes, or shop safely and securely online. </p>
-        <iframe src="https://public.tableau.com/views/ACSPercentofHouseholdswithNoComputer/U_S_CensusQuestions?:showVizHome=no&:embed=true" width="100%" height="600"></iframe>
+        <p>In addition to an internet subscription, owning a device that can connect and access the internet is an essential to full participation. Closing the digital divide includes enabling and empowering residents and businesses with connected devices. While the price of a personal computer has fallen [ X since X get source] still in [2019] nearly one in five households in [three communities] did not have a desktop or laptop to serve as a computing device. While mobile devices may someday be capable of connecting residents to a full set of services, not having a device today can leave households unable to work remotely, attend virtual classes, or shop safely and securely online. </p>
+        <iframe 
+          src="https://public.tableau.com/views/ACSPercentofHouseholdswithNoComputer/U_S_CensusQuestions?:showVizHome=no&:embed=true" 
+          width="100%" 
+          height="600"
+          allowFullScreen="true" 
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true" 
+        ></iframe>
         <p className="citation">American Community Survey 2019 5 year: Table S2801.</p>
       </div>
       <div className="section">
