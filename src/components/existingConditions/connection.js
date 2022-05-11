@@ -1,8 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
-import pew1 from "../../images/pew.png";
-import pew2 from "../../images/pew2.png";
-import ImageModal from "../modules/imageModal";
-import CalloutQuote from "../modules/calloutQuote";
+import React from "react";
 
 const Connection = () => {
 
