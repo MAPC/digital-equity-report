@@ -19,16 +19,16 @@ const Actions = () => {
           <li style={{listStyle: "circle", marginLeft: "1.2rem"}}>Promote competition among internet service providers offering broadband service.</li>
         </ul>
         <p>Below are actions that can be taken to address digital access and equity challenges facing our three communities. These recommendations range from immediate, intermediate, and long-term investments that can be made. These actions can build on each other to better and more sustainably connect residents and individuals in these communities. </p>
-        <h3>Immediate</h3>
         <div className="acc-action-immediate" id="immediate">
+          <h3>Immediate</h3>
           <Actions1Accordion />
         </div>
-        <h3>Intermediate</h3>
         <div className="acc-action-intermediate" id="intermediate">
+          <h3>Intermediate</h3>
           <Actions2Accordion />
         </div>
-        <h3>Longterm</h3>
-        <div className="acc-action-intermediate" id="intermediate">
+        <div className="acc-action-intermediate" id="longterm">
+          <h3>Longterm</h3>
           <Actions3Accordion />
         </div>
       </div>
