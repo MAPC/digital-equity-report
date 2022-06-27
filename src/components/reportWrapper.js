@@ -10,15 +10,15 @@ import Actions from "./sections/actions";
 import Appendix from "./sections/appendix";
 import Footer from "./modules/footer";
 import { PopupContext } from "./contexts/popupContext";
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { ParallaxBanner } from "react-scroll-parallax";
 
 const ReportWrapper = () => {
-
   const [tabIndex, setTabIndex] = useState(0);
   const [assessIndex, setAssessIndex] = useState(0);
   const [isActive, setActive] = useState("summary");
-  const { popupState, sourceState } = useContext(PopupContext)
+  const { popupState, sourceState } = useContext(PopupContext);
   const [popup, togglePopup] = popupState;
+  // eslint-disable-next-line no-unused-vars
   const [popupSource, setPopupSource] = sourceState;
 
   const summaryRef = useRef();
@@ -28,12 +28,20 @@ const ReportWrapper = () => {
   const assessRef = useRef();
   const actionsRef = useRef();
   const appendixRef = useRef();
-  let refs = [summaryRef, processRef, historyRef, existingRef, assessRef, actionsRef, appendixRef];
+  let refs = [
+    summaryRef,
+    processRef,
+    historyRef,
+    existingRef,
+    assessRef,
+    actionsRef,
+    appendixRef,
+  ];
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  },[]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleScroll = () => {
     let viewport = window.pageYOffset + window.innerHeight;
@@ -54,32 +62,41 @@ const ReportWrapper = () => {
     } else {
       setActive("");
     }
-  } 
+  };
 
   return (
     <div className="report-container" onScroll={handleScroll}>
       <div className={popup ? "report-image" : "hidden"}>
-        <img 
-          className={popup ? "popup" : "hidden"} 
-          src={popupSource} 
+        <img
+          className={popup ? "popup" : "hidden"}
+          src={popupSource}
           onClick={() => togglePopup(!popup)}
         />
       </div>
       <ParallaxBanner
-        layers={[{ image: 'https://source.unsplash.com/F-SSkCfSEoo/2400x1404', speed: -20 }]}
-        style={{height: "32rem"}}
+        layers={[
+          {
+            image: "https://source.unsplash.com/F-SSkCfSEoo/2400x1404",
+            speed: -20,
+          },
+        ]}
+        style={{ height: "32rem" }}
       >
-        <div style={{position: "absolute", width: "100%"}}>
+        <div style={{ position: "absolute", width: "100%" }}>
           <div className="padding report-header">
             <Header />
-            <h2 style={{width: "100%", color: "white", padding: "3rem 0"}}>Digital Equity Plan:<br/><span>Everett, Chelsea, & Revere</span></h2>
+            <h2 style={{ width: "100%", color: "white", padding: "3rem 0" }}>
+              Digital Equity Plan:
+              <br />
+              <span>Everett, Chelsea, & Revere</span>
+            </h2>
           </div>
         </div>
       </ParallaxBanner>
       <div className="report-content padding">
         <div className="report-content__col-1">
-          <ReportMenu 
-            isActive={isActive} 
+          <ReportMenu
+            isActive={isActive}
             setActive={setActive}
             setTabIndex={setTabIndex}
             setAssessIndex={setAssessIndex}
@@ -91,9 +108,14 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/gTyHuIDjUH0/4013x1923', speed: -30 }]}
-              style={{height: "30rem", width: "100vw"}}
-              className="fullbleed" 
+              layers={[
+                {
+                  image: "https://source.unsplash.com/gTyHuIDjUH0/4013x1923",
+                  speed: -30,
+                },
+              ]}
+              style={{ height: "30rem", width: "100vw" }}
+              className="fullbleed"
             />
           </div>
           <div ref={processRef} id="process">
@@ -101,9 +123,14 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/QVuBdXk-07I/2400x1600', speed: -30 }]}
-              style={{height: "30rem", width: "100vw"}}
-              className="fullbleed" 
+              layers={[
+                {
+                  image: "https://source.unsplash.com/QVuBdXk-07I/2400x1600",
+                  speed: -30,
+                },
+              ]}
+              style={{ height: "30rem", width: "100vw" }}
+              className="fullbleed"
             />
           </div>
           <div ref={historyRef} id="history">
@@ -111,35 +138,47 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/Tk7Vf2iMiRg', speed: -30 }]}
-              style={{height: "30rem", width: "100vw"}}
-              className="fullbleed" 
+              layers={[
+                {
+                  image: "https://source.unsplash.com/Tk7Vf2iMiRg",
+                  speed: -30,
+                },
+              ]}
+              style={{ height: "30rem", width: "100vw" }}
+              className="fullbleed"
             />
           </div>
           <div ref={existingRef} id="existing-conditions">
-            <ExistingConditions 
-              tabIndex={tabIndex}
-              setTabIndex={setTabIndex}
-            />
+            <ExistingConditions tabIndex={tabIndex} setTabIndex={setTabIndex} />
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/SpipDgDNE_U/2400x1600', speed: -30 }]}
-              style={{height: "30rem", width: "100vw"}}
-              className="fullbleed" 
+              layers={[
+                {
+                  image: "https://source.unsplash.com/SpipDgDNE_U/2400x1600",
+                  speed: -30,
+                },
+              ]}
+              style={{ height: "30rem", width: "100vw" }}
+              className="fullbleed"
             />
           </div>
           <div ref={assessRef} id="assessment">
-            <Assessment 
-              assessIndex={assessIndex} 
+            <Assessment
+              assessIndex={assessIndex}
               setAssessIndex={setAssessIndex}
             />
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/WPc2CaLR1U0/2400x1350', speed: -30 }]}
-              style={{height: "30rem", width: "100vw"}}
-              className="fullbleed" 
+              layers={[
+                {
+                  image: "https://source.unsplash.com/WPc2CaLR1U0/2400x1350",
+                  speed: -30,
+                },
+              ]}
+              style={{ height: "30rem", width: "100vw" }}
+              className="fullbleed"
             />
           </div>
           <div ref={actionsRef} id="actions">
@@ -147,9 +186,14 @@ const ReportWrapper = () => {
           </div>
           <div className="section">
             <ParallaxBanner
-              layers={[{ image: 'https://source.unsplash.com/XPkjweA1EBA/2400x3200', speed: -30 }]}
-              style={{height: "30rem", width: "100vw"}}
-              className="fullbleed" 
+              layers={[
+                {
+                  image: "https://source.unsplash.com/XPkjweA1EBA/2400x3200",
+                  speed: -30,
+                },
+              ]}
+              style={{ height: "30rem", width: "100vw" }}
+              className="fullbleed"
             />
           </div>
           <div ref={appendixRef} id="appendix">
@@ -159,7 +203,7 @@ const ReportWrapper = () => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default ReportWrapper
+export default ReportWrapper;
