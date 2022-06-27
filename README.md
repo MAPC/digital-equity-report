@@ -1,7 +1,5 @@
 # Digital Equity Plan: Everett, Chelsea, & Revere
 
-Report on digital access and equity for Everett, Chelsea, and Revere
-
 This [site](https://mapc.github.io/digital-equity-report/) is a digital toolkit created to share the digital access and equity plans developed for Everett, Chelsea, and Revere.
 
 ## Development
