@@ -1,8 +1,7 @@
 import React from "react";
-import AppendixAccordion from "../accordions/appendixAccordion";
+import AppendixAccordion from "../accordions/AppendixAccordion";
 
 const Appendix = () => {
-
   return (
     <div>
       <div className="section section-bottom">
@@ -10,7 +9,7 @@ const Appendix = () => {
         <AppendixAccordion />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Appendix
+export default Appendix;

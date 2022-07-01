@@ -1,7 +1,7 @@
 import React from "react";
-import Actions1Accordion from "../accordions/actions1Accordion";
-import Actions2Accordion from "../accordions/actions2Accordion";
-import Actions3Accordion from "../accordions/actions3Accordion";
+import ActionsAccordion1 from "../accordions/ActionsAccordion1";
+import ActionsAccordion2 from "../accordions/ActionsAccordion2";
+import ActionsAccordion3 from "../accordions/ActionsAccordion3";
 
 const Actions = () => {
   return (
@@ -52,15 +52,15 @@ const Actions = () => {
         </p>
         <div className="acc-action-immediate" id="immediate">
           <h3>Immediate</h3>
-          <Actions1Accordion />
+          <ActionsAccordion1 />
         </div>
         <div className="acc-action-intermediate" id="intermediate">
           <h3>Intermediate</h3>
-          <Actions2Accordion />
+          <ActionsAccordion2 />
         </div>
         <div className="acc-action-intermediate" id="longterm">
           <h3>Longterm</h3>
-          <Actions3Accordion />
+          <ActionsAccordion3 />
         </div>
       </div>
     </div>

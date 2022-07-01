@@ -1,7 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
-const CalloutQuote = ({quote, byline}) => {
-
+const CalloutQuote = ({ quote, byline }) => {
   return (
     <div className="quote">
       <span className="quote__marks left">"</span>
@@ -11,7 +11,7 @@ const CalloutQuote = ({quote, byline}) => {
       </div>
       <span className="quote__marks right">"</span>
     </div>
-  )
-}
+  );
+};
 
-export default CalloutQuote
+export default CalloutQuote;
