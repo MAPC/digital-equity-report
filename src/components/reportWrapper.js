@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
-import Header from "./modules/header";
-import ReportMenu from "./reportMenu";
-import Summary from "./sections/summary";
-import Process from "./sections/process";
-import History from "./sections/history";
-import ExistingConditions from "./sections/existingConditions";
-import Assessment from "./sections/assessment";
-import Actions from "./sections/actions";
-import Appendix from "./sections/appendix";
-import Footer from "./modules/footer";
+import Header from "./modules/Header";
+import ReportMenu from "./ReportMenu";
+import Summary from "./sections/Summary";
+import Process from "./sections/Process";
+import History from "./sections/History";
+import ExistingConditions from "./sections/ExistingConditions";
+import Assessment from "./sections/Assessment";
+import Actions from "./sections/Actions";
+import Appendix from "./sections/Appendix";
+import Footer from "./modules/Footer";
 import { PopupContext } from "./contexts/popupContext";
 import { ParallaxBanner } from "react-scroll-parallax";
 

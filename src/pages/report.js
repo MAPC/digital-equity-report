@@ -1,19 +1,18 @@
 import React from "react";
 import { PopupProvider } from "../components/contexts/popupContext";
-import ReportWrapper from "../components/reportWrapper";
+import ReportWrapper from "../components/ReportWrapper";
 import "../styles/index.scss";
-import { ParallaxProvider } from 'react-scroll-parallax';
-import Seo from "../components/modules/seo";
+import { ParallaxProvider } from "react-scroll-parallax";
+import Seo from "../components/modules/Seo";
 import { Helmet } from "react-helmet";
 
 const Report = () => {
-
   return (
     <ParallaxProvider>
       <PopupProvider>
         <Helmet>
           <script
-            type="module" 
+            type="module"
             src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
           ></script>
         </Helmet>
@@ -21,7 +20,7 @@ const Report = () => {
         <ReportWrapper />
       </PopupProvider>
     </ParallaxProvider>
-  )
-}
+  );
+};
 
-export default Report
+export default Report;

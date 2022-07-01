@@ -205,6 +205,7 @@ export default function Actions1Accordion() {
     return sections.map((section, index) => {
       return (
         <Accordion
+          key={index}
           id={`immediate-panel${index}`}
           expanded={expanded === "immediate-panel" + index}
           onChange={handleChange("immediate-panel" + index)}
