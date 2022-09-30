@@ -73,20 +73,20 @@ export default function TimelineAccordion() {
   const timelineData = [
     {
       title: "Existing Conditions",
-      time: "February - April",
+      time: "(February - April 2021)",
       description: [
         "Assess current internet service providers and their service offerings. Identify and analyze existing data sources to better understand community devices and internet access.",
       ],
       deliverables: [
         "Map of publicly owned digital infrastructure, including broadband fiber, telephone poles, cell towers, public Wi-Fi, data centers, etc.",
-        "Slide deck outlining Everett’s existing level of service and public infrastructure. Data files and code in standard formats used in the analysis. ",
+        "Slide deck outlining Everett’s existing level of service and public infrastructure. Data files and code in standard formats used in the analysis.",
       ],
     },
     {
       title: "Community Needs Assessment",
-      time: "April - June",
+      time: "(April - June 2021)",
       description: [
-        "Assess internet availability, device access, and digital literacy among specific populations in Everett community. With community partners, identify specific internet functions needed in daily life, current ability to use them, and barriers or challenges to doing so.",
+        "Assess internet availability, device access, and digital literacy among specific populations in Everett, Chelsea, and Revere. With community partners, identify specific internet functions needed in daily life, current ability to use them, and barriers or challenges to doing so.",
       ],
       deliverables: [
         "Data and analysis from the digital community needs assessment. Outline implications of this assessment for use in future recommendations.",
@@ -94,25 +94,25 @@ export default function TimelineAccordion() {
     },
     {
       title: "Infrastructure and Technology Evaluation ",
-      time: "June - August",
+      time: "(June - August 2021)",
       description: [
-        "Determine the state of digital infrastructure in the City of Everett. Analyze the extent to which private Internet Service Providers (ISPs) have invested in the community, and if there are gaps in private service infrastructure. Evaluate relevant infrastructure elements as recommended by the City and partners.",
+        "Determine the state of digital infrastructure. Analyze the extent to which private Internet Service Providers (ISPs) have invested in the community, and identify gaps in private service infrastructure. Evaluate relevant infrastructure elements as recommended by the cities and partners.",
       ],
       deliverables: [
         "Data and analysis related to the inventory of digital infrastructure in Everett. Outline implications for future investment based on current infrastructure.",
         "Technical memorandum outlining the relevant regulations and permitting for digital infrastructure.",
-        "Technical memorandum outlining major findings regarding strategic investment opportunities and policies that would improve digital infrastructure in the City.",
+        "Technical memorandum outlining major findings regarding strategic investment opportunities and policies that would improve digital infrastructure in the city.",
       ],
     },
     {
-      title: "Plan Development",
-      time: "August - November",
+      title: "Plan Development and Review",
+      time: "(September 2021 - September 2022)",
       description: [
-        "Synthesize earlier phases of work to inform policy, program, and capital investments that address specific barriers and needs in Everett. ",
+        "Synthesize earlier phases of work to inform policy, program, and capital investments that address specific barriers and needs",
       ],
       deliverables: [
-        "Public document of key digital needs and issues in the City of Everett, the vision for digital access, and specific strategies that will needed to meet the vision.   ",
-        "Presentation to working group of findings, strategies, and an evaluation framework. ",
+        "Public document of key digital needs and issues in the cities of Everett, Chelsea, and Revere outlining the vision for digital access, and specific strategies that will be needed to meet the vision.",
+        "Final report, presentation to working group of findings, strategies, and an evaluation framework.",
       ],
     },
   ];
