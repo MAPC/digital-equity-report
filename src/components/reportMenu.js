@@ -4,7 +4,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 const ReportMenu = ({ isActive, setActive, setTabIndex, setAssessIndex }) => {
   const menuData = [
     { type: "main", link: "summary", title: "Executive Summary" },
-    { type: "main", link: "process", title: "Process" },
+    { type: "main", link: "process", title: "Planning Process" },
     { type: "main", link: "history", title: "History & Background" },
     { type: "main", link: "existing-conditions", title: "Existing Conditions" },
     {
